@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Chinese Room &mdash; Recalcitrant Philosophy</title>
+  <meta name="description" content="Searle's Chinese Room is a trick: it leans on our intuitions about books, and the book it needs is bigger than many universes." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">philosophy</a>
+      <nav>
+        <a href="./index.html#rebukes">Rebukes</a>
+        <a href="./index.html#docket">The docket</a>
+        <a href="./house-rules.html">House rules</a>
+        <a href="https://github.com/microprediction/philosophy">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="pagenav"><a href="./index.html">&larr; Home</a></p>
+    <h1>The Chinese Room</h1>
+    <p class="subtitle">Of course the book doesn't understand Chinese. The book you're picturing couldn't order lunch.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendant</dt>
+        <dd>John Searle, &ldquo;Minds, Brains, and Programs&rdquo; (1980)</dd>
+        <dt>Claim</dt>
+        <dd>No program, however good, could understand anything merely by virtue of being run.</dd>
+        <dt>Charge</dt>
+        <dd>Passing off a ring binder as an object larger than the universe; begging the question from inside a locked room.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Guilty. An intuition about a clerk, promoted to a theorem about minds.</dd>
+      </dl>
+    </div>
+
+    <h2>The argument, stated fairly</h2>
+    <p>
+      Searle imagines himself locked in a room. He speaks no Chinese &mdash; to him the characters
+      are meaningless squiggles. Slips of paper covered in squiggles come in through a slot. He
+      has a rulebook, in English, telling him which squiggles to pass back out given which
+      squiggles came in. The rulebook is so good that, to the Chinese speakers outside, the room's
+      replies are indistinguishable from a native speaker's. The room passes the Turing test in
+      Chinese.
+    </p>
+    <p>
+      Yet Searle, inside, understands not a word. He is doing everything a computer does &mdash;
+      manipulating formal symbols according to rules &mdash; and no understanding results. So
+      running a program cannot be sufficient for understanding, and what he called
+      &ldquo;strong AI&rdquo; (the claim that an appropriately programmed computer literally
+      <em>has</em> a mind) is false.
+    </p>
+    <p>He later boiled it down to a tidy derivation:</p>
+    <div class="steelman">
+      <ol>
+        <li>Programs are purely formal (syntactic).</li>
+        <li>Minds have mental contents (semantics).</li>
+        <li>Syntax by itself is neither constitutive of nor sufficient for semantics.</li>
+      </ol>
+      <p><strong>Therefore:</strong> programs are neither constitutive of nor sufficient for minds.</p>
+    </div>
+    <p>
+      That's the whole thing. It has been reprinted, taught, and solemnly debated for going on
+      half a century. Let's see how it holds up.
+    </p>
+
+    <h2>Rebuke 1: the &ldquo;book&rdquo; is a trick</h2>
+    <p>
+      Start with the prop. Searle could have described the mechanism in the room any way he
+      liked, and he chose a <em>book</em>: a rulebook, some baskets of symbols, &ldquo;bits of
+      paper.&rdquo; That choice is the whole argument. Everybody knows what a book is. It sits on
+      a desk. It is finite, inert and human-sized. It has never learned anything, wanted anything
+      or got a joke. Ask whether a book plus a clerk could <em>understand Chinese</em> and the
+      answer is obviously no &mdash; and the reader, having agreed to that, is marched off to
+      a conclusion about every possible program.
+    </p>
+    <p>
+      Here is what makes it a trick rather than an argument. It's true that any intelligent
+      apparatus whatsoever can, in principle, be unrolled into a book: tabulate what it would say
+      in response to everything that could be said to it, and bind the pages. That works for a
+      chatbot. It works equally for <em>you</em> &mdash; there is a book of everything you would
+      say in every conversation you could have over the next hour. So the existence of a book
+      version shows nothing about whether the original understands. But the unrolled book is not
+      the object you pictured on the desk, and the gap is not a matter of degree.
+    </p>
+    <p>
+      Take chess, a vastly smaller problem than conversation. A book that plays chess by
+      listing a reply to every way the game could have gone so far needs an entry for each line
+      of play: Shannon's estimate is around 10<sup>120</sup> of them. The observable universe
+      contains about 10<sup>80</sup> atoms. At one atom per entry, the chess book needs some
+      10<sup>40</sup> universes' worth of paper. Chess can cheat, because everything that
+      matters about the past is captured by the current position, and a position-indexed book
+      shrinks to a mere 10<sup>44</sup> or so entries &mdash; roughly a planet. Conversation
+      can't cheat that way. There is no &ldquo;board&rdquo;; what a remark means depends on
+      everything said before it. A book covering only the possible opening messages of a hundred
+      characters, drawn from three thousand common ones, already has about 10<sup>347</sup>
+      entries &mdash; and a native speaker has to cope with the gibberish ones too. This is
+      essentially Ned Block's lookup-table machine, and Block was admirably upfront that it
+      could not exist.
+    </p>
+    <p>
+      The alternative is to roll the book back up: a rulebook of manageable length, plus
+      scratch paper, plus a great deal of rule-following. That's a program, and now we have some
+      idea of the scale. A modern language model with tens of billions of parameters needs on the
+      order of 10<sup>11</sup> arithmetic operations to emit one token. At one operation per
+      second, without sleep, the man in the room produces a fragment of a word roughly every
+      <em>three thousand years</em>, shepherding a working state of billions of numbers as he
+      goes. That isn't a book in any sense that licenses intuitions about books either.
+    </p>
+    <p>
+      So there are two honest versions of the thought experiment. In one, the &ldquo;book&rdquo;
+      is a static object bigger than a great many universes. In the other, it is a process
+      running over geological time across a vast, intricately structured, constantly evolving
+      state. Does <em>that</em> understand anything? Your intuition is &mdash; what, exactly? You
+      don't have one. Nobody does. Our intuitions about what books can do were formed on objects
+      you can carry under one arm, and they are simply silent about objects forty orders of
+      magnitude beyond the cosmos. Searle's version works only because the reader quietly
+      substitutes the ring binder for the thing stipulated, consults their intuition about the
+      ring binder &mdash; which is correct! ring binders don't understand Chinese! &mdash; and
+      then applies it to something that is not a ring binder. Dennett coined the term
+      <em>intuition pump</em> in his reply to this very paper, and this is the mechanism.
+    </p>
+    <p>
+      In fairness to Searle, in 1980 he had Roger Schank's story-understanding scripts in mind,
+      and about those he was right: they didn't understand anything, and they <em>were</em>
+      roughly ring-binder-sized. The sin was generalising from &ldquo;this program doesn't&rdquo;
+      to &ldquo;no program could&rdquo; on the strength of a mental image.
+    </p>
+    <div class="aside">
+      <p>
+        <strong>The luminous room.</strong> Paul and Patricia Churchland's parody deserves to be
+        better known than the original. A man stands in a dark room waving a bar magnet up and
+        down. Maxwell says oscillating electromagnetic fields <em>are</em> light. But look
+        &mdash; the room stays pitch black! Therefore: &ldquo;forces by themselves are neither
+        constitutive of nor sufficient for luminance.&rdquo; The man's intuition is impeccable and
+        his physics is wrong, because he's off by about fifteen orders of magnitude in frequency
+        and mistook the limits of his imagination for a fact about the world.
+      </p>
+    </div>
+
+    <h2>Rebuke 2: wrong level, wrong suspect</h2>
+    <p>
+      The argument asks one question &mdash; <em>does the man understand Chinese?</em> &mdash;
+      and then answers a different one &mdash; <em>does anything here understand Chinese?</em>
+      The man is one component of the system. Specifically, he's the dumbest component: the bit
+      that fetches an instruction and executes it. He is the CPU. The claim under attack was never
+      &ldquo;the CPU understands&rdquo;; it was that the <em>running program</em> does.
+    </p>
+    <p>
+      No individual neuron in your head understands English. Nor does any particular
+      sodium channel, nor the hypothalamus taken alone. If &ldquo;I checked one part and it
+      didn't understand&rdquo; were a valid inference, it would show that you don't understand
+      this sentence either. An argument that proves brains can't think has proved too much.
+    </p>
+    <p>
+      This is the <strong>systems reply</strong>, and it was put to Searle before the paper was
+      even published. His response is worth quoting, because it is not an argument:
+    </p>
+    <blockquote>
+      The idea is that while a person doesn't understand Chinese, somehow the conjunction of
+      that person and bits of paper might understand Chinese. It is not easy for me to imagine
+      how someone who was not in the grip of an ideology would find the idea at all plausible.
+      <cite>&mdash; Searle (1980)</cite>
+    </blockquote>
+    <p>
+      &ldquo;Bits of paper&rdquo; &mdash; there's the ring binder again, doing the work an
+      argument should be doing. Note also that
+      &ldquo;somehow the conjunction of eighty-six billion cells and some salty water might
+      understand Chinese&rdquo; sounds exactly as silly, and happens to be true of about a
+      billion people.
+    </p>
+
+    <h2>Rebuke 3: &ldquo;fine, I'll memorise the rulebook&rdquo;</h2>
+    <p>
+      Searle's substantive answer to the systems reply: let the man memorise the rules and do all
+      the lookups in his head. Now there is no system apart from him &mdash; and he
+      <em>still</em> doesn't understand Chinese.
+    </p>
+    <p>
+      But this just re-runs the same confusion with the furniture removed. If the man really has
+      internalised a program capable of fluent Chinese conversation, there are now two things
+      going on in one skull: Searle, who speaks English and is bored out of his mind, and a
+      Chinese-speaking process he is implementing step by step. That Searle has no access to what
+      the second process understands is not surprising &mdash; it is precisely what implementing
+      something means. The x86 chip running a Python interpreter running a chess engine does not
+      know the Sicilian Defence. Your laptop hosting a Windows virtual machine has not thereby
+      learned where the Start menu is. Implementation is not identity, and introspective access
+      doesn't flow downhill from the implemented to the implementer.
+    </p>
+    <p>
+      So the only thing the memorisation move establishes is: <em>the implementer doesn't
+      understand</em>. Which everybody already granted. The question of whether the thing
+      being implemented understands is left exactly where it was, and Searle answers it by
+      consulting the implementer &mdash; the one party guaranteed not to know.
+    </p>
+
+    <h2>Rebuke 4: premise 3 is the conclusion wearing a hat</h2>
+    <p>
+      Look again at the derivation. Premises 1 and 2 are harmless. All the action is in premise 3:
+      <em>syntax is not sufficient for semantics</em>. But &ldquo;no amount of symbol-processing
+      can amount to understanding&rdquo; is just the denial of strong AI, restated in linguistics
+      vocabulary. It is the very thing in dispute. A functionalist thinks meaning comes from the
+      right kind of causal and computational organisation; premise 3 says it doesn't. You can't
+      refute someone by listing the negation of their view as an axiom.
+    </p>
+    <p>
+      The Chinese Room is supposed to be the <em>evidence</em> for premise 3. But we've just seen
+      what the room delivers: a stage prop that's wrong by dozens of orders of magnitude
+      (Rebuke 1) and a confusion of levels (Rebukes 2 and 3). So the formal argument rests on the
+      premise, the premise rests on the thought experiment, and the thought experiment rests on
+      the reader not thinking very hard about it. It's turtles, and the bottom turtle is a vibe.
+    </p>
+
+    <h2>Rebuke 5: &ldquo;causal powers&rdquo; to the rescue</h2>
+    <p>
+      If programs can't produce understanding, what does? Searle's answer: the &ldquo;causal
+      powers of the brain.&rdquo; Brains cause minds the way stomachs cause digestion. A simulated
+      rainstorm doesn't leave anyone wet, and a simulated brain doesn't think.
+    </p>
+    <p>Two problems.</p>
+    <p>
+      First, the analogy is chosen to fit the conclusion. Some things are not reproduced by
+      simulating them: rain, digestion, fire. Other things are: a simulated calculator
+      <em>really does</em> add; a simulated chess player really does beat you; a simulated proof
+      checker really does check proofs. The entire question is which kind of thing understanding
+      is &mdash; more like wetness or more like arithmetic. Searle doesn't argue that it's
+      like wetness. He just picks rain.
+    </p>
+    <p>
+      Second, <em>which</em> causal powers? In forty-odd years no list was ever supplied. Not
+      carbon, he said; he allowed that Martians or machines made of other stuff might have the
+      right powers. Not the neural organisation either &mdash; when offered a program that
+      simulates the brain neuron by neuron, he replied that a man operating an elaborate system of
+      water pipes that mimicked the synapses still wouldn't understand (there's that clerk again).
+      So the magic ingredient is not the material and not the organisation. It is defined only as
+      &ldquo;whatever brains have that programs lack.&rdquo; That's not a theory of mind. It's an
+      IOU for one, and it makes the position unfalsifiable: any system you build, however it
+      behaves, can be declared to lack the powers, since nobody knows what they are.
+    </p>
+
+    <h2>A postscript from the 2020s</h2>
+    <p>
+      For forty years the room was safely hypothetical, so the stipulation &ldquo;suppose the
+      rulebook is good enough&rdquo; cost nothing. We have now actually built rulebooks that hold
+      up their end of a conversation in Chinese, and you can go and read the rules: they are
+      matrices. Whether those systems understand anything, and in what sense, is a live and
+      interesting argument. But notice <em>how</em> the serious participants argue it: with
+      evidence about generalisation, internal representations, grounding, and failure modes. Nobody
+      on either side settles it by pointing at a GPU and observing that the GPU doesn't speak
+      Chinese. That move was always empty. It just took the real thing turning up for it to look
+      empty.
+    </p>
+
+    <h2>What survives</h2>
+    <p>House rules require saying what, if anything, the defendant got right.</p>
+    <ul>
+      <li>
+        <strong>Behaviour alone doesn't logically entail understanding.</strong> Ned Block's
+        giant-lookup-table machine makes this point cleanly, and without the misdirection: what's
+        going on inside matters. But that's an argument <em>for</em> caring about internal
+        organisation, which is the functionalist's view, not Searle's.
+      </li>
+      <li>
+        <strong>Where meaning comes from is a real question.</strong> How symbols come to be
+        <em>about</em> the world &mdash; Harnad's symbol grounding problem &mdash; is hard and
+        open. The Chinese Room gestures at it. It doesn't answer it, and &ldquo;causal
+        powers&rdquo; certainly doesn't.
+      </li>
+      <li>
+        <strong>The 1980 programs really didn't understand.</strong> As a complaint about
+        overclaiming in early AI, fair enough. As a proof about all possible programs, no.
+      </li>
+    </ul>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Shannon, C. E. (1950). &ldquo;Programming a Computer for Playing Chess.&rdquo;
+        <em>Philosophical Magazine</em> 41(314), 256&ndash;275. Source of the 10<sup>120</sup>
+        game-tree estimate. For the ~4.8&times;10<sup>44</sup> legal positions, see John Tromp's
+        <a href="https://github.com/tromp/ChessPositionRanking">ChessPositionRanking</a>.
+      </li>
+      <li>
+        Searle, J. R. (1980). &ldquo;Minds, Brains, and Programs.&rdquo;
+        <em>Behavioral and Brain Sciences</em> 3(3), 417&ndash;457. The original, with
+        the systems, robot, and brain-simulator replies and twenty-seven peer commentaries.
+      </li>
+      <li>
+        Dennett, D. C. (1980). &ldquo;The Milk of Human Intentionality.&rdquo; Commentary in the
+        same issue. Where &ldquo;intuition pump&rdquo; was coined.
+      </li>
+      <li>
+        Block, N. (1981). &ldquo;Psychologism and Behaviorism.&rdquo;
+        <em>Philosophical Review</em> 90(1), 5&ndash;43. The lookup-table machine.
+      </li>
+      <li>
+        Hofstadter, D. R., and Dennett, D. C. (1981). <em>The Mind's I</em>. Basic Books. Reprints
+        Searle with a reflection that makes the scale point at length.
+      </li>
+      <li>
+        Searle, J. R. (1990). &ldquo;Is the Brain's Mind a Computer Program?&rdquo;
+        <em>Scientific American</em> 262(1), 26&ndash;31. The three-axiom version.
+      </li>
+      <li>
+        Churchland, P. M., and Churchland, P. S. (1990). &ldquo;Could a Machine Think?&rdquo;
+        <em>Scientific American</em> 262(1), 32&ndash;37. The luminous room.
+      </li>
+      <li>
+        Harnad, S. (1990). &ldquo;The Symbol Grounding Problem.&rdquo; <em>Physica D</em> 42,
+        335&ndash;346.
+      </li>
+      <li>
+        Cole, D. &ldquo;The Chinese Room Argument.&rdquo;
+        <a href="https://plato.stanford.edu/entries/chinese-room/"><em>Stanford Encyclopedia of
+        Philosophy</em></a>. The sober survey, if you want the case for the defence.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>
