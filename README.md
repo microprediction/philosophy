@@ -1,6 +1,7 @@
 # philosophy (view as [web page](https://microprediction.github.io/philosophy/))
 
-Philosophy is Mostly F#@king Dumb: rebukes to classic arguments that have been getting away with it for far too long.
+**Philosophy is Mostly F#@king Dumb.** It's supposed to be profound ... but mostly it is trivially defused.
+Classic philosophical arguments, stated fairly and then taken apart.
 
 The site is plain static HTML in `docs/`, served by GitHub Pages. To add a rebuke, copy
 `docs/chinese-room.html`, keep the section skeleton (charge sheet, the argument stated fairly,

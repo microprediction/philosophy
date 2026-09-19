@@ -5,9 +5,10 @@ const REBUKES = [
 ];
 
 (function () {
-  const dropdown = document.querySelector("details.dropdown");
+  const dropdown = document.querySelector(".dropdown");
+  const toggle = document.querySelector(".dropdown-toggle");
   const menu = document.getElementById("rebuke-menu");
-  if (!dropdown || !menu) return;
+  if (!dropdown || !toggle || !menu) return;
 
   const here = location.pathname.split("/").pop() || "index.html";
   const items = REBUKES.map((r) => {
@@ -19,10 +20,21 @@ const REBUKES = [
   });
   menu.prepend(...items);
 
+  const setOpen = (open) => {
+    dropdown.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+  };
+  // Without JS the toggle is a plain link to the list on the home page.
+  toggle.addEventListener("click", (e) => {
+    e.preventDefault();
+    setOpen(!dropdown.classList.contains("open"));
+  });
+  // Close after choosing an item (matters for same-page anchors), on outside click, and on Escape.
+  menu.addEventListener("click", () => setOpen(false));
   document.addEventListener("click", (e) => {
-    if (!dropdown.contains(e.target)) dropdown.removeAttribute("open");
+    if (!dropdown.contains(e.target)) setOpen(false);
   });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") dropdown.removeAttribute("open");
+    if (e.key === "Escape") setOpen(false);
   });
 })();

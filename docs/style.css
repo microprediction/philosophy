@@ -32,30 +32,32 @@ header.site-header nav { display: flex; flex-wrap: wrap; gap: 0 18px; }
 header.site-header nav a { color: #fff; opacity: 0.85; font-size: 0.95rem; }
 header.site-header nav a:hover { opacity: 1; }
 
-/* Rebukes dropdown (items filled in by nav.js) */
-header.site-header details.dropdown { position: relative; }
-header.site-header details.dropdown summary {
-  list-style: none; cursor: pointer; user-select: none;
-  color: #fff; opacity: 0.85; font-size: 0.95rem;
+/* Rebukes dropdown: opens on hover (desktop) or click/tap; items filled in by nav.js */
+header.site-header .dropdown { position: relative; }
+header.site-header .dropdown-toggle::after { content: " \25BE"; font-size: 0.8em; }
+header.site-header .dropdown.open .dropdown-toggle { opacity: 1; }
+header.site-header .dropdown .menu-wrap {
+  display: none; position: absolute; top: 100%; left: -12px; z-index: 10;
+  padding-top: 10px;  /* bridges the gap so hover isn't lost on the way down */
 }
-header.site-header details.dropdown summary::-webkit-details-marker { display: none; }
-header.site-header details.dropdown summary::after { content: " \25BE"; font-size: 0.8em; }
-header.site-header details.dropdown summary:hover,
-header.site-header details.dropdown[open] summary { opacity: 1; }
-header.site-header details.dropdown .menu {
-  position: absolute; top: calc(100% + 10px); left: -12px; z-index: 10;
+header.site-header .dropdown.open .menu-wrap { display: block; }
+@media (hover: hover) {
+  header.site-header .dropdown:hover .menu-wrap { display: block; }
+  header.site-header .dropdown:hover .dropdown-toggle { opacity: 1; text-decoration: none; }
+}
+header.site-header .dropdown .menu {
   min-width: 250px; padding: 6px 0;
   background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   display: flex; flex-direction: column;
 }
-header.site-header details.dropdown .menu a {
+header.site-header .dropdown .menu a {
   color: var(--text); opacity: 1; padding: 8px 16px; font-size: 0.95rem; white-space: nowrap;
 }
-header.site-header details.dropdown .menu a:hover { background: var(--accent-soft); text-decoration: none; }
-header.site-header details.dropdown .menu a[aria-current="page"] { color: var(--accent); font-weight: 600; }
-header.site-header details.dropdown .menu .who { color: var(--faint); font-size: 0.82rem; margin-left: 4px; font-weight: 400; }
-header.site-header details.dropdown .menu a.all {
+header.site-header .dropdown .menu a:hover { background: var(--accent-soft); text-decoration: none; }
+header.site-header .dropdown .menu a[aria-current="page"] { color: var(--accent); font-weight: 600; }
+header.site-header .dropdown .menu .who { color: var(--faint); font-size: 0.82rem; margin-left: 4px; font-weight: 400; }
+header.site-header .dropdown .menu a.all {
   border-top: 1px solid var(--border); margin-top: 4px; padding-top: 10px;
   color: var(--muted); font-size: 0.88rem;
 }
