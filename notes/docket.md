@@ -4,7 +4,6 @@ Candidate targets. Being listed here is an accusation, not a conviction.
 
 - Mary's Room — Jackson, 1982
 - Philosophical zombies — Chalmers, 1996
-- The Gödel argument against mechanism — Lucas, 1961; Penrose, 1989
 - Pascal's Wager — Pascal, 1670
 - The ontological argument — Anselm, 1078, and successors
 - The Doomsday argument — Carter; Leslie; Gott

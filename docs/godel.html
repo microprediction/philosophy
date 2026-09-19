@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The G&ouml;del Argument &mdash; Philosophy is Mostly F#@king Dumb</title>
+  <meta name="description" content="Lucas and Penrose say G&ouml;del proves minds are not machines. The theorem starts with 'if the system is consistent'. They skipped that bit." />
+  <link rel="stylesheet" href="./style.css?v=4" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Rebukes</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>The G&ouml;del Argument</h1>
+    <p class="subtitle">The theorem starts with &ldquo;if the system is consistent&rdquo;. They skipped that bit.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendants</dt>
+        <dd>J. R. Lucas, &ldquo;Minds, Machines and G&ouml;del&rdquo; (1961); Roger Penrose, <em>The Emperor&rsquo;s New Mind</em> (1989) and <em>Shadows of the Mind</em> (1994)</dd>
+        <dt>Claim</dt>
+        <dd>A human can see that a machine&rsquo;s G&ouml;del sentence is true. The machine can&rsquo;t prove it. So minds are not machines.</dd>
+        <dt>Charge</dt>
+        <dd>Deleting the hypothesis from a theorem and hoping nobody checks.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Guilty. Turing answered it in 1950, eleven years before Lucas published it.</dd>
+      </dl>
+    </div>
+
+    <h2>The argument, in their words</h2>
+    <p>
+      Lucas, in <a href="https://doi.org/10.1017/S0031819100057983"><em>Philosophy</em>, 1961</a>:
+    </p>
+    <blockquote>
+      G&ouml;del&rsquo;s theorem seems to me to prove that Mechanism is false, that is, that minds
+      cannot be explained as machines.
+      <cite>&mdash; Lucas (1961)</cite>
+    </blockquote>
+    <blockquote>
+      &hellip; given any machine which is consistent and capable of doing simple arithmetic, there
+      is a formula which it is incapable of producing as being true &mdash; i.e., the formula is
+      unprovable-in-the-system &mdash; but which we can see to be true. It follows that no machine
+      can be a complete or adequate model of the mind, that minds are essentially different from
+      machines.
+      <cite>&mdash; Lucas (1961)</cite>
+    </blockquote>
+    <p>
+      Penrose wrote two books on it. His own compressed version, from his
+      <a href="https://journalpsyche.org/files/0xaa2c.pdf">1996 reply to critics</a>, where F is a
+      formal system supposed to capture all of human mathematical reasoning:
+    </p>
+    <blockquote>
+      Though I don&rsquo;t know that I necessarily am F, I conclude that if I were, then the
+      system F would have to be sound and, more to the point, F&prime; would have to be sound,
+      where F&prime; is F supplemented by the further assertion &ldquo;I am F&rdquo;. I perceive
+      that it follows from the assumption that I am F that the G&ouml;del statement G(F&prime;)
+      would have to be true and, furthermore, that it would not be a consequence of F&prime;.
+      &hellip; Since I am therefore capable of perceiving something beyond the powers of F&prime;,
+      I deduce that, I cannot be F after all.
+      <cite>&mdash; Penrose (1996)</cite>
+    </blockquote>
+    <p>
+      His conclusion is that the brain does something no computer can, so physics must contain
+      something non-computable, and he thinks it lives in quantum gravity acting on microtubules
+      in your neurons. I am not making that up.
+    </p>
+
+    <h2>Rebuke 1: the theorem says &ldquo;if&rdquo;</h2>
+    <p>
+      G&ouml;del did not prove that G(F) is true. He proved: <em>if F is consistent</em>, then
+      G(F) is true and F can&rsquo;t prove it. Look at Lucas&rsquo;s own sentence. The word
+      &ldquo;consistent&rdquo; is right there, and then it quietly vanishes before the conclusion.
+    </p>
+    <p>
+      What can a human actually &ldquo;see&rdquo;? The conditional: <em>if F is consistent then
+      G(F)</em>. Here is the embarrassing part. F can see that too. The conditional is a theorem
+      <em>of F</em>; proving it inside F is exactly how G&ouml;del&rsquo;s second theorem is
+      derived. So on the only thing anybody can actually see, human and machine are dead level.
+    </p>
+    <p>
+      To get G(F) outright you need to know F is consistent. The second theorem says F can&rsquo;t
+      prove that about itself. Fine. Can you? For F equal to Peano arithmetic, sure, you believe
+      it, because you have the natural numbers in mind. A machine can believe it as well: add
+      &ldquo;F is consistent&rdquo; as an axiom. It is one line. Now it proves G(F), and it has a
+      new G&ouml;del sentence, and so do you, because you don&rsquo;t know that your new, bigger
+      set of beliefs is consistent either. Nobody knows that ZFC is consistent. We just haven&rsquo;t
+      found the contradiction yet.
+    </p>
+    <p>
+      So the argument needs an extra premise: <em>humans can know that they themselves are
+      consistent</em>. Nothing supports it, and history is against it. Frege&rsquo;s system was
+      inconsistent and he was about to publish volume two when Russell&rsquo;s letter arrived.
+      Naive set theory was inconsistent and the best mathematicians alive were happily using it.
+    </p>
+    <p>Turing had already said it all in one sentence in 1950:</p>
+    <blockquote>
+      &hellip; although it is established that there are limitations to the powers of any
+      particular machine, it has only been stated, without any sort of proof, that no such
+      limitations apply to the human intellect.
+      <cite>&mdash; Turing (1950)</cite>
+    </blockquote>
+
+    <h3>Lucas&rsquo;s response</h3>
+    <p>He saw the consistency problem coming, and this is what he did with it:</p>
+    <blockquote>
+      Nor could we make its inconsistency a reproach to it &mdash; are not men inconsistent too?
+      Certainly women are, and politicians; and even male non-politicians contradict themselves
+      sometimes, and a single inconsistency is enough to make a system inconsistent. The fact
+      that we are all sometimes inconsistent cannot be gainsaid, but from this it does not follow
+      that we are tantamount to inconsistent systems. Our inconsistencies are mistakes rather
+      than set policies. &hellip; Human beings, although not perfectly consistent, are not so
+      much inconsistent as fallible.
+      <cite>&mdash; Lucas (1961)</cite>
+    </blockquote>
+    <p>
+      Leaving aside the women, this concedes the point. &ldquo;Fallible but we fix it when we
+      notice&rdquo; describes a system that does not know it is consistent. Frege didn&rsquo;t
+      have a set policy of contradiction either. He just had one, and needed somebody else to
+      find it.
+    </p>
+
+    <h2>Rebuke 2: go on then, do it</h2>
+    <p>
+      Lucas pictures a contest. You hand him a machine, he hands you back its G&ouml;del sentence
+      and declares it true. This works nicely when the machine is Peano arithmetic, which fits on
+      a postcard.
+    </p>
+    <p>
+      The candidate for <em>your</em> mind is not a postcard. It is a formal description of
+      something with around 10<sup>11</sup> neurons and 10<sup>14</sup> synapses. Nobody can
+      write it down, let alone read it, let alone look at it and see that it is consistent. And
+      without that, you see nothing about its G&ouml;del sentence. It is the Chinese Room
+      mistake again: build your intuition on a toy, then apply it to something a dozen orders of
+      magnitude larger.
+    </p>
+    <p>
+      In fact humans demonstrably do not have the power the argument needs. &ldquo;This system is
+      consistent&rdquo; is the same kind of statement as &ldquo;this program never halts&rdquo;.
+      There is a Turing machine with a few thousand states that halts if and only if
+      Goldbach&rsquo;s conjecture is false, and another of similar size whose behaviour cannot be
+      settled in ZFC at all. If mathematical insight can see these truths, would somebody please
+      tell us the answers. Human insight is not a halting oracle. It is a mathematician staring
+      at a whiteboard for thirty years and sometimes getting somewhere.
+    </p>
+
+    <h3>Penrose&rsquo;s response</h3>
+    <p>
+      On human error, he retreats from mathematicians to an idealised mathematician:
+    </p>
+    <blockquote>
+      I fully accept that individual mathematicians can frequently make errors &hellip; This is
+      not the point. Mathematical errors are in principle correctable, and I was concerned
+      mainly with the ideal of what can indeed be perceived in principle by mathematical
+      understanding and insight.
+      <cite>&mdash; Penrose (1996)</cite>
+    </blockquote>
+    <p>And then, two paragraphs later:</p>
+    <blockquote>
+      We must ask whether it is conceivable that this mathematical community, or its individual
+      members, could be entirely computational entities even though the ideal for which they
+      strive is beyond computation. Put in this way, it may perhaps seem not unreasonable that
+      this could be the case.
+      <cite>&mdash; Penrose (1996)</cite>
+    </blockquote>
+    <p>
+      Quite. The ideal mathematician who never errs and sees every truth in principle is not a
+      person. It is a definition. Every actual mathematician, the only kind whose brain needs
+      explaining, could be &ldquo;entirely computational&rdquo; by his own admission. That is the
+      whole case, conceded in a subordinate clause.
+    </p>
+    <p>
+      On the objection that we could be an algorithm without knowing which one, or knowing that
+      it is sound, he notes with some satisfaction that nobody disputes this conclusion:
+    </p>
+    <blockquote>
+      Human mathematicians are not using a knowably sound algorithm in order to ascertain
+      mathematical truth.
+      <cite>&mdash; Penrose (1996)</cite>, quoting <em>Shadows</em> p. 76
+    </blockquote>
+    <p>
+      Nobody disputes it because it is harmless. &ldquo;Not a <em>knowably sound</em>
+      algorithm&rdquo; leaves &ldquo;an algorithm, not knowably sound&rdquo; wide open. That
+      describes every piece of software ever shipped, and me.
+    </p>
+
+    <h2>Rebuke 3: G&ouml;del didn&rsquo;t think his theorem proved it</h2>
+    <p>
+      G&ouml;del thought about what his theorem meant for minds and machines, and he was careful
+      where Lucas and Penrose are not. What he claimed followed was a disjunction:
+    </p>
+    <blockquote>
+      &hellip; either &hellip; the human mind (even within the realm of pure mathematics)
+      infinitely surpasses the powers of any finite machine, or else there exist absolutely
+      unsolvable diophantine problems &hellip;
+      <cite>&mdash; G&ouml;del, Gibbs Lecture (1951)</cite>
+    </blockquote>
+    <p>
+      Either we beat every machine, <em>or</em> there are mathematical questions we will never
+      answer. G&ouml;del personally leaned towards the first. But he knew the difference between
+      what he believed and what he had proved, which is the entire problem here. The
+      Lucas&ndash;Penrose argument is what you get by deleting the second half, and given the
+      whiteboard evidence the second half is looking pretty healthy.
+    </p>
+
+    <h2>Rebuke 4: when your conclusion needs new physics, check your argument</h2>
+    <p>
+      Penrose, to his credit, follows the logic where it leads. If mathematicians do something
+      non-computable then brains do, so physics does, and since no known physics is
+      non-computable there must be new physics: an objective collapse of the wave function driven
+      by gravity, orchestrated in neuronal microtubules. Tegmark calculated how long quantum
+      coherence would survive in a warm, wet brain and got somewhere between
+      10<sup>&minus;13</sup> and 10<sup>&minus;20</sup> seconds. Neurons work on milliseconds.
+    </p>
+    <p>
+      Most people, on finding that their argument about logic requires rewriting quantum mechanics
+      inside the cytoskeleton, would go back and look for a missing &ldquo;if&rdquo;.
+    </p>
+
+    <h2>What survives</h2>
+    <ul>
+      <li>
+        <em>We can&rsquo;t be an algorithm that we know to be sound.</em> True, and interesting.
+        A mind can&rsquo;t fully certify itself. That is a fact about self-knowledge, not about
+        machines.
+      </li>
+      <li>
+        <em>G&ouml;del&rsquo;s disjunction</em> is real mathematics and still open.
+      </li>
+      <li>
+        <em>Penrose</em> is one of the great mathematical physicists and has a Nobel Prize for the
+        part of his work that involves checking the hypotheses.
+      </li>
+    </ul>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Lucas, J. R. (1961). &ldquo;Minds, Machines and G&ouml;del.&rdquo;
+        <em>Philosophy</em> 36(137), 112&ndash;127.
+      </li>
+      <li>
+        Penrose, R. (1989). <em>The Emperor&rsquo;s New Mind</em>. Oxford University Press.
+        Penrose, R. (1994). <em>Shadows of the Mind</em>. Oxford University Press.
+      </li>
+      <li>
+        Penrose, R. (1996). &ldquo;Beyond the Doubting of a Shadow: A Reply to Commentaries on
+        <em>Shadows of the Mind</em>.&rdquo; <em>Psyche</em> 2(23). His replies to Chalmers,
+        Feferman, McDermott and others.
+      </li>
+      <li>
+        Turing, A. M. (1950). &ldquo;Computing Machinery and Intelligence.&rdquo;
+        <em>Mind</em> 59(236), 433&ndash;460. See &ldquo;The Mathematical Objection&rdquo;.
+      </li>
+      <li>
+        G&ouml;del, K. (1951). &ldquo;Some Basic Theorems on the Foundations of Mathematics and
+        Their Implications&rdquo; (the Gibbs Lecture). In <em>Collected Works</em>, vol. III,
+        Oxford University Press, 1995.
+      </li>
+      <li>
+        Feferman, S. (1995). &ldquo;Penrose&rsquo;s G&ouml;delian Argument.&rdquo;
+        <em>Psyche</em> 2(7). Chalmers, D. J. (1995). &ldquo;Minds, Machines, and
+        Mathematics.&rdquo; <em>Psyche</em> 2(9).
+      </li>
+      <li>
+        Franz&eacute;n, T. (2005). <em>G&ouml;del&rsquo;s Theorem: An Incomplete Guide to Its Use
+        and Abuse</em>. A K Peters.
+      </li>
+      <li>
+        Yedidia, A., and Aaronson, S. (2016). &ldquo;A Relatively Small Turing Machine Whose
+        Behavior Is Independent of Set Theory.&rdquo; <em>Complex Systems</em> 25(4).
+        <a href="https://arxiv.org/abs/1605.04343">arXiv:1605.04343</a>.
+      </li>
+      <li>
+        Tegmark, M. (2000). &ldquo;Importance of Quantum Decoherence in Brain Processes.&rdquo;
+        <em>Physical Review E</em> 61(4), 4194&ndash;4206.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>
