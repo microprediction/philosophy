@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>House rules &mdash; Recalcitrant Philosophy</title>
   <link rel="stylesheet" href="./style.css" />
+  <script defer src="./nav.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-inner">
       <a class="brand" href="./index.html">philosophy</a>
       <nav>
-        <a href="./index.html#rebukes">Rebukes</a>
+        <details class="dropdown">
+          <summary>Rebukes</summary>
+          <div class="menu" id="rebuke-menu">
+            <a class="all" href="./index.html#rebukes">All rebukes &rarr;</a>
+          </div>
+        </details>
         <a href="./index.html#docket">The docket</a>
         <a href="./house-rules.html">House rules</a>
         <a href="https://github.com/microprediction/philosophy">GitHub</a>
