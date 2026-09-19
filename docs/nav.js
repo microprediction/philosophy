@@ -24,11 +24,7 @@ const REBUKES = [
     dropdown.classList.toggle("open", open);
     toggle.setAttribute("aria-expanded", String(open));
   };
-  // Without JS the toggle is a plain link to the list on the home page.
-  toggle.addEventListener("click", (e) => {
-    e.preventDefault();
-    setOpen(!dropdown.classList.contains("open"));
-  });
+  toggle.addEventListener("click", () => setOpen(!dropdown.classList.contains("open")));
   // Close after choosing an item (matters for same-page anchors), on outside click, and on Escape.
   menu.addEventListener("click", () => setOpen(false));
   document.addEventListener("click", (e) => {

@@ -34,6 +34,11 @@ header.site-header nav a:hover { opacity: 1; }
 
 /* Rebukes dropdown: opens on hover (desktop) or click/tap; items filled in by nav.js */
 header.site-header .dropdown { position: relative; }
+header.site-header .dropdown-toggle {
+  background: none; border: 0; margin: 0; padding: 0; cursor: pointer;
+  font: inherit; font-size: 0.95rem; line-height: inherit; color: #fff; opacity: 0.85;
+}
+header.site-header .dropdown-toggle:hover { opacity: 1; }
 header.site-header .dropdown-toggle::after { content: " \25BE"; font-size: 0.8em; }
 header.site-header .dropdown.open .dropdown-toggle { opacity: 1; }
 header.site-header .dropdown .menu-wrap {
