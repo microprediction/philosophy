@@ -8,6 +8,7 @@
   --accent-soft: #fbeceb;
   --border: #e4e0d8;
   --ink: #221c1c;
+  --header-bg: #221c1c;
 }
 * { box-sizing: border-box; }
 html, body {
@@ -19,52 +20,45 @@ html, body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-header.site-header {
-  background: var(--ink); color: #fff;
-  padding: 14px 24px; border-bottom: 3px solid var(--accent);
-}
-header.site-header .nav-inner {
-  max-width: 820px; margin: 0 auto;
-  display: flex; gap: 18px; align-items: center; flex-wrap: wrap;
-}
-header.site-header .brand { font-weight: 600; font-size: 1.1rem; color: #fff; }
-header.site-header nav { display: flex; flex-wrap: wrap; gap: 0 18px; }
-header.site-header nav a { color: #fff; opacity: 0.85; font-size: 0.95rem; }
-header.site-header nav a:hover { opacity: 1; }
+/* Canonical site header: one block, byte-identical on every page (checked by
+   header-check.js). House dropdown pattern, as in precise/docs/academic.css:
+   span.menu > span.menu-label + span.drop, opened on hover and focus-within.
+   Pure CSS, no script. hrefs are root-absolute; the site is served at the domain root. */
+.site-nav { position: sticky; top: 0; z-index: 1000; background: var(--header-bg); color: #fff;
+            padding: 12px 20px; border-bottom: 3px solid var(--accent);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.site-nav-inner { max-width: 820px; margin: 0 auto; display: flex; align-items: center; gap: 24px; }
+.site-nav-brand { color: #fff; text-decoration: none; font-weight: 700; font-size: 1.25em; }
+.site-nav-links { display: flex; align-items: center; gap: 24px; margin-left: auto; }
+.site-nav a { color: #ecf0f1; text-decoration: none; }
+.site-nav a:hover { color: #fff; text-decoration: underline; }
 
-/* Rebukes dropdown: opens on hover (desktop) or click/tap; items filled in by nav.js */
-header.site-header .dropdown { position: relative; }
-header.site-header .dropdown-toggle {
-  background: none; border: 0; margin: 0; padding: 0; cursor: pointer;
-  font: inherit; font-size: 0.95rem; line-height: inherit; color: #fff; opacity: 0.85;
-}
-header.site-header .dropdown-toggle:hover { opacity: 1; }
-header.site-header .dropdown-toggle::after { content: " \25BE"; font-size: 0.8em; }
-header.site-header .dropdown.open .dropdown-toggle { opacity: 1; }
-header.site-header .dropdown .menu-wrap {
-  display: none; position: absolute; top: 100%; left: -12px; z-index: 10;
-  padding-top: 10px;  /* bridges the gap so hover isn't lost on the way down */
-}
-header.site-header .dropdown.open .menu-wrap { display: block; }
-@media (hover: hover) {
-  header.site-header .dropdown:hover .menu-wrap { display: block; }
-  header.site-header .dropdown:hover .dropdown-toggle { opacity: 1; text-decoration: none; }
-}
-header.site-header .dropdown .menu {
-  min-width: 250px; padding: 6px 0;
-  background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-  display: flex; flex-direction: column;
-}
-header.site-header .dropdown .menu a {
-  color: var(--text); opacity: 1; padding: 8px 16px; font-size: 0.95rem; white-space: nowrap;
-}
-header.site-header .dropdown .menu a:hover { background: var(--accent-soft); text-decoration: none; }
-header.site-header .dropdown .menu a[aria-current="page"] { color: var(--accent); font-weight: 600; }
-header.site-header .dropdown .menu .who { color: var(--faint); font-size: 0.82rem; margin-left: 4px; font-weight: 400; }
-header.site-header .dropdown .menu a.all {
-  border-top: 1px solid var(--border); margin-top: 4px; padding-top: 10px;
-  color: var(--muted); font-size: 0.88rem;
+.site-nav .menu { position: relative; display: inline-block; }
+.site-nav .menu-label { color: #ecf0f1; cursor: default; }
+.site-nav .menu-label::after { content: " \25be"; font-size: .8em; }
+.site-nav .menu:hover > .menu-label,
+.site-nav .menu:focus-within > .menu-label { color: #fff; }
+/* The menu's hover area extends 10px below the label so the pointer never
+   crosses a dead gap on the way down to the drop. */
+.site-nav .menu { padding-bottom: 10px; margin-bottom: -10px; }
+.site-nav .drop { display: none; position: absolute; right: 0; top: 100%;
+                  background: var(--header-bg); border: 1px solid rgba(255, 255, 255, .18);
+                  border-radius: 4px; padding: 8px 0; min-width: 240px;
+                  box-shadow: 0 6px 18px rgba(0, 0, 0, .22); }
+.site-nav .menu:hover > .drop,
+.site-nav .menu:focus-within > .drop { display: block; }
+.site-nav .drop a { display: block; padding: 7px 16px; white-space: nowrap; }
+.site-nav .drop a:hover { background: rgba(255, 255, 255, .10); color: #fff;
+                          text-decoration: none; }
+
+@media (max-width: 768px) {
+  .site-nav-inner { flex-wrap: wrap; gap: 14px; }
+  .site-nav-links { margin-left: 0; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+  .site-nav .menu { padding-bottom: 0; margin-bottom: 0; }
+  .site-nav .drop { position: static; display: block; margin: 6px 0 0; border: 0;
+                    box-shadow: none; padding: 0; min-width: 0; background: transparent; }
+  .site-nav .drop a { padding: 4px 0 4px 14px; }
+  .site-nav .menu-label::after { content: ""; }
 }
 
 main { max-width: 820px; margin: 32px auto; padding: 0 24px 60px; }
