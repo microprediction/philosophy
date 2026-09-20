@@ -10,6 +10,9 @@ Candidate targets. Being listed here is an accusation, not a conviction.
 - The simulation argument — Bostrom, 2003
 - Zeno's paradoxes — Zeno, c. 450 BC
 
+Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument.
+Sourced and waiting: Mary's Room, zombies, the ontological argument, Pascal, doomsday and simulation (see the quotes-*.md files). Capra's Tao of Physics is being sourced.
+
 ## Chinese Room: lines of attack not yet on the page
 
 - The brain is already in a Chinese room (the skull): it only ever receives spike trains. Kills Searle's answer to the robot reply.

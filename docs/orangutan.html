@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Orangutan Argument &mdash; Philosophy is Mostly F#@king Dumb</title>
+  <meta name="description" content="Yann LeCun says AI will not seek power because it never evolved the drive. It doesn't have to want power. It only has to want something for which power is useful." />
+  <link rel="stylesheet" href="./style.css?v=4" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Rebukes</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+        <a href="/godel-abuse.html">G&ouml;del Proves Whatever You Like</a>
+        <a href="/orangutan.html">The Orangutan Argument</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>The Orangutan Argument</h1>
+    <p class="subtitle">It doesn&rsquo;t have to want power. It only has to want something for which power is useful.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendant</dt>
+        <dd>Yann LeCun, 2019&ndash;present</dd>
+        <dt>Claim</dt>
+        <dd>AI lacks evolutionarily hardwired dominance and survival instincts, so it will remain subservient unless we foolishly install such goals.</dd>
+        <dt>Charge</dt>
+        <dd>Confusing wanting power for its own sake with acquiring power because it helps accomplish something else.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Guilty. The coffee-fetcher may resist shutdown precisely because it cares about nothing except the coffee.</dd>
+      </dl>
+    </div>
+
+    <h2>The argument, in his words</h2>
+    <p>
+      LeCun is a Turing Award winner and one of the people who made modern AI work. With the
+      neuroscientist Anthony Zador he set the argument out in
+      <a href="https://blogs.scientificamerican.com/observations/dont-fear-the-terminator/"><em>Scientific
+      American</em> in 2019</a>, under the subtitle &ldquo;Artificial intelligence never needed to
+      evolve, so it didn&rsquo;t develop the survival instinct that leads to the impulse to
+      dominate others&rdquo;:
+    </p>
+    <blockquote>
+      But intelligence per se does not generate the drive for domination, any more than horns do.
+      <cite>&mdash; Zador and LeCun (2019)</cite>
+    </blockquote>
+    <blockquote>
+      But because AI systems did not pass through the crucible of natural selection, they did not need to evolve a survival instinct. In AI, intelligence and survival are decoupled, and so intelligence can serve whatever goals we set for it.
+      <cite>&mdash; Zador and LeCun (2019)</cite>
+    </blockquote>
+    <p>His tightest version is a post from August 2023:</p>
+    <blockquote>
+      We are subservient to our drives, built into us by evolution. Because evolution made us a
+      social species with a hierarchical social structure, some of us have a drive to dominate,
+      and others not so much. But that drive has absolutely nothing to do with intelligence:
+      chimpanzees, baboons, and wolves have similar drives. Orangutans do not because they are
+      not a social species. And they are pretty darn smart. AI systems will become more
+      intelligent than humans, but they will still be subservient to us. &hellip; We will design
+      AI to be like the supersmart-but-non-dominating staff member.
+      <cite>&mdash; LeCun, <a href="https://x.com/ylecun/status/1695056787408400778">X, 25 August 2023</a></cite>
+    </blockquote>
+    <p>And on Lex Fridman&rsquo;s podcast in 2024:</p>
+    <blockquote>
+      They&rsquo;re not going to have the desire to dominate because the desire to dominate is something that has to be hardwired into an intelligent system. It is hardwired in humans. It is hardwired in baboons, in chimpanzees, in wolves, not in orangutans.
+      <cite>&mdash; LeCun (2024)</cite>
+    </blockquote>
+
+    <h2>Rebuke 1: nobody said the machine had to enjoy domination</h2>
+    <p>
+      Everything LeCun says about drives is true. Intelligence does not come with a taste for
+      power. Orangutans are clever and unambitious. None of it answers the worry, because the
+      worry was never about taste.
+    </p>
+    <p>
+      There are two reasons to acquire something. You can want it for itself, or you can want it
+      because it helps you get something else. I do not have a hardwired drive to own a car.
+      Evolution did not give me one. I own a car.
+    </p>
+    <p>
+      Staying switched on, having resources and not being interfered with are useful for almost
+      any goal whatever. Nick Bostrom granted LeCun&rsquo;s premise, and denied his conclusion,
+      seven years before the <em>Scientific American</em> piece:
+    </p>
+    <blockquote>
+      Agents with human-like motivational structures often seem to place some final value on their own survival. This is not a necessary feature of artificial agents: some may be designed to place no final value whatever on their own survival. Nevertheless, even agents that do not care intrinsically about their own survival would, under a fairly wide range of conditions, care instrumentally to some degree about their own survival in order to accomplish the final goals they do value.
+      <cite>&mdash; Bostrom (2012)</cite>
+    </blockquote>
+    <p>Stephen Hawking put the same thing without the jargon:</p>
+    <blockquote>
+      You&rsquo;re probably not an evil ant-hater who steps on ants out of malice, but if you&rsquo;re in charge of a hydroelectric green energy project and there&rsquo;s an anthill in the region to be flooded, too bad for the ants.
+      <cite>&mdash; Hawking (2015)</cite>
+    </blockquote>
+    <p>
+      The subtitle of the article also contains a logic error, as Alex Turner pointed out.
+      &ldquo;Evolution produces a survival instinct&rdquo; does not give you &ldquo;no evolution,
+      no survival instinct&rdquo;. That is affirming the consequent.
+    </p>
+
+    <h2>Rebuke 2: one tiny MDP is enough</h2>
+    <p>
+      LeCun&rsquo;s claim is categorical: the behaviour will not appear unless it is built in. A
+      categorical claim dies to one counterexample. Stuart Russell supplied it to LeCun directly
+      in 2019:
+    </p>
+    <blockquote>
+      It is trivial to construct a toy MDP in which the agent&rsquo;s only reward comes from fetching the coffee. If, in that MDP, there is another &ldquo;human&rdquo; who has some probability, however small, of switching the agent off, and if the agent has available a button that switches off that human, the agent will necessarily press that button as part of the optimal solution for fetching the coffee. No hatred, no desire for power, no built-in emotions, no built-in survival instinct, nothing except the desire to fetch the coffee successfully. This point cannot be addressed because it&rsquo;s a simple mathematical observation.
+      <cite>&mdash; Russell (2019)</cite>
+    </blockquote>
+    <p>
+      Here is one, small enough to check by hand. The coffee is two steps away. The robot gets
+      reward 1 when it delivers and nothing otherwise. At each step, before the robot moves, a
+      human switches it off with probability <em>p</em>. The robot may spend its first step
+      disabling the switch instead of walking. Future reward is discounted by &gamma; per step.
+    </p>
+    <p>
+      Walk, walk: the robot must survive two steps, so the value is (1&nbsp;&minus;&nbsp;<em>p</em>)<sup>2</sup>&gamma;<sup>2</sup>.
+      Disable, walk, walk: it is exposed for one step only, and delivers a step later, so the
+      value is (1&nbsp;&minus;&nbsp;<em>p</em>)&gamma;<sup>3</sup>. Disabling the switch is
+      optimal exactly when &gamma;&nbsp;&gt;&nbsp;1&nbsp;&minus;&nbsp;<em>p</em>.
+    </p>
+    <p>
+      With a 1% chance of shutdown per step, any robot more patient than &gamma; = 0.99 disables
+      the switch. The reward function mentions coffee and nothing else. Nobody installed a
+      survival instinct. It fell out of the arithmetic.
+    </p>
+    <p>
+      Turner and colleagues later proved a general version: in environments where an agent can
+      be shut down, &ldquo;most reward functions make it optimal to seek power by keeping a range
+      of options available&rdquo;.
+    </p>
+
+    <h3>LeCun&rsquo;s response</h3>
+    <p>He did answer, which is more than most defendants on this site:</p>
+    <blockquote>
+      1. Once the robot has brought you coffee, its self-preservation instinct disappears. You can
+      turn it off. 2. One would have to be unbelievably stupid to build open-ended objectives in
+      a super-intelligent (and super-powerful) machine without some safeguard terms in the
+      objective. 3. One would have to be rather incompetent not to have a mechanism by which new
+      terms in the objective could be added to prevent previously-unforeseen bad behavior.
+      <cite>&mdash; LeCun (2019)</cite>
+    </blockquote>
+    <p>
+      Point 1 concedes the counterexample. The instinct that was never going to exist now exists
+      until the coffee arrives. Points 2 and 3 are about safeguards, and get their own rebuke
+      below.
+    </p>
+
+    <h2>Rebuke 3: the orangutan answers the wrong claim</h2>
+    <p>
+      The orangutan shows that intelligence does not imply a <em>terminal</em> desire to
+      dominate. Nobody serious claimed it did. The claim is that goals make power
+      <em>useful</em>, and the orangutan has nothing to say about that. A solitary fruit-eater
+      gains little from running a hierarchy, so it doesn&rsquo;t bother.
+    </p>
+    <p>
+      Where force is useful to an orangutan, it appears. LeCun&rsquo;s own article says so:
+      &ldquo;competing males occasionally fight for access to females.&rdquo; That is
+      instrumental aggression, inside the example chosen to show there isn&rsquo;t any.
+    </p>
+    <p>
+      LeCun leaned on the ape again when pressed on instrumental goals: they must be &ldquo;much
+      weaker drives of behavior than hardwired objectives. Else, how could one explain the lack
+      of domination behavior in non-social animals, such as orangutans.&rdquo; Turner&rsquo;s
+      reply was five words long: &ldquo;Maybe the orangutans aren&rsquo;t robust to scale.&rdquo;
+    </p>
+    <p>The best cross-examination came from a journalist, Billy Perrigo of <em>TIME</em>:</p>
+    <blockquote>
+      <p>LeCun: The desire to dominate is not correlated with intelligence at all.</p>
+      <p>Perrigo: But it is correlated with domination.</p>
+      <p>
+        LeCun: &hellip; Look at orangutans. They are not social animals. They do not have this
+        drive to dominate, because it&rsquo;s completely useless to them.
+      </p>
+      <p>Perrigo: That&rsquo;s why humans are the dominant species, not orangutans.</p>
+      <cite>&mdash; <em>TIME</em>, 13 February 2024</cite>
+    </blockquote>
+    <p>
+      All three orangutan species are critically endangered. Nobody set out to dominate them. We
+      wanted timber and palm oil.
+    </p>
+
+    <h2>Rebuke 4: &ldquo;we&rsquo;ll add safeguards&rdquo; is an engineering proposal, not a rebuttal</h2>
+    <blockquote>
+      It&rsquo;s a bit like saying that building cars without brakes will lead to fatalities. Yes, but why would we be so stupid as to not include brakes?
+      <cite>&mdash; LeCun (2019)</cite>
+    </blockquote>
+    <p>
+      Notice what has happened to the argument. It began as: the drive will not arise unless we
+      build it in. It is now: the drive will arise unless we build it out. Those are different
+      claims, and the second one has a name. It is called the alignment problem, and it is what
+      the people LeCun is arguing with work on.
+    </p>
+    <p>On whether we would be so stupid, Russell had an example to hand, from LeCun&rsquo;s employer:</p>
+    <blockquote>
+      Yann&rsquo;s comment &ldquo;Facebook stopped maximizing clickthroughs several years ago and stopped using the time spent in the app as a criterion about 2 years ago&rdquo; makes my point for me. Why did they stop doing it? Because it was the wrong objective function. Yann says we&rsquo;d have to be &ldquo;extremely stupid&rdquo; to put the wrong objective into a super-powerful machine. Facebook&rsquo;s platform is not super-smart but it is super-powerful, because it connects with billions of people for hours every day. And yet they put the wrong objective function into it. QED.
+      <cite>&mdash; Russell (2019)</cite>
+    </blockquote>
+    <p>On the state of the brakes, LeCun is candid:</p>
+    <blockquote>
+      LLMs are not controllable.
+      <cite>&mdash; LeCun (2024)</cite>
+    </blockquote>
+    <blockquote>
+      This is sort of a new architecture, and we don&rsquo;t have any demonstration of it at the moment.
+      <cite>&mdash; LeCun, on his proposed objective-driven AI, <em>Wired</em> (2023)</cite>
+    </blockquote>
+    <blockquote>
+      Designing those guardrails so that the system behaves properly is not going to be a simple issue for which there is a silver bullet for which you have a mathematical proof that the system can be safe.
+      <cite>&mdash; LeCun (2024)</cite>
+    </blockquote>
+    <p>
+      By 2025 he was describing the guardrails as &ldquo;the AI equivalent of instinct or drives
+      in animals and humans&rdquo;. So the machines will have hardwired drives after all. We will
+      be the evolution.
+    </p>
+
+    <h2>The rebuke stops here</h2>
+    <p>
+      The toy MDP refutes a categorical claim. It does not show that any system now running seeks
+      power. Turner and his co-authors say of their own theorem that &ldquo;optimal policies can
+      be qualitatively divorced from real-world learned policies&rdquo;.
+    </p>
+    <p>
+      It does not show that every objective rewards power-seeking. In the example above, an
+      impatient robot leaves the switch alone.
+    </p>
+    <p>
+      Laboratories have reported models resisting shutdown in test scenarios. The authors
+      themselves call those scenarios contrived, and one such result has been blamed on ambiguous
+      instructions. I don&rsquo;t lean on them.
+    </p>
+    <p>
+      And it does not show that AI will kill anybody. LeCun&rsquo;s conclusion may be right. This
+      argument for it is wrong.
+    </p>
+
+    <h2>In LeCun&rsquo;s favour</h2>
+    <p>
+      He is right that intelligence alone does not entail a taste for domination, and right that
+      much public fear is science fiction projecting human vices onto machines.
+    </p>
+    <p>
+      He is right that we choose the objectives, and that this makes machines easier to shape
+      than people. In the 2019 exchange he offered Russell common ground: &ldquo;not all
+      consequences of a fixed set of incentives can be predicted&rdquo;, and &ldquo;because of
+      that, objectives functions must be updatable.&rdquo; That is most of what his opponents
+      believe.
+    </p>
+    <p>
+      And he turned up to argue, in public and at length, with the people who disagree with him,
+      and conceded ground while doing it.
+    </p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Zador, A., and LeCun, Y. (2019). &ldquo;Don&rsquo;t Fear the Terminator.&rdquo;
+        <a href="https://blogs.scientificamerican.com/observations/dont-fear-the-terminator/"><em>Scientific
+        American</em>, 26 September</a>.
+      </li>
+      <li>
+        &ldquo;Debate on Instrumental Convergence between LeCun, Russell, Bengio, Zador, and
+        More.&rdquo; The 2019 Facebook exchange, archived with light edits by Ben Pace on
+        <a href="https://www.lesswrong.com/posts/WxW6Gc6f2z3mzmqKs/debate-on-instrumental-convergence-between-lecun-russell">LessWrong</a>.
+        Source of the Russell (2019) and LeCun (2019) quotations, and of Turner&rsquo;s comments.
+      </li>
+      <li>
+        LeCun, Y. (2023). <a href="https://x.com/ylecun/status/1695056787408400778">Post on X, 25
+        August</a>. Levy, S. (2023). &ldquo;How Not to Be Stupid About AI, With Yann LeCun.&rdquo;
+        <a href="https://www.wired.com/story/artificial-intelligence-meta-yann-lecun-interview/"><em>Wired</em>,
+        22 December</a>.
+      </li>
+      <li>
+        Perrigo, B. (2024). &ldquo;Meta&rsquo;s AI Chief Yann LeCun on AGI, Open-Source, and AI
+        Risk.&rdquo; <a href="https://time.com/6694432/yann-lecun-meta-ai-interview/"><em>TIME</em>,
+        13 February</a>.
+      </li>
+      <li>
+        Fridman, L. (2024). <a href="https://lexfridman.com/yann-lecun-3-transcript/">Podcast
+        #416 with Yann LeCun</a>, 7 March. Source of the LeCun (2024) quotations. The 2025 remark
+        on instincts is from a LinkedIn post as quoted by
+        <a href="https://www.techspot.com/news/109086-godfathers-ai-geoffrey-hinton-yann-lecun-warn-maternal.html">TechSpot</a>.
+      </li>
+      <li>
+        Bostrom, N. (2012). &ldquo;The Superintelligent Will: Motivation and Instrumental
+        Rationality in Advanced Artificial Agents.&rdquo;
+        <a href="https://nickbostrom.com/superintelligentwill.pdf"><em>Minds and Machines</em>
+        22(2)</a>.
+      </li>
+      <li>
+        Omohundro, S. (2008). &ldquo;The Basic AI Drives.&rdquo; <em>Proceedings of the First AGI
+        Conference</em>.
+      </li>
+      <li>
+        Turner, A., Smith, L., Shah, R., Critch, A., and Tadepalli, P. (2021). &ldquo;Optimal
+        Policies Tend to Seek Power.&rdquo; NeurIPS.
+        <a href="https://arxiv.org/abs/1912.01683">arXiv:1912.01683</a>.
+      </li>
+      <li>
+        Hawking, S. (2015). Reddit &ldquo;Ask Me Anything&rdquo;, as transcribed by the
+        <a href="https://futureoflife.org/ai/hawking-reddit-ama-on-ai/">Future of Life
+        Institute</a>.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>
