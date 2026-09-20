@@ -1,10 +1,25 @@
 # philosophy (view as [web page](https://dumbphilosophy.com/))
 
-**Philosophy is Mostly F#@king Dumb.** It's supposed to be profound ... but mostly it is trivially defused.
-Classic philosophical arguments, stated fairly and then taken apart.
+Make a mistake in mathematics and you start again. Make a mistake in software, it's a bug. Make a
+mistake in philosophy and the world has to hear about it endlessly.
 
-The site is plain static HTML in `docs/`, served by GitHub Pages at the domain root. To add a
-rebuke, copy `docs/chinese-room.html`, add a card to the list in `docs/index.html`, and add a link
-to the Rebukes dropdown in the header. The header is one block, byte-identical on every page
+This repository is the source for [dumbphilosophy.com](https://dumbphilosophy.com/), where famous
+arguments are quoted in their authors' own words and then taken apart. Each page also quotes the
+author's replies to critics, and says what the author got right.
+
+## Rebukes
+
+- [The Chinese Room](https://dumbphilosophy.com/chinese-room.html). Searle, 1980. The book that could do the job would be bigger than a great many universes, and nobody has intuitions about those.
+- [The Gödel Argument](https://dumbphilosophy.com/godel.html). Lucas, 1961, and Penrose, 1989 and 1994. Lucas dropped the theorem's "if". Penrose replaced it with a premise that contradicts itself.
+- [Gödel Proves Whatever You Like](https://dumbphilosophy.com/godel-abuse.html). A theorem about arithmetic, cited as an authority on Lenin's tomb, God, poetry and the end of physics.
+- [The Orangutan Argument](https://dumbphilosophy.com/orangutan.html). LeCun, 2019 to the present. A machine doesn't have to want power. It only has to want something for which power is useful.
+
+## Adding a rebuke
+
+The site is plain static HTML in `docs/`, served by GitHub Pages at the domain root. Copy an
+existing page, add a card to the list in `docs/index.html`, and add a link to the Rebukes dropdown
+in the header. The header is one block, byte-identical on every page
 (see `~/github/style/site_conventions.md`), so paste the updated block into every page and run
 `node docs/header-check.js` before committing.
+
+Sourced quotations for pages written and unwritten are in `notes/`.
