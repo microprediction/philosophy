@@ -10,8 +10,8 @@ Candidate targets. Being listed here is an accusation, not a conviction.
 - The simulation argument — Bostrom, 2003
 - Zeno's paradoxes — Zeno, c. 450 BC
 
-Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token".
-Sourced and waiting: zombies, the ontological argument, Pascal, doomsday and simulation (see the quotes-*.md files). Capra's Tao of Physics is sourced too (quotes-capra.md).
+Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", The Tao of Physics.
+Sourced and waiting: zombies, the ontological argument, Pascal, doomsday and simulation (see the quotes-*.md files).
 
 ## Chinese Room: lines of attack not yet on the page
 

@@ -16,6 +16,7 @@ author's replies to critics, and says what the author got right.
 - [The Orangutan Argument](https://dumbphilosophy.com/orangutan.html). LeCun, 2019 to the present. A machine doesn't have to want power. It only has to want something for which power is useful.
 - [Mary's Room](https://dumbphilosophy.com/marys-room.html). Jackson, 1982. "It seems just obvious" is the whole argument, and its author no longer finds it obvious.
 - [Just Predicting the Next Token](https://dumbphilosophy.com/next-token.html). Bender, Chomsky, Marcus, Chiang, LeCun, Kambhampati. For any algorithm there is a corpus whose best next-token predictor is that algorithm, so the premise rules nothing out.
+- [The Tao of Physics](https://dumbphilosophy.com/tao-of-physics.html). Capra, 1975. He hitched a religion to a theory of physics, and the theory lost the year before he published.
 
 ## Adding a rebuke
 
