@@ -15,6 +15,7 @@ author's replies to critics, and says what the author got right.
 - [Gödel Proves Whatever You Like](https://dumbphilosophy.com/godel-abuse.html). A theorem about arithmetic, cited as an authority on Lenin's tomb, God, poetry and the end of physics.
 - [The Orangutan Argument](https://dumbphilosophy.com/orangutan.html). LeCun, 2019 to the present. A machine doesn't have to want power. It only has to want something for which power is useful.
 - [Mary's Room](https://dumbphilosophy.com/marys-room.html). Jackson, 1982. "It seems just obvious" is the whole argument, and its author no longer finds it obvious.
+- [Just Predicting the Next Token](https://dumbphilosophy.com/next-token.html). Bender, Chomsky, Marcus, Chiang, LeCun, Kambhampati. For any algorithm there is a corpus whose best next-token predictor is that algorithm, so the premise rules nothing out.
 
 ## Adding a rebuke
 
