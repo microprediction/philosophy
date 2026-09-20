@@ -1,0 +1,75 @@
+# "Machines can't originate / can't do abduction": sources (internal notes)
+
+Started 2026-09-20. RAW = wording read in downloaded full text. A research agent is sourcing the
+abduction defendants (Larson, Fodor, Peirce, Pearl) and the hypothesis-generating machines
+(Robot Scientist Adam, Eureqa, AI Feynman); its findings go below when they arrive.
+
+## The ancestor: Lovelace's objection
+
+Ada Lovelace, Note G to her translation of Menabrea (1843). RAW, from
+https://www.fourmilab.ch/babbage/sketch.html
+
+"The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we
+know how to order it to perform. It can follow analysis; but it has no power of anticipating any
+analytical relations or truths. Its province is to assist us in making available what we are
+already acquainted with."
+
+FLAG: Turing quotes this WITHOUT the word "whatever", as "The Analytical Engine has no pretensions
+to originate anything." The original has "whatever". Quote whichever source you name.
+
+## Turing's reply, 1950, section 6, "Lady Lovelace's Objection"
+
+RAW, from https://courses.cs.umbc.edu/471/papers/turing.pdf
+
+The burden-of-proof point: "It will be noticed that he does not assert that the machines in
+question had not got the property, but rather that the evidence available to Lady Lovelace did not
+encourage her to believe that they had it."
+
+The universality answer, which is the same move as the next-token page's theorem: "It is quite
+possible that the machines in question had in a sense got this property. For suppose that some
+discrete-state machine has the property. The Analytical Engine was a universal digital computer,
+so that, if its storage capacity and speed were adequate, it could by suitable programming be made
+to mimic the machine in question."
+
+On originality: "A variant of Lady Lovelace's objection states that a machine can 'never do
+anything really new.' This may be parried for a moment with the saw, 'There is nothing new under
+the sun.' Who can be certain that 'original work' that he has done was not simply the growth of
+the seed planted in him by teaching, or the effect of following well-known general principles."
+
+On surprise: "A better variant of the objection says that a machine can never 'take us by
+surprise.' This statement is a more direct challenge and can be met directly. Machines take me by
+surprise with great frequency."
+
+## The popular modern form
+
+Nick Cave, The Red Hand Files (January 2023). RAW, from
+https://www.theredhandfiles.com/chat-gpt-what-do-you-think/
+"... in time create a song that is, on the surface, indistinguishable from an original, but it
+will always be a replication, a kind of burlesque. Songs arise out of suffering, by which I mean
+they are predicated upon the complex, internal human struggle of creation and, well, as far as I
+know, algorithms don't feel. Data doesn't suffer. ChatGPT has no inner being, it has been nowhere,
+it has endured nothing, it has not had the audacity to reach beyond its limitations, and hence it
+doesn't have the capacity for a shared transcendent experience."
+
+## Move 37
+
+Cade Metz, Wired, March 2016. RAW, from
+https://www.wired.com/2016/03/two-moves-alphago-lee-sedol-redefined-future/
+"In Game Two, the Google machine made a move that no human ever would. And it was beautiful."
+"That's a very strange move," said one commentator, himself a nine dan Go player, the highest rank
+there is. "I thought it was a mistake," said the other.
+Fan Hui's often-quoted "It's not a human move ... So beautiful" is NOT in this page; treat as
+unverified until a source is found.
+
+## Already sourced elsewhere and reusable here
+- Chomsky, Roberts and Watumull (NYT 2023): "The crux of machine learning is description and
+  prediction; it does not posit any causal mechanisms or physical laws." (see quotes-lecun.md area
+  / next-token page)
+- FunSearch, Nature 625 (2023/24): "This demonstrates that it is possible to make a scientific
+  discovery - a new piece of verifiable knowledge about a notorious scientific problem - using an
+  LLM." Caveat: FunSearch is an LLM paired with "a systematic evaluator"; the LLM alone tends "to
+  confabulate or ultimately fall short of going beyond existing results."
+- Solomonoff, via Scholarpedia "Algorithmic probability": the universal predictor "would thus, in
+  some sense, be the perfect universal prediction algorithm, if only it were computable."
+- Malach (ICML 2024) and the trace construction on the next-token page: the training scheme
+  excludes no computable behaviour.
