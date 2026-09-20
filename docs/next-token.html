@@ -39,7 +39,7 @@
         <dt>Charge</dt>
         <dd>Inferring a bound on the computation from the training objective and the output interface.</dd>
         <dt>Verdict</dt>
-        <dd class="verdict">Guilty, and demonstrably so. For every algorithm there is a corpus whose best next-token predictor is that algorithm.</dd>
+        <dd class="verdict">Guilty on capability. For every algorithm there is a corpus whose best next-token predictor is that algorithm, so the objective bounds nothing. Whether any symbol thereby means anything is a separate question, untouched here.</dd>
       </dl>
     </div>
 
@@ -65,7 +65,10 @@
     </blockquote>
     <p>
       Gary Marcus supplies the slogan: language models are &ldquo;simply and true [<em>sic</em>]
-      next-word predictors (or, as I once put it, &lsquo;autocomplete on steroids&rsquo;)&rdquo;.
+      next-word predictors (or, as I once put it, &lsquo;autocomplete on
+      steroids&rsquo;)&rdquo;, a phrase he has used
+      <a href="https://garymarcus.substack.com/p/alphaproof-alphageometry-chatgpt">since at least
+      2021 and claims as his own</a>.
       Ted Chiang supplies the image: &ldquo;Think of ChatGPT as a blurry JPEG of all the text on
       the Web.&rdquo; Subbarao Kambhampati supplies the engineering version:
     </p>
@@ -91,11 +94,14 @@
       Every distribution over text, without exception, is a distribution over next tokens.
     </p>
     <p>
-      So &ldquo;it only models the next token&rdquo; is not a restriction on what is modelled. A
-      novelist is a next-token predictor. A theorem prover writing out a proof is a next-token
-      predictor. So is Chomsky, composing the sentence about lumbering statistical engines. The
-      description is true of everything that has ever produced text, which is why it distinguishes
-      nothing.
+      So &ldquo;it only models the next token&rdquo; is not a restriction on what is modelled.
+      Any distribution over text can be written this way, including whatever distribution produced
+      Chomsky&rsquo;s sentence about lumbering statistical engines.
+    </p>
+    <p>
+      The factorisation is about the output interface, not about the machinery behind it. Emitting
+      one symbol at a time places no bound on the computation that chooses the symbol, and a bound
+      on that computation is the only thing the slogan could have been claiming.
     </p>
 
     <h2>Rebuke 2: a corpus for every algorithm</h2>
@@ -130,9 +136,16 @@
       perfect next-token prediction <em>is</em> that behaviour.
     </p>
     <p>
-      Which settles the logic. From &ldquo;trained by next-token prediction&rdquo; nothing follows
-      about what the system cannot do, because the premise is compatible with every computable
-      behaviour there is.
+      That settles the capability question. From &ldquo;trained by next-token prediction&rdquo;
+      nothing follows about what the system cannot <em>do</em>, because the premise is compatible
+      with every computable behaviour there is.
+    </p>
+    <p>
+      It settles nothing else, and the construction shows why. The corpus contains explicit
+      encodings of a machine&rsquo;s internal states, so matching its conditionals proves the
+      predictor computes what the machine computes. It does not show that any token has come to
+      refer to anything. Bender and Koller&rsquo;s argument is about learning meaning from form,
+      and a simulation result does not reach it.
     </p>
     <p>
       The rigorous learning-theoretic version is Eran Malach&rsquo;s, and it is stronger than the
@@ -143,9 +156,9 @@
       <cite>&mdash; Malach, <em>Auto-Regressive Next-Token Predictors are Universal Learners</em>, ICML 2024</cite>
     </blockquote>
     <p>
-      His informal statement of it: &ldquo;any computer program or intelligent agent that can be
-      simulated by a computer, can be learned, given the right dataset, by a simple next-token
-      predictor.&rdquo; The catch is real and he states it: the dataset has to contain the
+      His own informal gloss on the theorem, in the paper: &ldquo;any computer program or
+      intelligent agent that can be simulated by a computer, can be learned, given the right
+      dataset, by a simple next-token predictor.&rdquo; The catch is real and he states it: the dataset has to contain the
       intermediate steps, and acquiring such data &ldquo;might be costly, or even
       impossible.&rdquo;
     </p>
@@ -186,14 +199,15 @@
     <p>Hinton makes the same point from the other end:</p>
     <blockquote>
       Suppose you want to be really good at predicting the next word. If you want to be really good, you have to understand what&rsquo;s being said. &hellip; Yes, it&rsquo;s &lsquo;autocomplete&rsquo; &mdash; but you didn&rsquo;t think through what it means to have a really good autocomplete.
-      <cite>&mdash; Hinton, quoted in <em>The New Yorker</em> (2023)</cite>
+      <cite>&mdash; Hinton, quoted by Joshua Rothman, <em>The New Yorker</em>, 13 November 2023</cite>
     </blockquote>
     <p>
       None of this is new. Shannon measured how much a person knows about English by how well they
       predict the next letter, in 1951: familiarity with the language &ldquo;enables him to fill in
       missing or incorrect letters in proof-reading, or to complete an unfinished phrase in
-      conversation.&rdquo; The Hutter Prize has offered money since 2006 on the premise that
-      &ldquo;being able to compress well is closely related to acting intelligently&rdquo;.
+      conversation.&rdquo; The <a href="http://prize.hutter1.net/">Hutter Prize</a> has offered money
+      since 2006 on the premise that &ldquo;being able to compress well is closely related to
+      acting intelligently&rdquo;.
       Prediction has been the instrument for measuring knowledge for as long as we have had a
       theory of information.
     </p>
@@ -244,31 +258,53 @@
       <cite>&mdash; LeCun, Lex Fridman Podcast #416 (2024)</cite>
     </blockquote>
     <p>
-      It is a very strong assumption, and in an autoregressive model it is the wrong one. Each token
-      conditions on every token before it. That is what &ldquo;autoregressive&rdquo; means. A
-      model that has written three lines of a proof is not sampling the fourth from the same
-      distribution it started with.
+      It is a very strong assumption, but dropping it is not enough, and this is where the usual
+      reply goes wrong. Write C<sub><em>t</em></sub> for &ldquo;still correct after <em>t</em>
+      tokens&rdquo;. The chain rule gives
+    </p>
+    <p class="display">P(C<sub><em>n</em></sub>) = &prod;<sub><em>t</em></sub> P(C<sub><em>t</em></sub> | C<sub><em>t</em>&minus;1</sub>)</p>
+    <p>
+      so if the chance of surviving each step is 1&nbsp;&minus;&nbsp;<em>e</em> along a correct
+      prefix, the product follows whether or not the errors are independent. Autoregressive
+      dependence is perfectly compatible with a constant hazard.
     </p>
     <p>
-      Drop the assumption and use the loss instead. Let &epsilon; be the model&rsquo;s excess log
-      loss over the optimum, in nats per sequence. Then, averaging over inputs drawn from the
-      training distribution:
+      What has to go is the rest of the model. That the hazard stays constant as the answer gets
+      longer. That one wrong token is unrecoverable. That there is a single narrow correct path
+      rather than many acceptable continuations. Each is a claim about the task and about training,
+      and the slide argues for none of them.
     </p>
-    <p class="display">E<sub><em>x</em></sub>&thinsp;[&thinsp;Q(the entire correct continuation | <em>x</em>)&thinsp;] &ge; <em>e</em><sup>&minus;&epsilon;</sup></p>
     <p>
-      That is Jensen&rsquo;s inequality applied to the definition of the loss, and it bounds the
-      probability of getting the <em>whole</em> answer right, with no independence assumption
-      anywhere. The exponential decay reappears only if you insist that the per-token excess loss
-      is a constant that training cannot reduce. Whether it is, is the question. LeCun assumes it,
-      and calls the answer &ldquo;not fixable&rdquo;.
+      There is a bound running the other way, in the setting of Rebuke 2 where each input
+      <em>x</em> has one intended continuation <em>y</em>*(<em>x</em>). Write
+      <em>L</em> for the model&rsquo;s log loss on that answer,
+      <em>L</em>&nbsp;=&nbsp;E<sub><em>x</em></sub>[&minus;log Q(<em>y</em>*(<em>x</em>) | <em>x</em>)].
+      Jensen gives
+    </p>
+    <p class="display">E<sub><em>x</em></sub>&thinsp;[&thinsp;Q(<em>y</em>*(<em>x</em>) | <em>x</em>)&thinsp;] &ge; <em>e</em><sup>&minus;<em>L</em></sup></p>
+    <p>
+      with no independence assumption anywhere. Two conditions on it, both real. The target must be
+      unique, since if several continuations are acceptable the quantity has to be redefined over
+      the whole set. And <em>L</em> is the loss on the intended answer, which is not the same as
+      ordinary token cross-entropy.
+    </p>
+    <p>
+      Within those conditions it says that whole-answer correctness is governed by a loss that
+      training reduces and that is zero at the optimum. Exponential decay in length returns exactly
+      when the sequence loss grows linearly with length. Whether it must is the question, and the
+      slide answers it by assumption, then calls the answer &ldquo;not fixable&rdquo;.
     </p>
     <p>
       The empirical record since is unkind to &ldquo;not fixable&rdquo;. Take
       <em>e</em> = 0.001 per token and the formula puts a two-thousand-token answer right 13% of
       the time and a twenty-thousand-token proof right about twice in a billion. In July 2025 two
       autoregressive systems scored at gold-medal level at the International Mathematical Olympiad,
-      one of them, per DeepMind, &ldquo;producing rigorous mathematical proofs directly from the
-      official problem descriptions&rdquo;.
+      one of them
+      <a href="https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/">per
+      DeepMind</a> &ldquo;producing rigorous mathematical proofs directly from the official problem
+      descriptions&rdquo;. The IMO president confirmed the score and added that the IMO
+      &ldquo;cannot validate the methods, including the amount of compute used or whether there was
+      any human involvement&rdquo;.
     </p>
 
     <h2>Rebuke 6: they are not trained that way any more</h2>
@@ -283,9 +319,9 @@
     <p>
       Reasoning models go further. DeepSeek-R1 reports that &ldquo;the reasoning abilities of LLMs
       can be incentivized through pure reinforcement learning&rdquo;, with a reward based
-      &ldquo;solely&hellip; on the correctness of final predictions&rdquo;. OpenAI says o1
-      &ldquo;learns to recognize and correct its mistakes&rdquo;, which is the second thing
-      LeCun&rsquo;s formula forbids.
+      &ldquo;solely&hellip; on the correctness of final predictions&rdquo;. <a href="https://openai.com/index/learning-to-reason-with-llms/">OpenAI
+      says</a> o1 &ldquo;learns to recognize and correct its mistakes&rdquo;, which is the second
+      thing LeCun&rsquo;s formula forbids.
     </p>
     <p>
       So &ldquo;it is just trained to predict the next token&rdquo; is now false as a description
