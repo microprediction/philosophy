@@ -52,13 +52,14 @@ a:hover { text-decoration: underline; }
                           text-decoration: none; }
 
 @media (max-width: 768px) {
-  .site-nav-inner { flex-wrap: wrap; gap: 14px; }
-  .site-nav-links { margin-left: 0; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
-  .site-nav .menu { padding-bottom: 0; margin-bottom: 0; }
-  .site-nav .drop { position: static; display: block; margin: 6px 0 0; border: 0;
-                    box-shadow: none; padding: 0; min-width: 0; background: transparent; }
-  .site-nav .drop a { padding: 4px 0 4px 14px; }
-  .site-nav .menu-label::after { content: ""; }
+  /* Not pinned, and the menu stays collapsed until tapped. With nine links an
+     always-open list would eat the viewport. It opens on tap through
+     :focus-within, since the label carries tabindex="0". */
+  .site-nav { position: relative; }
+  .site-nav-inner { flex-wrap: wrap; gap: 12px; }
+  .site-nav-links { margin-left: 0; flex-wrap: wrap; gap: 16px; align-items: center; }
+  .site-nav .menu { position: static; }
+  .site-nav .drop { left: 12px; right: 12px; min-width: 0; }
 }
 
 main { max-width: 820px; margin: 32px auto; padding: 0 24px 60px; }
