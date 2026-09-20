@@ -73,3 +73,29 @@ unverified until a source is found.
   some sense, be the perfect universal prediction algorithm, if only it were computable."
 - Malach (ICML 2024) and the trace construction on the next-token page: the training scheme
   excludes no computable behaviour.
+
+## The working demonstration (built 2026-09-20)
+
+`demos/abduce.py` and `docs/abduce.js` are the same algorithm, verified to agree exactly.
+
+Given Kepler's six planets as (a, T) pairs, it enumerates expressions in a and T smallest
+first and keeps any that is (i) near-constant on the data and (ii) NOT constant on random
+data. Condition (ii) is the "matter of course" clause in Peirce's schema: an expression that
+comes out constant whatever the data explains nothing.
+
+Real output, both implementations, identical:
+
+    (a*(a*(a/(T*T))))      = 1.000109   spread 1.39e-03   varies on random data: 2.7
+    (T/(a*(a*(a/T))))      = 0.999891   spread 1.39e-03   varies on random data: 6.1
+
+    2 law(s), 5 leaves, after 120,082 candidates
+
+Both survivors are Kepler's third law, one the reciprocal of the other. Nothing smaller fits,
+so simplicity alone picks the law out. Python runs in about 1.6 seconds.
+
+Check on the data: a^3/T^2 is 1.00036, 0.99982, 1.00000, 0.99992, 1.00097, 0.99958 for
+Mercury through Saturn. Relative spread 1.39e-3.
+
+Honest scope for the page: the space searched is tiny (two variables, four operators, at most
+five leaves). Real abduction searches a space that is not tiny. That is an argument about cost,
+which is an engineering problem, not an argument about possibility.
