@@ -122,3 +122,20 @@ Mercury through Saturn. Relative spread 1.39e-3.
 Honest scope for the page: the space searched is tiny (two variables, four operators, at most
 five leaves). Real abduction searches a space that is not tiny. That is an argument about cost,
 which is an engineering problem, not an argument about possibility.
+
+## Corrections applied 2026-09-20 (issues 18-25)
+- The demo is a toy instance of ONE formalisable component (search a hypothesis language, score
+  candidates). It is not general abduction and does not answer Fodor or Larson on relevance,
+  background knowledge or open-ended search. The page now says so twice.
+- "Simplicity alone" is grammar-relative: leaf count, this operator set, this tolerance. The
+  120,082 are generated trees, not distinct hypotheses.
+- Scoring is not generating. Bayes/MDL rank a supplied class; Solomonoff is not computable. The
+  page concedes Larson has a real objection available, and faults what he does with it.
+- Schmidt and Lipson's "no prior physics" is disputed: Hillar and Sommer (arXiv:1210.7273) argue
+  the fitness criterion encodes Hamiltonian and Newtonian structure.
+- The AI co-scientist case is a held-out match, not a prospective prediction later confirmed. The
+  lab had the answer and had not published it.
+- Negative search claims are now stated as searches of the scanned text, not as facts about the
+  book. Larson and Fodor quotes remain OCR-sourced and print-unchecked.
+- demos/abduce.py and docs/abduce.js now share a checked-in CONTROL table instead of two different
+  PRNGs, so both report identical figures. Verified: both give 2.7 and 6.1.

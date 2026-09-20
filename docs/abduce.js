@@ -2,6 +2,9 @@
 const DATA=[["Mercury",0.3871,0.2408],["Venus",0.7233,0.6152],["Earth",1.0,1.0],
             ["Mars",1.5237,1.8809],["Jupiter",5.2029,11.862],["Saturn",9.5367,29.457]];
 const OPS=["*","/","+","-"], TOL=3e-3;
+// Same eight arbitrary pairs as demos/abduce.py, so both report identical numbers.
+const CONTROL=[[8.475334,22.787041],[4.321601,7.915719],[5.210492,12.267037],[7.881226,9.238719],
+               [4.87065,17.584785],[9.099506,15.239668],[2.962011,22.722965],[6.260016,7.665089]];
 function trees(n){ if(n===1) return [null]; let out=[];
   for(let k=1;k<n;k++) for(const l of trees(k)) for(const r of trees(n-k)) out.push([l,r]);
   return out; }
@@ -20,8 +23,7 @@ function combos(pool,n){ let out=[[]];
   for(let k=0;k<n;k++){ const nx=[]; for(const c of out) for(const p of pool) nx.push(c.concat(p)); out=nx; }
   return out; }
 window.abduce=function(){
-  let seed=1, rnd=()=> (seed=(seed*1103515245+12345)%2147483648)/2147483648;
-  const fake=[]; for(let i=0;i<8;i++) fake.push([0.2+rnd()*9.8, 0.2+rnd()*29.8]);
+  const fake=CONTROL;
   let checked=0, seen=new Set(), hits=[];
   for(let n=1;n<=5;n++){
     for(const sh of trees(n)) for(const lv of combos(["a","T"],n)) for(const op of combos(OPS,n-1)){

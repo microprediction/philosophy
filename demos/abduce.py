@@ -10,12 +10,17 @@ data: an "explanation" that fits any data whatever explains nothing.
 
     python3 abduce.py
 """
-import itertools, math, random
+import itertools, math
 
 # semi-major axis a (AU), orbital period T (years), for Kepler's six planets
 DATA = [("Mercury", 0.3871, 0.2408), ("Venus",   0.7233,  0.6152),
         ("Earth",   1.0000, 1.0000), ("Mars",    1.5237,  1.8809),
         ("Jupiter", 5.2029, 11.862), ("Saturn",  9.5367, 29.457)]
+
+# Eight arbitrary (a, T) pairs that obey no law. Checked in rather than generated
+# so that this file and docs/abduce.js produce identical numbers.
+CONTROL = [(8.475334, 22.787041), (4.321601, 7.915719), (5.210492, 12.267037), (7.881226, 9.238719),
+         (4.87065, 17.584785), (9.099506, 15.239668), (2.962011, 22.722965), (6.260016, 7.665089)]
 
 TOL = 3e-3          # how constant a law must be on the real data
 VACUOUS = 0.1       # how much it must vary on random data to count as saying anything
@@ -75,8 +80,7 @@ def spread(values):
 
 def search():
     real = [{"a": a, "T": T} for _, a, T in DATA]
-    random.seed(0)
-    fake = [{"a": random.uniform(0.2, 10), "T": random.uniform(0.2, 30)} for _ in range(8)]
+    fake = [{"a": a, "T": T} for a, T in CONTROL]
 
     checked, seen, hits = 0, set(), []
     for n in range(1, 6):

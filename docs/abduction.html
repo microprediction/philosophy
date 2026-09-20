@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Machines Can&rsquo;t Do Abduction &mdash; Dumb Philosophy</title>
-  <meta name="description" content="Inference to the best explanation is said to be beyond any machine. Here is a program that does it, and recovers Kepler's third law in under two seconds." />
+  <meta name="description" content="Inference to the best explanation is said to be unprogrammable. Here is a toy that does one formalisable piece of it, and recovers Kepler's third law from six numbers." />
   <link rel="stylesheet" href="./style.css?v=4" />
+  <script defer src="./abduce.js"></script>
 </head>
 <body>
   <nav class="site-nav"><div class="site-nav-inner">
@@ -28,7 +29,7 @@
   <main>
     <p class="pagenav"><a href="/">&larr; Home</a></p>
     <h1>Machines Can&rsquo;t Do Abduction</h1>
-    <p class="subtitle">Guessing the best explanation. There is a program on this page that does it.</p>
+    <p class="subtitle">Nobody knows how to program it, says the book. Here is a program that does a piece of it.</p>
 
     <div class="charge-sheet">
       <dl>
@@ -92,7 +93,7 @@
       <cite>&mdash; Fodor (2000), p. 47</cite>
     </blockquote>
 
-    <h2>Rebuke 1: here it is, implemented</h2>
+    <h2>Rebuke 1: a piece of it, implemented</h2>
     <p>
       Peirce&rsquo;s schema has two clauses and both are mechanical. The candidate must account for
       the observation. And the accounting must be <em>non-trivial</em>, because something that
@@ -114,35 +115,52 @@
         continue
 
     report(expr)</pre>
-    <p>The first <em>continue</em> is Peirce&rsquo;s second line. The second is his first. Run it:</p>
+    <p>
+      Those two tests are mechanical stand-ins for the two clauses of the schema. They are stand-ins
+      and not the thing itself, which the next paragraphs are about. Run it:
+    </p>
     <pre class="out">(a*(a*(a/(T*T))))      = 1.000109   spread 1.39e-03   varies on random data: 2.7
 (T/(a*(a*(a/T))))      = 0.999891   spread 1.39e-03   varies on random data: 6.1
 
 2 law(s), 5 leaves, after 120,082 candidates</pre>
     <p>
       Both survivors are Kepler&rsquo;s third law, one the reciprocal of the other. Nothing smaller
-      fits, so simplicity alone picked it out of 120,082 candidates. Kepler took about a decade;
-      the Python takes 1.6 seconds.
+      survived, so within this grammar, with leaf count as the measure of size, simplicity picked
+      the law out. The 120,082 are generated trees rather than distinct hypotheses, so
+      algebraically equal forms are counted more than once.
     </p>
     <p>
-      That is the shape of it; the
+      Kepler is not being beaten here. He worked from raw observations and had to invent the
+      orbital quantities first, where the program is handed <em>a</em> and <em>T</em> already
+      built. The speed is a joke, not a measurement.
+    </p>
+    <p>
+      That is the shape of it. The
       <a href="https://github.com/microprediction/philosophy/blob/main/demos/abduce.py">whole
-      program</a> is forty lines, and the data is six pairs of numbers you can check. Here is the
-      same search running in your browser:
+      program</a> is a hundred lines with its comments, the data is six pairs of numbers, and the
+      JavaScript below reports the same figures as the Python. Here it is in your browser:
     </p>
     <p>
       <button class="run" id="abduce-run">Run the search</button>
     </p>
     <pre class="out" id="abduce-out">(not run yet)</pre>
     <p>
-      That is a toy, and the next section says exactly how much of a toy. But it is a working
-      instance of the thing said to have no working instances, and it was not hard to write.
+      Now the honest accounting. The variables, the operators, the size bound, the error measure,
+      the tolerance and the form of the data were all supplied by me. The program searches a small
+      space that somebody else fenced off, and it does nothing at all about explanatory relevance,
+      background knowledge, or which of a thousand irrelevant facts might bear on the case.
+    </p>
+    <p>
+      So this is a toy instance of one formalisable component: search a hypothesis language, score
+      the candidates, keep what fits and says something. It is not general abduction, and it does
+      not refute Fodor or Larson on the hard part. It does show that the component is mechanical,
+      which is worth establishing before anyone calls the whole thing a mystery.
     </p>
 
     <h2>Rebuke 2: the formal answer is in the endnotes</h2>
     <p>
-      Choosing the hypothesis that best explains the data, with a penalty for complication, is not
-      an open problem. It is a textbook chapter. David MacKay, in the standard one:
+      <em>Scoring</em> a hypothesis against the data, with a penalty for complication, is not an
+      open problem. It is a textbook chapter. David MacKay, in the standard one:
     </p>
     <blockquote>
       Coherent inference (as embodied by Bayesian probability) automatically embodies Occam&rsquo;s razor, quantitatively.
@@ -156,7 +174,17 @@
       Peirce&rsquo;s own vocabulary: the prior &ldquo;gives most weight to the explanation that
       compresses the data the most&rdquo;.
     </p>
-    <p>Larson&rsquo;s reply to all of this appears in an endnote:</p>
+    <p>
+      Scoring is not generating, and the distinction matters. Bayesian comparison ranks candidates
+      you have already written down, under a prior and a likelihood you have already chosen. MDL
+      needs a coding language. Solomonoff&rsquo;s universal version is not computable. None of them
+      hands you the hypothesis space, and Larson&rsquo;s unbounded &ldquo;et cetera&rdquo; lives
+      exactly there.
+    </p>
+    <p>
+      So he has a real objection available. What he does with it is the complaint. His reply to the
+      whole literature appears in an endnote:
+    </p>
     <blockquote>
       More recently, circa 2010 up to present day, various probabilistic (in particular, Bayesian) approaches have been adopted as possible routes to bona fide abductive inference. Those systems, however, are not full treatments of abduction either. &hellip; Abduction in name only is not what I mean by abduction, and the systems using the name but not solving the problem won&rsquo;t help us make progress in AI.
       <cite>&mdash; Larson (2021), introduction, endnote 1</cite>
@@ -168,15 +196,16 @@
       principle.
     </p>
     <p>
-      The words Solomonoff, Kolmogorov, minimum description, symbolic regression and Eureqa do not
-      occur in the book. Occam occurs once, to be waved off: &ldquo;The ellipse wasn&rsquo;t simpler
-      than all the others&mdash;this wasn&rsquo;t an Occam&rsquo;s razor explanation.&rdquo;
+      A search of the scanned text finds no occurrence of Solomonoff, Kolmogorov, minimum
+      description, symbolic regression or Eureqa. Occam turns up once, to be waved off: &ldquo;The
+      ellipse wasn&rsquo;t simpler than all the others&mdash;this wasn&rsquo;t an Occam&rsquo;s
+      razor explanation.&rdquo;
     </p>
     <p>
       That sentence is about the orbit shape, Kepler&rsquo;s first law, and not the law recovered
-      above. But it is the only time the book meets simplicity-driven search, and it meets it with
-      an assertion about the one scientist whose other law a simplicity-driven search reconstructs
-      in under two seconds.
+      above. But it is the one place the search turns up simplicity at all, and it meets it with an
+      assertion about the one scientist whose other law a simplicity-driven search reconstructs
+      from six numbers.
     </p>
 
     <h2>Rebuke 3: machines have been doing it since 2009</h2>
@@ -200,25 +229,33 @@
       <cite>&mdash; Schmidt and Lipson, <em>Science</em> (2009)</cite>
     </blockquote>
     <p>
-      Those authors also identified Larson&rsquo;s objection, seventeen years early, and treated it
-      as an engineering requirement rather than a barrier: &ldquo;To distinguish good conservation
-      law candidates from poor ones, we need a more robust principle than simply invariance
-      alone.&rdquo;
+      That phrase is theirs and it is disputed. Hillar and Sommer replied that the method&rsquo;s
+      fitness criterion smuggles in Hamiltonian and Newtonian structure, so the machine is given
+      more physics than the sentence suggests. The dispute is about exactly the thing at issue here,
+      which is how much of the work the representation does.
     </p>
     <p>
-      More recently a language-model system was given an unsolved problem in microbiology, and
-      its answer was checked in a laboratory. The result is in <em>Cell</em>:
+      Either way, those authors identified Larson&rsquo;s objection seventeen years early and
+      treated it as an engineering requirement rather than a barrier: &ldquo;To distinguish good
+      conservation law candidates from poor ones, we need a more robust principle than simply
+      invariance alone.&rdquo;
+    </p>
+    <p>
+      More recently a language-model system was set a problem in microbiology to which the
+      laboratory already had the answer. They had found and confirmed a cross-species mechanism and
+      had not published it. Working from the public literature, the system proposed the same
+      mechanism. The result is in <em>Cell</em>:
     </p>
     <blockquote>
       Remarkably, the AI co-scientist&rsquo;s top-ranked hypothesis matched our experimentally confirmed mechanism: cf-PICIs hijack diverse phage tails to expand their host range.
       <cite>&mdash; Pen&agrave;d&eacute;s, Gottweis, He et al., <em>Cell</em> (2025)</cite>
     </blockquote>
     <p>
-      Treat that one carefully. Google&rsquo;s own figure caption calls it a
-      <em>re-discovery</em>, the group had published the single-species version of the mechanism in
-      2023, and the company describes the system as &ldquo;an assistive technology&rdquo; that
-      &ldquo;leverage[d] decades of research&rdquo;. The genuinely new step was the cross-species
-      one.
+      Treat that one carefully. It is a held-out match rather than a prospective prediction later
+      confirmed, which is weaker evidence and answers a different question. Google&rsquo;s own
+      figure caption calls it a <em>re-discovery</em>, the group had published the single-species
+      version in 2023, and the company describes the system as &ldquo;an assistive technology&rdquo;
+      that &ldquo;leverage[d] decades of research&rdquo;.
     </p>
 
     <h2>Rebuke 4: &ldquo;nobody has the slightest idea&rdquo; is not a result</h2>
@@ -374,6 +411,11 @@
         6(16). Pen&agrave;d&eacute;s, J. R., Gottweis, J., He, L., et al. (2025). &ldquo;AI mirrors
         experimental science to uncover a mechanism of gene transfer crucial to bacterial
         evolution.&rdquo; <em>Cell</em> 188, 6654&ndash;6665.
+      </li>
+      <li>
+        Hillar, C., and Sommer, F. (2012). &ldquo;Comment on &lsquo;Distilling Free-Form Natural
+        Laws from Experimental Data&rsquo;.&rdquo;
+        <a href="https://arxiv.org/abs/1210.7273">arXiv:1210.7273</a>.
       </li>
       <li>
         Lovelace, A. (1843). Note G to her translation of Menabrea, at

@@ -163,11 +163,15 @@
       impossible.&rdquo;
     </p>
     <p>
-      The expressivity results agree. Merrill and Sabharwal show that transformers allowed a
-      polynomial number of intermediate decoding steps &ldquo;recognize exactly the class of
-      polynomial-time solvable problems&rdquo;. That is a direct answer to Kambhampati: constant
-      time <em>per token</em> is not constant time <em>per problem</em>, because the tokens are
-      the computation.
+      The expressivity results agree, inside their own formal models. In Merrill and
+      Sabharwal&rsquo;s decoder model, which assumes saturated attention, logarithmic precision and
+      projected pre-norm, a polynomial number of intermediate decoding steps
+      &ldquo;recognize exactly the class of polynomial-time solvable problems&rdquo;.
+    </p>
+    <p>
+      That answers Kambhampati on the point he raised: constant time <em>per token</em> is not
+      constant time <em>per problem</em>, because the tokens are the computation. It says what such
+      a model can express, and nothing about what gradient descent will find.
     </p>
 
     <h2>Rebuke 3: the objective is not the mechanism</h2>
@@ -180,9 +184,9 @@
       <cite>&mdash; Chalmers (2023)</cite>
     </blockquote>
     <p>
-      His analogy is the one that should end the argument. Evolution optimises a single scalar, and
-      the cheapest way to raise it turned out to be eyes, wings and world-models. &ldquo;A critic
-      might say, all these systems are doing is maximizing fitness.&rdquo;
+      His analogy is the one that should end the argument. Selection on reproductive success
+      produced eyes, wings and world-models without any of them being specified in advance.
+      &ldquo;A critic might say, all these systems are doing is maximizing fitness.&rdquo;
     </p>
     <p>Scott Alexander names the mistake:</p>
     <blockquote>
@@ -318,8 +322,9 @@
     </blockquote>
     <p>
       Reasoning models go further. DeepSeek-R1 reports that &ldquo;the reasoning abilities of LLMs
-      can be incentivized through pure reinforcement learning&rdquo;, with a reward based
-      &ldquo;solely&hellip; on the correctness of final predictions&rdquo;. <a href="https://openai.com/index/learning-to-reason-with-llms/">OpenAI
+      can be incentivized through pure reinforcement learning&rdquo;. At the R1-Zero stage the
+      rule-based reward scored the answer and the output format rather than scoring the reasoning
+      against a reference chain; the full pipeline then adds cold-start data and further stages. <a href="https://openai.com/index/learning-to-reason-with-llms/">OpenAI
       says</a> o1 &ldquo;learns to recognize and correct its mistakes&rdquo;, which is the second
       thing LeCun&rsquo;s formula forbids.
     </p>
