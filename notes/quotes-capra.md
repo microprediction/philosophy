@@ -55,3 +55,13 @@ Oppenheimer (1954): the electron passage continues "The Buddha has given such an
 No critic was seen making the truncation point. It is ours.
 Capra is not Chopra: the epilogue denies that physicists should meditate and denies a synthesis. Lederman, Bernstein, Wilber and Shimony all concede he writes well and gets much physics right.
 Defender: Victor Mansfield, Physics Today review (SECONDARY): "Capra, a high-energy theorist, has succeeded admirably."
+
+## The demonstration on the page (added 2026-09-20)
+Source: Shields, "Ancient Atomism", Stanford Encyclopedia of Philosophy, section 1. https://plato.stanford.edu/entries/atomism-ancient/ VERIFIED (fetched, read in raw text).
+"Two distinct systems that regard Vedic texts as authoritative, Nyāya and Vaiśeṣika, favoured atomist accounts of the material world."
+"The Nyāya-Vaiśeṣika theory posited different kinds of atoms for each of the elements earth, water, air and fire"
+"Atoms combine into dyads and triads before they aggregate into bodies of a kind that can be perceived."
+"it is possible that the first theories we can describe as atomist were developed in classical Indian philosophy"
+Dating: "it likely has origins several centuries before the common era."
+NOT safely attributable: "eternal". SEP says some Indian systems held atoms are created, destructible, or momentary, unlike the Greek tradition. The page therefore says "indivisible", not "eternal".
+Point: Capra says Eastern thought denies fundamental constituents. Classical Indian philosophy has atomist schools whose particles combine in twos and threes, which is the structure of mesons and baryons. The method produces the theory Capra said could not be true.
