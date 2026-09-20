@@ -1,7 +1,8 @@
 # philosophy (view as [web page](https://dumbphilosophy.com/))
 
 Make a mistake in mathematics and you start again. Make a mistake in software, it's a bug. Make a
-mistake in philosophy and the world has to hear about it endlessly.
+mistake in philosophy and the world has to hear about it endlessly. This site compounds the
+problem.
 
 This repository is the source for [dumbphilosophy.com](https://dumbphilosophy.com/), where famous
 arguments are quoted in their authors' own words and then taken apart. Each page also quotes the
