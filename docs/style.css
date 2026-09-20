@@ -123,6 +123,24 @@ blockquote cite { display: block; font-size: 0.88rem; margin-top: 6px; font-styl
   font-family: Georgia, "Times New Roman", serif; overflow-x: auto;
 }
 
+/* code and demo */
+pre.code, pre.out {
+  border: 1px solid var(--border); border-radius: 6px;
+  padding: 14px 16px; margin: 18px 0; overflow-x: auto;
+  font-size: 0.83rem; line-height: 1.55;
+  font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+}
+pre.code { background: #f3f0ea; }
+pre.out { background: var(--ink); color: #e9e4db; border-color: var(--ink); }
+pre.code .c { color: #8a8378; }
+button.run {
+  font: inherit; font-size: 0.95rem; cursor: pointer;
+  background: var(--accent); color: #fff; border: 0;
+  border-radius: 6px; padding: 9px 18px; margin-top: 4px;
+}
+button.run:hover { background: #8e1d17; }
+button.run:disabled { background: var(--faint); cursor: default; }
+
 /* index listing */
 .rebukes { list-style: none; padding-left: 0; }
 .rebukes li {

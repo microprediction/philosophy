@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Machines Can&rsquo;t Do Abduction &mdash; Dumb Philosophy</title>
+  <meta name="description" content="Inference to the best explanation is said to be beyond any machine. Here is a program that does it, and recovers Kepler's third law in under two seconds." />
+  <link rel="stylesheet" href="./style.css?v=4" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Rebukes</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+        <a href="/godel-abuse.html">G&ouml;del Proves Whatever You Like</a>
+        <a href="/orangutan.html">The Orangutan Argument</a>
+        <a href="/marys-room.html">Mary&rsquo;s Room</a>
+        <a href="/next-token.html">Just Predicting the Next Token</a>
+        <a href="/tao-of-physics.html">The Tao of Physics</a>
+        <a href="/abduction.html">Machines Can&rsquo;t Do Abduction</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>Machines Can&rsquo;t Do Abduction</h1>
+    <p class="subtitle">Guessing the best explanation. There is a program on this page that does it.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendants</dt>
+        <dd>Erik J. Larson, <em>The Myth of Artificial Intelligence</em> (2021); Jerry Fodor, <em>The Mind Doesn&rsquo;t Work That Way</em> (2000)</dd>
+        <dt>Claim</dt>
+        <dd>Inference to the best explanation is neither deduction nor induction, nobody knows how to program it, and so machine intelligence is going nowhere.</dd>
+        <dt>Charge</dt>
+        <dd>Answering a formal literature in two endnotes, and treating an unsolved problem as a closed door.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Guilty as popularly stated, and the defendants agree: both of them wrote &ldquo;not yet&rdquo; and were quoted as though they had written &ldquo;never&rdquo;.</dd>
+      </dl>
+    </div>
+
+    <h2>The argument, in their words</h2>
+    <p>
+      Peirce named the third kind of inference and gave it a form. A surprising fact turns up; you
+      cast about for something that would have made it unsurprising; you suspect that something.
+    </p>
+    <blockquote>
+      The surprising fact, C, is observed;<br />
+      But if A were true, C would be a matter of course,<br />
+      Hence, there is reason to suspect that A is true.
+      <cite>&mdash; Peirce, <em>Collected Papers</em> 5.189</cite>
+    </blockquote>
+    <p>
+      It is the interesting one, because it is the only one that adds anything. Deduction unpacks
+      what you had; induction counts. Abduction guesses.
+    </p>
+    <blockquote>
+      Abduction is the process of forming an explanatory hypothesis. It is the only logical operation which introduces any new idea; for induction does nothing but determine a value, and deduction merely evolves the necessary consequences of a pure hypothesis.
+      <cite>&mdash; Peirce, <em>Collected Papers</em> 5.171</cite>
+    </blockquote>
+    <p>
+      Erik Larson built a book on it. His thesis sentence closes the chapter called
+      &ldquo;Abductive Inference&rdquo;:
+    </p>
+    <blockquote>
+      Neither deduction nor induction illuminates this core mystery of human intelligence. The abductive inference that Peirce proposed long ago does, but we don&rsquo;t know how to program it.
+      <cite>&mdash; Larson (2021), p. 190</cite>
+    </blockquote>
+    <p>And the inferential step the rest of this page is about, from his chapter 12:</p>
+    <blockquote>
+      If deduction is inadequate, and induction is inadequate, then we must have a theory of abduction. Since we don&rsquo;t (yet), we can already conclude that we are not on a path to artificial general intelligence.
+      <cite>&mdash; Larson (2021), p. 173</cite>
+    </blockquote>
+    <p>
+      In the introduction he is blunter: &ldquo;The third type (abduction) makes for general
+      intelligence, and, surprise, no one is working on it&mdash;at all.&rdquo;
+    </p>
+    <p>
+      Jerry Fodor got there first, and identified abduction with the frame problem: the difficulty
+      that anything you know might turn out to bear on anything you are trying to explain.
+    </p>
+    <blockquote>
+      As for me, I&rsquo;m inclined to think that Chicken Little got it right. Abduction really is a terrible problem for cognitive science, one that is unlikely to be solved by any kind of theory we have heard of so far.
+      <cite>&mdash; Fodor (2000), p. 41</cite>
+    </blockquote>
+    <blockquote>
+      The substantive problem is to understand, even to a first approximation, what sort of architecture cognitive science ought to switch to insofar as the goal is to accommodate abduction. As far as I know, however, nobody has the slightest idea.
+      <cite>&mdash; Fodor (2000), p. 47</cite>
+    </blockquote>
+
+    <h2>Rebuke 1: here it is, implemented</h2>
+    <p>
+      Peirce&rsquo;s schema has two clauses and both are mechanical. The candidate must account for
+      the observation. And the accounting must be <em>non-trivial</em>, because something that
+      would fit any observation whatever accounts for nothing.
+    </p>
+    <p>
+      So: take Kepler&rsquo;s six planets as bare pairs of numbers, the distance <em>a</em> and the
+      period <em>T</em>. Enumerate expressions in the two variables, smallest first, and keep the
+      ones that pass both clauses. That is the whole program.
+    </p>
+    <pre class="code">for expr in expressions_by_size():   <span class="c"># a, T, (a*T), (a/(T*T)), ...</span>
+
+    <span class="c"># it must account for the observations</span>
+    if spread(expr, kepler) &gt; TOL:
+        continue
+
+    <span class="c"># and not for just any observations</span>
+    if spread(expr, random_rows) &lt; VACUOUS:
+        continue
+
+    report(expr)</pre>
+    <p>The first <em>continue</em> is Peirce&rsquo;s second line. The second is his first. Run it:</p>
+    <pre class="out">(a*(a*(a/(T*T))))      = 1.000109   spread 1.39e-03   varies on random data: 2.7
+(T/(a*(a*(a/T))))      = 0.999891   spread 1.39e-03   varies on random data: 6.1
+
+2 law(s), 5 leaves, after 120,082 candidates</pre>
+    <p>
+      Both survivors are Kepler&rsquo;s third law, one the reciprocal of the other. Nothing smaller
+      fits, so simplicity alone picked it out of 120,082 candidates. Kepler took about a decade;
+      the Python takes 1.6 seconds.
+    </p>
+    <p>
+      That is the shape of it; the
+      <a href="https://github.com/microprediction/philosophy/blob/main/demos/abduce.py">whole
+      program</a> is forty lines, and the data is six pairs of numbers you can check. Here is the
+      same search running in your browser:
+    </p>
+    <p>
+      <button class="run" id="abduce-run">Run the search</button>
+    </p>
+    <pre class="out" id="abduce-out">(not run yet)</pre>
+    <p>
+      That is a toy, and the next section says exactly how much of a toy. But it is a working
+      instance of the thing said to have no working instances, and it was not hard to write.
+    </p>
+
+    <h2>Rebuke 2: the formal answer is in the endnotes</h2>
+    <p>
+      Choosing the hypothesis that best explains the data, with a penalty for complication, is not
+      an open problem. It is a textbook chapter. David MacKay, in the standard one:
+    </p>
+    <blockquote>
+      Coherent inference (as embodied by Bayesian probability) automatically embodies Occam&rsquo;s razor, quantitatively.
+      <cite>&mdash; MacKay, <em>Information Theory, Inference, and Learning Algorithms</em> (2003), &sect;28.1</cite>
+    </blockquote>
+    <p>
+      MacKay states the rule as &ldquo;Accept the simplest explanation that fits the data&rdquo;,
+      and says why he is bothering: &ldquo;If we wish to make artificial intelligences that
+      interpret data correctly, we must translate this intuitive feeling into a concrete
+      theory.&rdquo; Solomonoff did the universal version, which Vit&aacute;nyi and Li describe in
+      Peirce&rsquo;s own vocabulary: the prior &ldquo;gives most weight to the explanation that
+      compresses the data the most&rdquo;.
+    </p>
+    <p>Larson&rsquo;s reply to all of this appears in an endnote:</p>
+    <blockquote>
+      More recently, circa 2010 up to present day, various probabilistic (in particular, Bayesian) approaches have been adopted as possible routes to bona fide abductive inference. Those systems, however, are not full treatments of abduction either. &hellip; Abduction in name only is not what I mean by abduction, and the systems using the name but not solving the problem won&rsquo;t help us make progress in AI.
+      <cite>&mdash; Larson (2021), introduction, endnote 1</cite>
+    </blockquote>
+    <p>
+      That is the argument in full. There is a second endnote, objecting that Bayesian systems
+      &ldquo;consider only a small subset of known possible hypotheses (sometimes as few as
+      two)&rdquo;, which is a complaint about the size of the search rather than about the
+      principle.
+    </p>
+    <p>
+      The words Solomonoff, Kolmogorov, minimum description, symbolic regression and Eureqa do not
+      occur in the book. Occam occurs once, to be waved off: &ldquo;The ellipse wasn&rsquo;t simpler
+      than all the others&mdash;this wasn&rsquo;t an Occam&rsquo;s razor explanation.&rdquo;
+    </p>
+    <p>
+      That sentence is about the orbit shape, Kepler&rsquo;s first law, and not the law recovered
+      above. But it is the only time the book meets simplicity-driven search, and it meets it with
+      an assertion about the one scientist whose other law a simplicity-driven search reconstructs
+      in under two seconds.
+    </p>
+
+    <h2>Rebuke 3: machines have been doing it since 2009</h2>
+    <p>
+      Two papers appeared back to back in the same issue of <em>Science</em>. In the first, a robot
+      formed hypotheses in genetics and then went and tested them:
+    </p>
+    <blockquote>
+      Adam has autonomously generated functional genomics hypotheses about the yeast Saccharomyces cerevisiae and experimentally tested these hypotheses by using laboratory automation.
+      <cite>&mdash; King et al., &ldquo;The Automation of Science&rdquo;, <em>Science</em> (2009)</cite>
+    </blockquote>
+    <p>
+      They saw the objection coming and answered it inside the paper. Lady Lovelace is named,
+      quoted, and conceded partially: the knowledge Adam produced is &ldquo;of a modest
+      kind&rdquo;, but &ldquo;this knowledge is not trivial, and &hellip; it sheds light on, and
+      perhaps solves, a 50-year-old puzzle&rdquo;.
+    </p>
+    <p>In the second, an algorithm was handed raw motion data and no physics:</p>
+    <blockquote>
+      Without any prior knowledge about physics, kinematics, or geometry, the algorithm discovered Hamiltonians, Lagrangians, and other laws of geometric and momentum conservation.
+      <cite>&mdash; Schmidt and Lipson, <em>Science</em> (2009)</cite>
+    </blockquote>
+    <p>
+      Those authors also identified Larson&rsquo;s objection, seventeen years early, and treated it
+      as an engineering requirement rather than a barrier: &ldquo;To distinguish good conservation
+      law candidates from poor ones, we need a more robust principle than simply invariance
+      alone.&rdquo;
+    </p>
+    <p>
+      More recently a language-model system was given an unsolved problem in microbiology, and
+      its answer was checked in a laboratory. The result is in <em>Cell</em>:
+    </p>
+    <blockquote>
+      Remarkably, the AI co-scientist&rsquo;s top-ranked hypothesis matched our experimentally confirmed mechanism: cf-PICIs hijack diverse phage tails to expand their host range.
+      <cite>&mdash; Pen&agrave;d&eacute;s, Gottweis, He et al., <em>Cell</em> (2025)</cite>
+    </blockquote>
+    <p>
+      Treat that one carefully. Google&rsquo;s own figure caption calls it a
+      <em>re-discovery</em>, the group had published the single-species version of the mechanism in
+      2023, and the company describes the system as &ldquo;an assistive technology&rdquo; that
+      &ldquo;leverage[d] decades of research&rdquo;. The genuinely new step was the cross-species
+      one.
+    </p>
+
+    <h2>Rebuke 4: &ldquo;nobody has the slightest idea&rdquo; is not a result</h2>
+    <p>
+      Pinker answered Fodor in 2005, and the answer applies to the whole family. His first
+      complaint is that the key term is never pinned down:
+    </p>
+    <blockquote>
+      Frustratingly, Fodor never gives a clear definition of what he means by abduction, nor does he work through an example that lays bare exactly how a computational system (Turing machine or other) fails to do something that humans easily do. He often seems to use &ldquo;abduction&rdquo; and its relatives to embrace any really hard problem about cognition, as if the real title of the book was We Don&rsquo;t Understand Everything About the Mind Yet.
+      <cite>&mdash; Pinker, &ldquo;So How Does the Mind Work?&rdquo; (2005), p. 9</cite>
+    </blockquote>
+    <p>
+      His second is an equivocation worth watching for, because Larson repeats it. The examples are
+      always Kepler, Newton, Einstein, and then the conclusion is drawn about minds in general:
+    </p>
+    <blockquote>
+      Fodor identifies abduction with the cumulative accomplishments of the scientific community over millennia. This is very different from the accomplishments of human common sense, so the supposed gap between human cognition and computational models may be illusory.
+      <cite>&mdash; Pinker (2005), abstract</cite>
+    </blockquote>
+    <p>
+      A scientific inference, he points out, is the work of thousands of people over centuries,
+      with the false starts edited out afterwards by the winners. Setting that as the bar for a
+      single machine, and then noting that no single human clears it either, is not a finding about
+      machines.
+    </p>
+    <p>
+      The reviewer Ben Byford made the same diagnosis of Larson&rsquo;s book, in
+      <em>Prometheus</em>: &ldquo;abductive logic and the role it plays in human thought becomes
+      magical and unknowable. The myth of AI becomes the myth of intelligence generally.&rdquo;
+    </p>
+
+    <h2>Rebuke 5: Lovelace asked it in 1843 and Turing answered it in 1950</h2>
+    <p>This is the oldest objection in the subject. Ada Lovelace, in Note G:</p>
+    <blockquote>
+      The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform. It can follow analysis; but it has no power of anticipating any analytical relations or truths.
+      <cite>&mdash; Lovelace (1843)</cite>
+    </blockquote>
+    <p>
+      That last clause is the abduction claim, a century before the word reached AI. Turing gave it
+      a name and three answers. The first is about burden of proof: the evidence available to her
+      &ldquo;did not encourage her to believe&rdquo; the machines had the property, which is not the
+      same as their lacking it.
+    </p>
+    <p>
+      The second is universality, and it is still the strongest thing anyone has said on the
+      subject. Whatever the mysterious faculty is, if some machine has it, a universal computer
+      can be programmed to do the same: &ldquo;The Analytical Engine was a universal digital
+      computer, so that, if its storage capacity and speed were adequate, it could by suitable
+      programming be made to mimic the machine in question.&rdquo;
+    </p>
+    <p>The third is to turn the question round:</p>
+    <blockquote>
+      A variant of Lady Lovelace&rsquo;s objection states that a machine can &lsquo;never do anything really new&rsquo;. This may be parried for a moment with the saw, &lsquo;There is nothing new under the sun&rsquo;. Who can be certain that &lsquo;original work&rsquo; that he has done was not simply the growth of the seed planted in him by teaching, or the effect of following well-known general principles.
+      <cite>&mdash; Turing (1950), p. 450</cite>
+    </blockquote>
+    <p>
+      Seventy-five years later, Fan Hui watched a machine play a move with a one in ten thousand
+      chance of being chosen by a human: &ldquo;It&rsquo;s not a human move. I&rsquo;ve never seen a
+      human play this move,&rdquo; he says. &ldquo;So beautiful.&rdquo;
+    </p>
+
+    <h2>Scope</h2>
+    <p>
+      The program above searches two variables, four operators and at most five leaves. Real
+      abduction searches a space that is not small, and Larson is right that the candidates are
+      &ldquo;effectively unbounded&rdquo;. That is a claim about cost.
+    </p>
+    <p>
+      Cost is what Peirce himself said the problem was. His third requirement on abduction, after
+      accounting for the facts and being testable, is &ldquo;in view of the enormous expensiveness
+      of experimentation in money, time, energy, and thought &hellip; the consideration of
+      economy&rdquo;. The originator framed his own problem as a search budget.
+    </p>
+    <p>
+      None of this shows that any machine now running does science. The best empirical cases are
+      assisted, narrow, or re-discoveries, and their authors say so. The authors of AI Feynman put
+      the honest version in their closing line: &ldquo;We look forward to the day when, for the
+      first time in the history of physics, a computer, just like Kepler, discovers a useful and
+      hitherto unknown physics formula through symbolic regression!&rdquo;
+    </p>
+    <p>
+      What fails is only the step from &ldquo;we have no general theory of this&rdquo; to
+      &ldquo;therefore no machine.&rdquo; That step needs an argument, and neither defendant offers
+      one, because neither defendant actually believes it.
+    </p>
+
+    <h2>In their favour</h2>
+    <p>
+      Larson says so himself, on his first page: &ldquo;The myth is not that true AI is possible. As
+      to that, the future of AI is a scientific unknown.&rdquo; Asked directly whether abduction is
+      doable on a digital computer, he answered that &ldquo;the future of the field is of course a
+      scientific unknown, Some Einstein could come along and illuminate the problem in a way that no
+      one else has yet seen.&rdquo;
+    </p>
+    <p>
+      Fodor conceded the same ground in the same breath as his pessimism: &ldquo;I&rsquo;m quite
+      prepared to admit that it may yet turn out that all cognitive processes reduce to local ones
+      &hellip; But nothing of the sort is currently on offer, and I wouldn&rsquo;t advise your
+      holding your breath.&rdquo; That is a bet about timing, and a reasonable one to have made in
+      2000.
+    </p>
+    <p>
+      Both men also identified a real problem that the formal machinery does not dissolve. Deciding
+      what counts as a candidate, and what counts as better, is genuinely open. The Stanford
+      Encyclopedia agrees: the rule &ldquo;presupposes the notions of candidate explanation and best
+      explanation, neither of which has a straightforward interpretation&rdquo;.
+    </p>
+    <p>
+      And Peirce, who is the only one here who was describing rather than forbidding, was cheerful
+      about how badly it goes: &ldquo;abduction is, after all, nothing but guessing.&rdquo;
+    </p>
+    <p class="muted" style="font-size:0.92rem;">
+      Disclosure: this page was drafted by a machine, which has an interest in the verdict. The
+      program in the first rebuke does not care who wrote it. Run it.
+    </p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Larson, E. J. (2021). <em>The Myth of Artificial Intelligence: Why Computers Can&rsquo;t
+        Think the Way We Do</em>. Belknap/Harvard. The interview quotations are from
+        <a href="https://ea.rna.nl/2021/08/21/review-of-the-myth-of-artificial-intelligence-a-conversation-with-erik-larson/">Gerben
+        Wierda&rsquo;s conversation with him</a>, 21 August 2021.
+      </li>
+      <li>
+        Fodor, J. (2000). <em>The Mind Doesn&rsquo;t Work That Way</em>. MIT Press. Chapters 2 and
+        3.
+      </li>
+      <li>
+        Pinker, S. (2005). &ldquo;So How Does the Mind Work?&rdquo;
+        <a href="https://stevenpinker.com/files/pinker/files/so_how_does_the_mind_work.pdf"><em>Mind
+        &amp; Language</em> 20(1)</a>, 1&ndash;24. The reply to Fodor.
+      </li>
+      <li>
+        Peirce, C. S. <em>Collected Papers</em> 5.171, 5.189 (Harvard lectures, 1903) and
+        7.219&ndash;7.220 (1901), for the schema, the &ldquo;new idea&rdquo; claim, guessing, and
+        economy of research.
+      </li>
+      <li>
+        MacKay, D. J. C. (2003). <em>Information Theory, Inference, and Learning Algorithms</em>,
+        <a href="https://www.inference.org.uk/itprnn/book.pdf">ch. 28</a>. Vit&aacute;nyi, P., and
+        Li, M. (2000). &ldquo;Minimum Description Length Induction, Bayesianism, and Kolmogorov
+        Complexity.&rdquo; <a href="https://arxiv.org/pdf/cs/9901014"><em>IEEE Trans. Inf.
+        Theory</em> 46(2)</a>.
+      </li>
+      <li>
+        King, R. D., et al. (2009). &ldquo;The Automation of Science.&rdquo; <em>Science</em>
+        324(5923), 85&ndash;89. Schmidt, M., and Lipson, H. (2009). &ldquo;Distilling Free-Form
+        Natural Laws from Experimental Data.&rdquo; <em>Science</em> 324(5923), 81&ndash;85.
+      </li>
+      <li>
+        Udrescu, S.-M., and Tegmark, M. (2020). &ldquo;AI Feynman.&rdquo; <em>Science Advances</em>
+        6(16). Pen&agrave;d&eacute;s, J. R., Gottweis, J., He, L., et al. (2025). &ldquo;AI mirrors
+        experimental science to uncover a mechanism of gene transfer crucial to bacterial
+        evolution.&rdquo; <em>Cell</em> 188, 6654&ndash;6665.
+      </li>
+      <li>
+        Lovelace, A. (1843). Note G to her translation of Menabrea, at
+        <a href="https://www.fourmilab.ch/babbage/sketch.html">fourmilab</a>. Turing, A. M. (1950).
+        &ldquo;Computing Machinery and Intelligence.&rdquo; <em>Mind</em> LIX(236), section 6,
+        p. 450.
+      </li>
+      <li>
+        Douven, I. &ldquo;Abduction.&rdquo;
+        <a href="https://plato.stanford.edu/entries/abduction/"><em>Stanford Encyclopedia of
+        Philosophy</em></a>, for the survey and for the objections to formalising it.
+      </li>
+      <li>
+        Byford, B. (2022). Review of <em>The Myth of Artificial Intelligence</em>.
+        <em>Prometheus</em> 38(2). Metz, C. (2016). &ldquo;The Sadness and Beauty of Watching
+        Google&rsquo;s AI Play Go.&rdquo;
+        <a href="https://www.wired.com/2016/03/sadness-beauty-watching-googles-ai-play-go/"><em>Wired</em>,
+        11 March</a>, for Fan Hui.
+      </li>
+      <li>
+        Book quotations from Larson and Fodor were read from scanned full texts rather than print
+        editions, and Turing was read from a facsimile of the original <em>Mind</em> printing.
+        Turing quotes Lovelace without her word &ldquo;whatever&rdquo;, and King et al. in turn
+        quote Turing&rsquo;s version rather than hers.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>

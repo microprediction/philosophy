@@ -1,8 +1,31 @@
 # "Machines can't originate / can't do abduction": sources (internal notes)
 
-Started 2026-09-20. RAW = wording read in downloaded full text. A research agent is sourcing the
-abduction defendants (Larson, Fodor, Peirce, Pearl) and the hypothesis-generating machines
-(Robot Scientist Adam, Eureqa, AI Feynman); its findings go below when they arrive.
+Started 2026-09-20. Page published as docs/abduction.html.
+
+The full research pack (Larson, Fodor, Peirce, Pinker, MacKay, the hypothesis-generating machines,
+and the attribution checks) is the agent report in this session's tool-results directory,
+file toolu_015CrKHkYYEotiMSJ4k7hM27.txt. Key points carried onto the page:
+
+- Larson's thesis: "The abductive inference that Peirce proposed long ago does, but we don't know
+  how to program it." (p. 190), immediately followed by "at least, not yet".
+- Larson's entire treatment of formalised abduction is two endnotes; he calls Bayesian abduction
+  "abduction in name only". The words Solomonoff, Kolmogorov, minimum description, symbolic
+  regression and Eureqa do not occur in the book (agent grepped the OCR: 0 hits each). "Occam"
+  occurs once, to deny that Kepler's ELLIPSE was an Occam's-razor inference. That is the first law,
+  not the third; the page says so explicitly rather than claiming a direct refutation.
+- Fodor's qualification: "I'm quite prepared to admit that it may yet turn out that all cognitive
+  processes reduce to local ones ... But nothing of the sort is currently on offer."
+- Pinker's line: "as if the real title of the book was We Don't Understand Everything About the
+  Mind Yet."
+- MacKay: "Coherent inference (as embodied by Bayesian probability) automatically embodies Occam's
+  razor, quantitatively."
+- PRINT-CHECK ADVISED on all Larson and Fodor quotes: read from archive.org OCR, not print.
+- CORRECTION to an earlier note here: the Wired line "the Google machine made a move that no human
+  ever would" is from a DIFFERENT Metz piece (16 March 2016). Fan Hui's own words are in "The
+  Sadness and Beauty of Watching Google's AI Play Go", 11 March 2016, and are verbatim:
+  "It's not a human move. I've never seen a human play this move," he says. "So beautiful."
+- Turing quotes Lovelace WITHOUT "whatever" (confirmed against a facsimile of the original Mind
+  printing, p. 450). King et al. 2009 quote Turing's version rather than hers.
 
 ## The ancestor: Lovelace's objection
 

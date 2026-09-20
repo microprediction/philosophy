@@ -17,6 +17,7 @@ author's replies to critics, and says what the author got right.
 - [Mary's Room](https://dumbphilosophy.com/marys-room.html). Jackson, 1982. "It seems just obvious" is the whole argument, and its author no longer finds it obvious.
 - [Just Predicting the Next Token](https://dumbphilosophy.com/next-token.html). Bender, Chomsky, Marcus, Chiang, LeCun, Kambhampati. For any algorithm there is a corpus whose best next-token predictor is that algorithm, so the premise rules nothing out.
 - [The Tao of Physics](https://dumbphilosophy.com/tao-of-physics.html). Capra, 1975. He hitched a religion to a theory of physics, and the theory lost the year before he published.
+- [Machines Can't Do Abduction](https://dumbphilosophy.com/abduction.html). Larson, 2021; Fodor, 2000. A forty-line program recovers Kepler's third law from six numbers, and the formal literature appears in the defendant's book as two endnotes.
 
 ## Adding a rebuke
 

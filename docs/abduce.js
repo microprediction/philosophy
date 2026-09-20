@@ -38,3 +38,22 @@ window.abduce=function(){
   return {hits:[], checked:checked, leaves:null};
 };
 })();
+
+document.addEventListener("DOMContentLoaded", function(){
+  const btn = document.getElementById("abduce-run"), out = document.getElementById("abduce-out");
+  if(!btn || !out) return;
+  btn.addEventListener("click", function(){
+    btn.disabled = true; out.textContent = "searching expressions in a and T, smallest first ...";
+    setTimeout(function(){
+      const t0 = performance.now(), r = window.abduce(), ms = Math.round(performance.now()-t0);
+      let s = "";
+      for(const h of r.hits)
+        s += h.expr.padEnd(22) + " = " + h.val.toFixed(6) +
+             "   spread " + h.sr.toExponential(2) +
+             "   varies on random data: " + h.sf.toFixed(1) + "\n";
+      s += "\n" + r.hits.length + " law(s), " + r.leaves + " leaves, after " +
+           r.checked.toLocaleString() + " candidates, " + ms + " ms";
+      out.textContent = s; btn.disabled = false; btn.textContent = "Run it again";
+    }, 30);
+  });
+});
