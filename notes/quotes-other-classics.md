@@ -36,6 +36,7 @@ Some sources are OCR or transcriptions; check punctuation against print before p
 - Diderot (SEP translation): "An Imam could reason just as well this way".
 - Voltaire (via SEP): "That article seems a bit indecent and childish; that notion of gambling, of losses and winnings, does not suit the gravity of the subject".
 - Bostrom, "Pascal's mugging", Analysis 69(3), 2009: "Mugger: Hey, give me your wallet. Pascal: Why on Earth would I want to do that? Mugger: Otherwise I'll shoot you. Pascal: But you don't have a gun. Mugger: Oops! I knew I had forgotten something." Ends: "Pascal hands over his wallet." https://nickbostrom.com/papers/pascal.pdf
+- Hossenfelder, "Make AI Believe in God to Keep Humans Safe, Scientist Argues" (YouTube): the wager turned around, belief installed in the machine for our safety. Quote to pull, and the scientist and paper behind it still to identify. https://www.youtube.com/watch?v=XjrQkohPxOQ
 
 ## Doomsday and simulation
 - Hossenfelder (2017): ""The programmer did it" isn't science. It's not even pseudoscience. It's just words." And: "Most readers will instead correctly conclude that today's intelligencia is full of shit. And I can't even blame them for it." http://backreaction.blogspot.com/2017/03/no-we-probably-dont-live-in-computer.html
