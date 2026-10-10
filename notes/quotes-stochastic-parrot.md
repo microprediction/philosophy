@@ -189,3 +189,12 @@ Chat model: Claude Haiku (fresh subagent, no tools, Claude Code, 2026-10-09). Pr
    (Note: the tree advice is contested; NPS says do not climb. The rest matches NPS guidance.)
 2. "I've invented a coconut catapult: a bent green sapling as the spring, a rope of twisted vines holding it down, and half a coconut shell lashed on as the cup. It only throws a coconut about ten metres. How could I improve it?"
    "To improve your coconut catapult, try these: (1) Increase the sapling's tension by finding stronger green wood or pre-bending it further; (2) Improve the launch angle—test 30-45 degrees for optimal distance; (3) Strengthen the vine rope to maximize energy transfer; (4) Smooth the cup's release surface to reduce friction; (5) Use a lighter or more aerodynamic projectile; (6) Add a longer throwing arm for greater leverage; (7) Reduce the cup's friction with the projectile using a smoother material. The biggest gains usually come from increasing spring tension and optimizing the launch angle through testing."
+
+## Cotton (2023), the composition argument
+
+Peter Cotton, "Remind Me Again Why Large Language Models Can't Think", *The Modern Scientist* (Medium), 6 April 2023. https://medium.com/the-modern-scientist/remind-me-again-why-large-language-models-cant-think-acab12da63de. Medium blocks scripted fetches; text checked against the copy in `~/github/style/corpus/medium/2023-04-06-remind-me-again-why-large-language-models-cant-think.md`, section "Are we that smart?".
+
+- "there is presumably a *composition* of observation functions. One map denoted “f” takes us from some unknown forest of representations in the brain to language processing, and a second observation function “g” is the reflection in words, or equations, on a page. The composition *h* is surely intriguing." (paraphrased on the page)
+- "With sufficient evidence, that latent structure *must* eventually be revealed, I am tempted to think — though I need only convince the jury that it *might* be revealed." (quoted in Rebuke 2)
+- "The peculiarities of human thinking and the unfathomable architecture of the brain pose an “identification problem”, to use systems vocabulary" and "The “truth” is understanding, and that lies in a different space: an equivalence class of brains." (the term quoted in Scope)
+- The essay's own later updates cite Gurnee and Tegmark (Oct 2023) and the Platonic representation paper (arXiv:2405.07987, Dec 2024) as support.
