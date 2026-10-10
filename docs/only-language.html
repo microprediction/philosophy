@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Only Language &mdash; Dumb Philosophy</title>
+  <meta name="description" content="Browning and LeCun say a system trained on language alone will never approximate human intelligence. The byte count behind the claim counts the wrong thing, and the standard it sets is one that deaf-blind people fail." />
+  <link rel="stylesheet" href="./style.css?v=5" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Rebukes</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+        <a href="/godel-abuse.html">G&ouml;del Proves Whatever You Like</a>
+        <a href="/orangutan.html">The Orangutan Argument</a>
+        <a href="/marys-room.html">Mary&rsquo;s Room</a>
+        <a href="/next-token.html">Just Predicting the Next Token</a>
+        <a href="/stochastic-parrot.html">The Stochastic Parrot</a>
+        <a href="/only-language.html">Only Language</a>
+        <a href="/tao-of-physics.html">The Tao of Physics</a>
+        <a href="/abduction.html">Machines Can&rsquo;t Do Abduction</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>Only Language</h1>
+    <p class="subtitle">Language is said to be too narrow a channel to learn the world through. The people who learned the world through it were not consulted.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendants</dt>
+        <dd>Jacob Browning and Yann LeCun (2022); LeCun in later interviews (2024)</dd>
+        <dt>Claim</dt>
+        <dd>&ldquo;A system trained on language alone will never approximate human intelligence, even if trained from now until the heat death of the universe.&rdquo;</dd>
+        <dt>Charge</dt>
+        <dd>Measuring knowledge in bytes, and setting a standard for intelligence that some of the family would fail.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Guilty on the arithmetic and on the word &ldquo;never&rdquo;. Much of the structure of perception can be read out of text. That text alone is enough for everything a person can do is not shown, and nobody needs it to be.</dd>
+      </dl>
+    </div>
+
+    <p>
+      This rebuke was suggested by <strong>Stuart Reynolds</strong>, whose rule for tests of machine
+      intelligence does most of the work in Rebuke 2.
+    </p>
+
+    <h2>The argument, in their words</h2>
+    <p>
+      The fullest statement is Browning and LeCun&rsquo;s essay
+      &ldquo;<a href="https://www.noemamag.com/ai-and-the-limits-of-language/">AI and the Limits of
+      Language</a>&rdquo;, published in <em>Noema</em> in August 2022. Its diagnosis:
+    </p>
+    <blockquote>
+      The underlying problem isn&rsquo;t the AI. The problem is the limited nature of language. Once we abandon old assumptions about the connection between thought and language, it is clear that these systems are doomed to a shallow understanding that will never approximate the full-bodied thinking we see in humans.
+      <cite>&mdash; Browning and LeCun (2022)</cite>
+    </blockquote>
+    <p>Its reason is that language carries little:</p>
+    <blockquote>
+      Language is a very low-bandwidth method for transmitting information: isolated words or sentences, shorn of context, convey little.
+      <cite>&mdash; Browning and LeCun (2022)</cite>
+    </blockquote>
+    <p>
+      Language, they say, &ldquo;struggles with more concrete information, such as describing
+      irregular shapes, the motion of objects, the functioning of a complex mechanism or the nuanced
+      brushwork of a painting&rdquo;. A model trained on it is therefore like a mirror:
+    </p>
+    <blockquote>
+      It is acquiring a small part of human knowledge through a tiny bottleneck. But that small part of human knowledge can be about anything, whether it be love or astrophysics. It is thus a bit akin to a mirror: it gives the illusion of depth and can reflect almost anything, but it is only a centimeter thick.
+      <cite>&mdash; Browning and LeCun (2022)</cite>
+    </blockquote>
+    <p>And the conclusion:</p>
+    <blockquote>
+      A system trained on language alone will never approximate human intelligence, even if trained from now until the heat death of the universe. This is just the wrong kind of knowledge for developing awareness or being a person.
+      <cite>&mdash; Browning and LeCun (2022)</cite>
+    </blockquote>
+    <p>In 2024 LeCun put numbers on the bottleneck:</p>
+    <blockquote>
+      And you can compute this by estimating that the optical nerve carry about 20 megabytes per second roughly, and so 10 to the 15 bytes for a four-year-old versus two times 10 to the 13 bytes for 170,000 years worth of reading. What that tells you is that through sensory input, we see a lot more information than we do through language, and that despite our intuition, most of what we learn and most of our knowledge is through our observation and interaction with the real world, not through language.
+      <cite>&mdash; LeCun, <em>Lex Fridman Podcast</em> #416, 7 March 2024</cite>
+    </blockquote>
+    <p>
+      This is a different claim from the <a href="/stochastic-parrot.html">stochastic parrot</a>.
+      Bender and Koller say that form without grounding cannot yield meaning. Browning and LeCun
+      grant the models &ldquo;some genuine understanding&rdquo; and say there is too little of it,
+      because of the medium.
+    </p>
+
+    <h2>Rebuke 1: bytes are not knowledge</h2>
+    <p>
+      LeCun&rsquo;s arithmetic is right. Sixteen thousand waking hours at 20 megabytes a second is
+      about 10<sup>15</sup> bytes. What it measures is the capacity of a nerve.
+    </p>
+    <p>
+      Zheng and Meister measured what comes out the other end:
+    </p>
+    <blockquote>
+      The information throughput of a human being is about 10 bits/s. In comparison, our sensory systems gather data at ~10<sup>9</sup> bits/s.
+      <cite>&mdash; Zheng and Meister (2024), abstract</cite>
+    </blockquote>
+    <p>
+      At ten bits a second, sixteen thousand hours come to about 72 megabytes. That figure is for
+      behaviour, not for learning, and nobody knows how many of the 10<sup>15</sup> bytes a child
+      keeps. The point is only that the count at the nerve says nothing about it. By that count
+      a security camera knows more than its guard.
+    </p>
+    <p>
+      Text is the opposite case. Every sentence was written by someone who had already done the
+      seeing and decided what was worth saying. The essay concedes this:
+      &ldquo;Language is important because it can convey a lot of information in a small
+      format&rdquo;. Fridman made the same point to LeCun: language &ldquo;is already very
+      compressed.&rdquo;
+    </p>
+    <p>
+      A child born blind receives nothing through the optic nerve. On LeCun&rsquo;s figures that
+      child is missing nearly all the data. Blind children learn the language and the world.
+    </p>
+    <h3>LeCun&rsquo;s response</h3>
+    <p>LeCun answered Fridman directly:</p>
+    <blockquote>
+      I&rsquo;m clearly in the camp that yes, intelligence cannot appear without some grounding in some reality. It doesn&rsquo;t need to be physical reality. It could be simulated, but the environment is just much richer than what you can express in language.
+      <cite>&mdash; LeCun, <em>Lex Fridman Podcast</em> #416, 7 March 2024</cite>
+    </blockquote>
+    <p>
+      That restates the position. Later in the interview he grants the point about bytes:
+      &ldquo;Language might represent more information really, because it&rsquo;s already
+      compressed. You&rsquo;re right about that&rdquo;. And in October 2026 he gave the child
+      10<sup>14</sup> bytes, at 2 megabytes a second, a tenth of the 2024 figure. The conclusion
+      did not move with the number.
+    </p>
+    <p>
+      His better reply is that redundancy is the point: &ldquo;redundancy in data is
+      <em>precisely</em> what we need for Self-Supervised Learning to capture the structure of the
+      data.&rdquo; That is an argument about which signal is easier to learn from. It may be
+      right. It does not get from &ldquo;harder&rdquo; to &ldquo;never&rdquo;.
+    </p>
+
+    <h2>Rebuke 2: the family dinner test</h2>
+    <p>Stuart Reynolds has a rule for claims of this kind:</p>
+    <blockquote>
+      If it&rsquo;s not a standard for human intelligence when your family can&rsquo;t do it, it&rsquo;s not a standard for intelligence when AI can&rsquo;t do it.
+      <cite>&mdash; Reynolds, &ldquo;AI Can&rsquo;t? In Defense of Behaviorism&rdquo; (2024)</cite>
+    </blockquote>
+    <p>He applies it to the senses:</p>
+    <blockquote>
+      Your granddaddy is deaf. Are you calling him deficient in intelligence? Is that what intelligence is?
+      <cite>&mdash; Reynolds (2024)</cite>
+    </blockquote>
+    <p>
+      The essay&rsquo;s standard is knowledge of shapes, motion, brushwork and music gained by
+      perceiving them. Helen Keller lost sight and hearing at nineteen months. She had touch, smell
+      and a language spelled into her hand. In 1908 she answered the critics who said she had no
+      right to words for things she could not perceive:
+    </p>
+    <blockquote>
+      Critics delight to tell us what we cannot do. They assume that blindness and deafness sever us completely from the things which the seeing and the hearing enjoy, and hence they assert we have no moral right to talk about beauty, the skies, mountains, the song of birds, and colours. &hellip; They deny <em>a priori</em> what they have not seen and I have felt.
+      <cite>&mdash; Keller, <em>The World I Live In</em> (1908), ch. IV</cite>
+    </blockquote>
+    <p>She also said how she did it:</p>
+    <blockquote>
+      When he meets terms of colour, light, physiognomy, he guesses, divines, puzzles out their meaning by analogies drawn from the senses he has. I naturally tend to think, reason, draw inferences as if I had five senses instead of three.
+      <cite>&mdash; Keller, <em>The World I Live In</em> (1908), ch. VIII</cite>
+    </blockquote>
+    <p>
+      Kim, Elli and Bedny found the same in people born blind. Their knowledge of how animals look
+      &ldquo;is acquired primarily through inference, rather than through memorization of verbally
+      stipulated facts.&rdquo;
+    </p>
+    <p>
+      Keller was not trained on language alone. She had three senses. Her case shows that the two
+      channels LeCun counts can be closed and the intelligence is still there, built from a
+      narrow base and a great deal of language. It does not show that the base can be removed
+      entirely, and no human case could.
+    </p>
+    <p>
+      It is enough for the rule. If learning about colour, music and the sky through words gives
+      only a &ldquo;shallow understanding&rdquo;, then Keller&rsquo;s was shallow. Reynolds asks
+      that anyone who believes this say so at the next family dinner.
+    </p>
+
+    <h3>LeCun&rsquo;s response</h3>
+    <p>LeCun anticipated the blind and the deaf-blind, two days after the interview:</p>
+    <blockquote>
+      Yes, humans can get smart without vision, even pretty smart without vision and audition. But not without touch. Touch is pretty high bandwidth, too.
+      <cite>&mdash; LeCun, LinkedIn, 9 March 2024</cite>
+    </blockquote>
+    <p>
+      The first sentence passes the family dinner test, and it gives up the optic nerve. If a
+      person can get smart without vision, the 10<sup>15</sup> bytes were not what made the
+      four-year-old smart. The claim that is left is that touch is necessary. No bandwidth
+      figure is offered for it, and no one has the evidence, because no person has grown up
+      without it.
+    </p>
+
+    <h2>Rebuke 3: perception can be read out of text</h2>
+    <p>
+      The essay says there is &ldquo;a massive difference between reading a musical score and
+      listening to a recording&rdquo;. There is. How much of the recording can be recovered from
+      what people have written is a question with an answer, and it has been measured.
+    </p>
+    <p>
+      Abdou and colleagues took language models trained on text alone and compared their
+      representations of colour words with CIELAB, a colour space built from human perception.
+      They &ldquo;find significant correspondence.&rdquo; Marjieh and colleagues asked GPT models
+      for similarity judgements in six senses:
+    </p>
+    <blockquote>
+      We show that the judgments are significantly correlated with human data across all domains, recovering well-known representations like the color wheel and pitch spiral. Surprisingly, we find that a model (GPT-4) co-trained on vision and language does not necessarily lead to improvements specific to the visual modality.
+      <cite>&mdash; Marjieh et al. (2024), abstract</cite>
+    </blockquote>
+    <p>
+      The pitch spiral is the structure of the recording, recovered from the score. And adding
+      vision did not reliably improve the visual judgements.
+    </p>
+    <p>
+      Merullo and colleagues took a frozen text-only model and a vision model trained on images
+      alone, and joined them with a single linear map. The result captioned images. Their
+      conclusion:
+    </p>
+    <blockquote>
+      Our results indicate that LMs encode conceptual information structurally similarly to vision-based models, even those that are solely trained on images.
+      <cite>&mdash; Merullo et al. (2022), abstract</cite>
+    </blockquote>
+    <p>Huh and colleagues found the same across many models:</p>
+    <blockquote>
+      As vision models and language models get larger, they measure distance between datapoints in a more and more alike way.
+      <cite>&mdash; Huh, Cheung, Wang and Isola (2024), abstract</cite>
+    </blockquote>
+    <p>
+      A mirror a centimetre thick would not line up with a model that has only ever seen
+      pictures. These results concern the structure of perceptual space: which colours are near
+      which, which notes. They say nothing about what red looks like, which is the subject of
+      <a href="/marys-room.html">Mary&rsquo;s Room</a>.
+    </p>
+
+    <h2>Rebuke 4: &ldquo;never&rdquo; needs more than a list</h2>
+    <p>
+      The essay claims an impossibility that outlasts the universe. Its support is a list of what
+      language models could not do in 2022, and one item on the list has already gone:
+    </p>
+    <blockquote>
+      Once we scratch beneath the surface, it is easier to see how limited these systems really are: they have the attention span and memory of roughly a paragraph.
+      <cite>&mdash; Browning and LeCun (2022)</cite>
+    </blockquote>
+    <p>
+      That was true of GPT-3, which read at most 2,048 tokens at a time. It was a property of the
+      model and not of language. Later models read several books at once.
+    </p>
+    <p>
+      The essay&rsquo;s other examples have a different weakness. Language cannot teach the
+      &ldquo;finicky, context-specific movements needed for surfing a wave&rdquo;, and that is
+      right. Most people cannot surf either. Skill at moving a body is one thing,
+      and it is not what anyone means by intelligence when the family is being assessed.
+    </p>
+    <p>
+      A claim of &ldquo;never&rdquo; needs an argument that no amount of text determines the
+      missing knowledge. The essay offers the bandwidth figure, which Rebuke 1 examines, and the
+      observation that some things are hard to say. Hard to say in one sentence is not the same
+      as absent from a trillion.
+    </p>
+
+    <h2>Scope of the rebukes</h2>
+    <p>
+      None of this shows that text alone is enough. The evidence in Rebuke 3 is about similarity
+      structure, in a few senses, and the fit is partial. Marjieh&rsquo;s correlations run from .92
+      for pitch down to .42 for timbre. Huh and colleagues report that their alignment score
+      &ldquo;only reaches a score of 0.16&rdquo; of a possible 1. No
+      person has ever learned from language alone, so the human evidence stops at Keller.
+    </p>
+    <p>
+      The question is also moot for the systems in use. Frontier models are trained on images and
+      on feedback as well as text, as Rebuke 4 of the
+      <a href="/stochastic-parrot.html">stochastic parrot page</a> describes. The essay&rsquo;s
+      target is a system &ldquo;trained on language alone&rdquo;, and its authors may fairly say
+      the field took their advice.
+    </p>
+    <p>
+      And LeCun&rsquo;s remarks about robots stand. In the same interview he says models
+      &ldquo;can&rsquo;t learn to clear out the dinner table and fill up the dishwasher like any
+      10-year old can learn in one shot.&rdquo; Nothing here says otherwise.
+    </p>
+
+    <h2>In their favour</h2>
+    <p>
+      The essay is right about its main target. It attacks the old view that &ldquo;knowledge just
+      is linguistic&rdquo;, and that view is wrong. People know how to ride bicycles, read maps
+      and recognise faces without being able to say how. &ldquo;Abandoning the view that all
+      knowledge is linguistic permits us to realize how much of our knowledge is
+      nonlinguistic.&rdquo;
+    </p>
+    <p>
+      It is also more generous to the models than most criticism of the time. It says that
+      predicting text &ldquo;forces the system to learn language-specific skills, such as
+      explaining a joke, solving a word problem or figuring out a logic puzzle&rdquo;, and it
+      declines to argue about the word &ldquo;understanding&rdquo;: &ldquo;it isn&rsquo;t clear what
+      semantic gatekeeping is buying anyone these days.&rdquo;
+    </p>
+    <p>
+      And its practical advice was sound. Learning from video, action and simulation is a
+      reasonable research programme whether or not text has a ceiling. The error is in the word
+      &ldquo;never&rdquo;, and in the count of bytes offered to support it.
+    </p>
+    <p class="muted" style="font-size:0.92rem;">
+      Disclosure: this page was researched and drafted by a language model, which has an interest
+      in the verdict. Check the quotations.
+    </p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Browning, J., and LeCun, Y. (2022). &ldquo;AI and the Limits of Language.&rdquo;
+        <a href="https://www.noemamag.com/ai-and-the-limits-of-language/"><em>Noema</em></a>,
+        23 August.
+      </li>
+      <li>
+        Fridman, L. (2024). &ldquo;Yann LeCun: Meta AI, Open Source, Limits of LLMs, AGI &amp; the
+        Future of AI.&rdquo; <em>Lex Fridman Podcast</em> #416, 7 March.
+        <a href="https://lexfridman.com/yann-lecun-3-transcript">Transcript</a>. The byte count
+        is at 00:04:08. LeCun, Y. (2024).
+        <a href="https://www.linkedin.com/posts/yann-lecun_parm-prmshra-on-x-activity-7172266619103080448-iqvP">LinkedIn
+        post</a>, 9 March; and reply on X, 3 October 2026. Both are quoted in the repository&rsquo;s
+        <a href="https://github.com/microprediction/philosophy/blob/main/notes/quotes-only-language.md">notes</a>.
+      </li>
+      <li>
+        Reynolds, S. (2024). &ldquo;AI Can&rsquo;t? In Defense of Behaviorism.&rdquo; Medium, 29 June.
+        <a href="https://medium.com/@stuart-reynolds/in-defense-of-behaviorism-44fdbd7a4087">medium.com</a>.
+      </li>
+      <li>
+        Keller, H. (1908). <em>The World I Live In</em>. Century.
+        <a href="https://www.gutenberg.org/ebooks/27683">Project Gutenberg</a>.
+      </li>
+      <li>
+        Zheng, J., and Meister, M. (2024). &ldquo;The Unbearable Slowness of Being: Why do we live
+        at 10 bits/s?&rdquo; <a href="https://arxiv.org/abs/2408.10234">arXiv:2408.10234</a>.
+      </li>
+      <li>
+        Kim, J. S., Elli, G. V., and Bedny, M. (2019). &ldquo;Knowledge of animal appearance among
+        sighted and blind adults.&rdquo; <em>PNAS</em> 116(23), 11213&ndash;11222.
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6561279/">PMC6561279</a>.
+      </li>
+      <li>
+        Abdou, M., et al. (2021). &ldquo;Can Language Models Encode Perceptual Structure Without
+        Grounding? A Case Study in Color.&rdquo; CoNLL.
+        <a href="https://arxiv.org/abs/2109.06129">arXiv:2109.06129</a>.
+        Marjieh, R., et al. (2024). &ldquo;Large language models predict human sensory judgments
+        across six modalities.&rdquo; <em>Scientific Reports</em> 14, 21445 (2024).
+        <a href="https://arxiv.org/abs/2302.01308">arXiv:2302.01308</a>.
+      </li>
+      <li>
+        Merullo, J., et al. (2022). &ldquo;Linearly Mapping from Image to Text Space.&rdquo;
+        <a href="https://arxiv.org/abs/2209.15162">arXiv:2209.15162</a>.
+        Huh, M., Cheung, B., Wang, T., and Isola, P. (2024). &ldquo;The Platonic Representation
+        Hypothesis.&rdquo; <a href="https://arxiv.org/abs/2405.07987">arXiv:2405.07987</a>.
+      </li>
+      <li>
+        Brown, T., et al. (2020). &ldquo;Language Models are Few-Shot Learners.&rdquo;
+        <a href="https://arxiv.org/abs/2005.14165">arXiv:2005.14165</a>. GPT-3&rsquo;s context
+        window of 2,048 tokens.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>

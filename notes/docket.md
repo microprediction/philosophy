@@ -11,10 +11,12 @@ Candidate targets. Being listed here is an accusation, not a conviction.
 - Zeno's paradoxes — Zeno, c. 450 BC
 - "Only language": the claim that a system which deals only in language cannot think or understand. Raised by, and to be credited to, **Stuart Reynolds** (issue #33). See "Only language" below.
 
-Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, The Tao of Physics.
+Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", The Tao of Physics.
 Sourced and waiting: zombies, the ontological argument, Pascal, doomsday and simulation (see the quotes-*.md files).
 
 ## "Only language" (issue #33; credit Stuart Reynolds)
+
+Done 2026-10-09 as docs/only-language.html, written from the essay alone. The phrase "only language" is not attributed to Reynolds on the page, because his LinkedIn reply was never read. Defendants are Browning and LeCun (Noema 2022) and LeCun on Fridman #416; quotes were checked against the fetched pages and arXiv abstracts.
 
 - Source of the suggestion: Stuart Reynolds's reply in the thread under Piotr Migdał's LinkedIn post "Pure mathematics, in my view, is not science, not craft - it is art" (8 Oct 2026), https://lnkd.in/p/gUMc45Jc. **His reply is not publicly readable** (LinkedIn shows only top-level comments without a login), so his wording is still to be copied in. Do not paraphrase him from memory.
 - His essay: Stuart Reynolds, "AI Can't? In Defense of Behaviorism", Medium, 29 June 2024, https://medium.com/@stuart-reynolds/in-defense-of-behaviorism-44fdbd7a4087. Medium blocks scripted fetches; the quotes below are from the live text Peter pasted on 2026-10-09. Quote briefly and link; do not reproduce the essay.
