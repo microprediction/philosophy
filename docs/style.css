@@ -171,3 +171,11 @@ footer {
   .charge-sheet dl { grid-template-columns: 1fr; gap: 0; }
   .charge-sheet dd { margin-bottom: 8px; }
 }
+
+/* Evidence tables */
+.table-wrap { overflow-x: auto; margin: 1.2em 0; }
+table.evidence { border-collapse: collapse; width: 100%; font-size: 0.9rem; background: var(--panel); }
+table.evidence th, table.evidence td {
+  border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top;
+}
+table.evidence th { color: var(--muted); font-weight: 600; }

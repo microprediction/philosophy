@@ -128,7 +128,12 @@ Bender: "The message that I always bring when I have a chance is that, when the 
 Bender on sycophancy: "that kind of response has to do with additional layers of training past the original pre-training."
 The interview links a May 2026 Medium post, "Stochastic Parrots: Frequently Unasked Questions"
 (https://medium.com/@emilymenonbender/stochastic-parrots-frequently-unasked-questions-49c2e7d22d11).
-NOT READ: Medium and the Wayback copy both blocked the fetch. Do not quote it until checked.
+Read 2026-10-09 in a browser (Medium blocks scripted fetches). Phrases used on the page, checked against the post:
+- under "It can't be a stochastic parrot, it's come up with something new!": "not usually a direct regurgitation of their input, but rather a remix of it"
+- under "The stochastic parrots argument [is wrong, is out of date, etc]": "It's a description or a metaphor, again an attempt to make vivid what language mimicking machines do."
+- under "The stochastic parrots hypothesis has been disproved": not an empirical hypothesis, so neither "disproved" nor "unfalsifiable"; the closest thing is the argument in Bender and Koller 2020.
+- under "They're not stochastic parrots because they're multi-modal models now": image/text models "can be argued to meet the definition of understanding in Bender & Koller 2020 — albeit in an extremely thin way"; coined for "systems trained only on linguistic form"; readers must not project their rich, socially situated sense-making onto the model.
+- under "Stochastic parrot is an insult": the phrase draws on the verb to parrot, "to repeat back without understanding".
 
 ## Evidence
 

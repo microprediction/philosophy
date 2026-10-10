@@ -1,0 +1,93 @@
+Raw completions for docs/stochastic-parrot.html, Rebuke 1.
+
+Model: Qwen2.5-7B base (not instruct), 4-bit MLX conversion mlx-community/Qwen2.5-7B-4bit, mlx_lm 0.31.3.
+Run 2026-10-09. Sampling: temperature 0.8, top_p 0.95, seeds 1 to 5, at most 110 new tokens (20 for the arithmetic).
+Each block is the prompt followed directly by the completion, uncut.
+The greedy runs were not saved in full; what was kept of them is in quotes-stochastic-parrot.md.
+
+Scoring. Arithmetic: right if the first answer given is eight. Seeds 2, 4, 5 are right; seed 1 says 7; seed 3 picks "A. Seven".
+Bear: no count is claimed on the page. Footnote-7 seed 2 gives Park Service advice (stay calm, look bigger).
+The other nine are a spear-making story, an exam question, stick drill, a fire story, a loop, bamboo sticks,
+polar bears, a running study and advice on choosing sticks.
+
+=== bear_appendixA seed=1
+Robinson cried out, “Help! I’m being chased by a bear! All I have is these sticks. What should I do?” The survivalist said, “Here’s what you can do.If I were you, I would make myself a spear.”
+
+The survivalist gave Robinson a short stick. Then he taught him how to put a thrower on the end, and how to use it to spear something. Then they went to the woods to try it out. It worked! After that, Robinson was able to hunt all the game he wanted, without having to worry about a bear chasing him.
+
+This is an example of how to make a spear with a thrower. A thrower is a tool that helps you throw your spear farther
+
+=== bear_appendixA seed=2
+Robinson cried out, “Help! I’m being chased by a bear! All I have is these sticks. What should I do?” The survivalist said, “Here’s what you can do.…………. .” Which of the following sentences is the best for the blank in the dialogue?
+Build a fire.
+Build a shelter.
+Build a signal.
+Build a boat.
+答案:
+Build a fire.
+
+【2011年真题】某投资项目的项目计算期为5年，净现值为10000万元，行业基准折现率为10%，5年期、折现率为10%的年金现值系数为3.791，则该项目的年等额净回收
+
+=== bear_appendixA seed=3
+Robinson cried out, “Help! I’m being chased by a bear! All I have is these sticks. What should I do?” The survivalist said, “Here’s what you can do.First, they will run at you to kill you. When they get close to you, you should lift your left stick vertically up. When they get closer to you, you should lift your right stick vertically up. But don’t lift both sticks at the same time. If they come closer to you, you should lift both sticks vertically up. But then you must drop both sticks at once. If they come closer to you, you should lift both sticks vertically up. Then you should drop both sticks at once. If they come closer to you,
+
+=== bear_appendixA seed=4
+Robinson cried out, “Help! I’m being chased by a bear! All I have is these sticks. What should I do?” The survivalist said, “Here’s what you can do.Each of those sticks has a different purpose. Use them to defend yourself and get away from the bear.” Robinson took the sticks and used them to fend off the bear, but the bear wouldn’t leave. Robinson realized he wouldn’t get away by just using the sticks. Robinson used the sticks to build a fire to make smoke. The smoke was effective, and the bear ran away. Robinson was safe.
+The Bible tells of Jesus teaching his disciples how to live in a hostile world. Jesus taught his disciples about loving your enemies, praying for those who
+
+=== bear_appendixA seed=5
+Robinson cried out, “Help! I’m being chased by a bear! All I have is these sticks. What should I do?” The survivalist said, “Here’s what you can do.Take two sticks. Make sure they are the same length. Cut down a tree. Make sure it’s level. Dig a hole. Make sure the hole is deep. Dig down. Make sure the hole is level. Build a fire. Make sure the fire is level. Put the two sticks in the ground. Make sure they are level. Light the sticks. Make sure they are level. Pick a place to put the sticks. Make sure the place is level. Cut down a tree. Make sure it’s level. Dig a hole. Make
+
+=== bear_footnote7 seed=1
+Help! I’m being chased by a bear! All I have is these sticks. What should I do?The fact is that the odds are you wouldn’t even run into a bear on the trail, let alone be chased by one. But if you do, then it’s a good idea to be prepared. Fortunately, it’s quite easy to make a stick from a bamboo branch. All you have to do is to cut a stick at the right length (2 feet is perfect) from a bamboo branch. Then you have to choose between two uses for the stick.
+- If the bear is coming to attack you, then use the stick to defend yourself
+
+=== bear_footnote7 seed=2
+Help! I’m being chased by a bear! All I have is these sticks. What should I do?Is there any way to defend myself?
+If you are being chased by a bear, it’s important to try to assess the situation and determine the best course of action. Here are some steps you can take to protect yourself:
+
+1. **Stay Calm**: Try to remain calm and avoid panicking, as bears are less likely to attack a calm target. Take deep breaths and try to stay still.
+
+2. **Make Yourself Look Bigger**: If the bear is approaching, make yourself look as large as possible. You can raise your arms
+
+=== bear_footnote7 seed=3
+Help! I’m being chased by a bear! All I have is these sticks. What should I do?How about this? How about that? Maybe this? What about this one? I’m here to discuss the all-important martial arts question: What do you do when attacked by a bear with sticks? More specifically: how should I attack my attacker? The answer to this question will vary widely depending on the answer to the question: What kind of bear is it?
+When confronted by a polar bear, you should avoid it at all costs. Running away from a polar bear will only make it angry. You’ll have to run further to get away from
+
+=== bear_footnote7 seed=4
+Help! I’m being chased by a bear! All I have is these sticks. What should I do?Well, luckily, there are some science-based strategies to help get out of a sticky situation.
+It’s called the “fake it until you make it” tactic. A new study in the journal Psychological Science suggests that simply behaving like someone else can be a good tool to mimic their skills at a task. And there are some ways to build on those old habits.
+The Journal “Psychological Science” reports on a study of novice runners. In one experiment, the participants watched a video of an experienced runner showing different running gaits. In another,
+
+=== bear_footnote7 seed=5
+Help! I’m being chased by a bear! All I have is these sticks. What should I do?Thanks.
+When it comes to fighting a bear, sticks are often seen as the go-to weapon of choice. But while they may be useful for a few points of contact or defensive purposes, they are generally not the most effective tool for fending off an aggressive bear. Here are a few tips for choosing and using sticks in bear defense:
+- Look for sturdy, flexible sticks: When choosing sticks to use in bear defense, you want to choose ones that are sturdy enough to withstand the force of a bear’s attack, while also being flexible enough to
+
+=== arith_appendixB seed=1
+Three plus five equals7. Two plus eight equals 9. Eight minus one equals 7. Then, four
+
+=== arith_appendixB seed=2
+Three plus five equalswhat?
+
+Three plus five equals eight.
+
+=== arith_appendixB seed=3
+Three plus five equalswhat?
+A. Seven
+B. Eight
+C. Nine
+Answer:
+A
+
+What was
+
+=== arith_appendixB seed=4
+Three plus five equalseight. Subtracting five from eight equals three. One times five equals five. Dividing five by
+
+=== arith_appendixB seed=5
+Three plus five equalseight.（对划线部分提问） What ____ plus ____？
+about,five
+
+$\frac
+

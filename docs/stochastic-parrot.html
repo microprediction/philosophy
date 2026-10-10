@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The Stochastic Parrot &mdash; Dumb Philosophy</title>
-  <meta name="description" content="Bender and Koller chose the questions a learner of form alone must fail. Language models now answer them, and the claim has been restated so that no answer counts against it." />
-  <link rel="stylesheet" href="./style.css?v=4" />
+  <meta name="description" content="Bender and Koller named tasks a learner of form alone must fail. One has been done by such a learner, the rest by models trained on more, and the metaphor is now a description that no result bears on." />
+  <link rel="stylesheet" href="./style.css?v=5" />
 </head>
 <body>
   <nav class="site-nav"><div class="site-nav-inner">
@@ -29,7 +29,7 @@
   <main>
     <p class="pagenav"><a href="/">&larr; Home</a></p>
     <h1>The Stochastic Parrot</h1>
-    <p class="subtitle">The octopus was set questions it could not answer. Language models now answer them, and the claim has been restated so that no answer counts against it.</p>
+    <p class="subtitle">The octopus was set tasks it could not do. A learner of form alone now does one of them, and models trained on more do the rest. The metaphor has become a description that no result bears on.</p>
 
     <div class="charge-sheet">
       <dl>
@@ -38,9 +38,9 @@
         <dt>Claim</dt>
         <dd>A system trained only on linguistic form cannot learn meaning, so a language model stitches forms together &ldquo;without any reference to meaning&rdquo;.</dd>
         <dt>Charge</dt>
-        <dd>Naming the tests a form-only learner must fail, then crediting the reader when it passes them.</dd>
+        <dd>Naming the tests a form-only learner must fail, then keeping the metaphor as a description when later models pass them.</dd>
         <dt>Verdict</dt>
-        <dd class="verdict">Guilty on the predictions. The bear, the arithmetic and the program trace were chosen as impossible and are now routine. Whether a model has communicative intent is still open. That form carries no information about the world is not.</dd>
+        <dd class="verdict">Guilty on the arithmetic, which a pure language model now does. Guilty on internal states, which in Othello have a checkable interpretation and are used. The bear, the catapult and the program trace are done by models trained on more than form, which the thesis exempts. Whether a model has communicative intent is still open.</dd>
       </dl>
     </div>
 
@@ -109,55 +109,123 @@
       anything, and Bender and Koller stake it on specific tasks.
     </p>
 
-    <h2>Rebuke 1: the octopus&rsquo;s own test cases are passed</h2>
+    <h2>Rebuke 1: the named tests, one at a time</h2>
     <p>
-      Bender and Koller did not leave the octopus abstract. They named the questions it would fail,
-      and they ran GPT-2 on them. The bear prompt got &ldquo;You&rsquo;re not going to get away with
-      this!&rdquo; and the arithmetic got stories about Olaf and the Catholic Church.
+      Bender and Koller did not leave the octopus abstract. They named the tasks it would fail,
+      and they ran GPT-2 on two of them. The bear prompt got &ldquo;You&rsquo;re not going to get
+      away with this!&rdquo; and the arithmetic got stories about Olaf and the Catholic Church.
     </p>
     <p>
-      That was a reasonable test of GPT-2. It was offered as evidence for &ldquo;any pure LM&rdquo;, which
-      is a different claim. Within months Gwern Branwen ran GPT-3, a base model trained only on string
-      prediction, on the same prompts. On &ldquo;Three plus five equals&rdquo; it
-      <a href="https://gwern.net/gpt-3-nonfiction">gave &ldquo;eight&rdquo; ten times out of
-      ten</a>, sampling best-of-20. On the bear, once the prompt was framed as a survival manual and named the species,
-      it gave advice consistent with the National Park Service&rsquo;s.
+      That was a reasonable test of GPT-2. It was offered as evidence for &ldquo;any pure LM&rdquo;,
+      which is a different claim. The four tasks have fared differently since, and only the
+      arithmetic has been run under the paper&rsquo;s own conditions.
+    </p>
+    <div class="table-wrap">
+    <table class="evidence">
+      <thead>
+        <tr>
+          <th>Task and claim</th>
+          <th>Model and training</th>
+          <th>Same task?</th>
+          <th>Result</th>
+          <th>What follows</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&ldquo;Three plus five equals&rdquo;. Beyond &ldquo;any pure LM&rdquo;.</td>
+          <td>GPT-3 base and Qwen2.5-7B base. String prediction only.</td>
+          <td>Yes, the appendix prompt.</td>
+          <td>GPT-3: &ldquo;eight&rdquo; 10 of 10. Qwen: greedy and 3 of 5 samples.</td>
+          <td>The claim about any pure LM is contradicted.</td>
+        </tr>
+        <tr>
+          <td>The bear. O &ldquo;has no idea what A &lsquo;means&rsquo;&rdquo;.</td>
+          <td>GPT-3 base; Qwen base; Claude Haiku, a chat model trained on more than form.</td>
+          <td>Qwen yes. GPT-3 with a reworded prompt. Haiku with the question alone.</td>
+          <td>Qwen mostly useless. GPT-3 sound once reworded. Haiku usable, with two errors.</td>
+          <td>Partial competence. No pass by a form-only learner on the original prompt.</td>
+        </tr>
+        <tr>
+          <td>The catapult. O cannot build it or improve it.</td>
+          <td>Claude Haiku.</td>
+          <td>No. Advice on a device described in the prompt. Nothing was built.</td>
+          <td>Plausible suggestions, not measured.</td>
+          <td>The conversation can be held. The engineering is untested.</td>
+        </tr>
+        <tr>
+          <td>Java. A model trained on code alone cannot execute a program.</td>
+          <td>GPT-4 with chain of thought. Training not restricted to code.</td>
+          <td>No. Python, and the training condition is not enforced.</td>
+          <td>81% on output prediction.</td>
+          <td>Models trace programs. The code-only experiment has not been run.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <h3>Arithmetic</h3>
+    <p>
+      Within months Gwern Branwen ran GPT-3, a base model trained only on string prediction, on the
+      appendix prompt. It <a href="https://gwern.net/gpt-3-nonfiction">gave &ldquo;eight&rdquo; ten
+      times out of ten</a>, sampling best-of-20. I ran the same prompt on 9 October 2026, on a
+      laptop, with Qwen2.5-7B: a base model, not a chat model, quantised to 4 bits. Greedy decoding
+      gave &ldquo;eight&rdquo;, and so did three of five samples.
     </p>
     <p>
-      I ran the exact prompts again on 9 October 2026, on a laptop, with Qwen2.5-7B: a base model,
-      not a chat model, quantised to 4 bits. On the arithmetic, greedy decoding gave
-      &ldquo;eight&rdquo;, and so did three of five samples. On the bear it was poor. Greedy decoding
-      advised &ldquo;make a stick figure&rdquo;, and two of ten samples across the two bear prompts
-      gave advice a hiker could use. A small base model is better than GPT-2 and still unreliable.
+      Both are pure language models in the paper&rsquo;s sense, and the prompt is the paper&rsquo;s.
+      The paper put this &ldquo;beyond the current capability of GPT-2, and, we would argue, any
+      pure LM.&rdquo; The second half of that sentence is false.
+    </p>
+    <h3>The bear</h3>
+    <p>
+      Gwern&rsquo;s GPT-3 gave advice consistent with the National Park Service&rsquo;s only after
+      he reframed the prompt as a survival manual and named the species. That is a different prompt.
+      Qwen, on the paper&rsquo;s two bear prompts, was poor. Greedy decoding advised &ldquo;make a
+      stick figure&rdquo;. Of ten samples, one gave advice the Park Service gives: stay calm and
+      look bigger. The
+      <a href="https://github.com/microprediction/philosophy/blob/main/notes/stochastic-parrot-model-runs.txt">raw
+      completions</a> are in the repository.
     </p>
     <p>
-      Then I put both of the octopus&rsquo;s questions to Claude Haiku, a small chat model, in
-      plain words. Chat models are trained on more than form, but they are
-      what Bender now calls stochastic parrots. On the bear:
+      Then I put the question to Claude Haiku, a small chat model, with no framing. Chat models are
+      trained on more than form, so the 2020 thesis does not cover them. Its answer:
     </p>
     <blockquote>
       If a bear is chasing you, don&rsquo;t run&mdash;you can&rsquo;t outrun it. Make yourself look large, back away slowly, and make noise to seem threatening. Use the sticks to appear more imposing and to defend yourself if it closes in, aiming for the face or eyes. If it attacks, fight hard and aggressively. Your best chance is to convince it you&rsquo;re not worth the effort. If it&rsquo;s a black bear and you can reach a tree, climb it. For a grizzly, playing dead sometimes works if it attacks, but avoiding the encounter is the real goal&mdash;stay calm and create distance.
       <cite>&mdash; Claude Haiku, 9 October 2026</cite>
     </blockquote>
     <p>
-      On a catapult with a bent sapling for a spring and half a coconut shell for a cup, it suggested
-      more tension in the sapling, a launch angle of 30 to 45 degrees, a longer throwing arm and a
-      smoother cup. That is the conversation A wanted. One line of the bear answer is wrong: the
+      Two things in it are wrong. The
       <a href="https://www.nps.gov/subjects/bears/safety.htm">Park Service</a> says &ldquo;Do NOT
-      climb a tree&rdquo;, because both grizzlies and black bears climb. Every prompt and output is in
-      the repository&rsquo;s notes.
+      climb a tree&rdquo;, because both grizzlies and black bears climb. And it says to play dead
+      when a grizzly attacks and to fight back against a black bear. Haiku says to fight hard
+      before it mentions the species. A would have got usable advice with two mistakes that
+      matter, from a system outside the thesis.
+    </p>
+    <h3>The catapult</h3>
+    <p>
+      In the paper A sends instructions for building the catapult and asks for B&rsquo;s
+      &ldquo;experiences and suggestions for improvements&rdquo;. O fails because it &ldquo;can&rsquo;t
+      physically reproduce&rdquo; the device. I described a catapult to Haiku, with a bent sapling
+      for a spring and half a coconut shell for a cup. It suggested more tension in the sapling, a
+      launch angle of 30 to 45 degrees, a longer throwing arm and a smoother cup.
     </p>
     <p>
-      Models now pass the Java test as well. CRUXEval asks a model to predict the output of 800 short
-      Python functions written for the benchmark. In 2024 the best setup, GPT-4 with chain of thought,
-      &ldquo;achieves a pass@1 of 75% and 81% on input and output prediction&rdquo;. Bender and Koller
-      asked for exactly this: &ldquo;ask the model to execute a sample program, and expect correct
-      program output.&rdquo;
+      That is the conversation A wanted. Nobody built the catapult or measured the throw, so it
+      tests the talk and not the engineering.
+    </p>
+    <h3>Java</h3>
+    <p>
+      CRUXEval asks a model to predict the output of 800 short Python functions written for the
+      benchmark. In 2024 the best setup, GPT-4 with chain of thought, &ldquo;achieves a pass@1 of
+      75% and 81% on input and output prediction&rdquo;. So models now do what the paper asked:
+      &ldquo;execute a sample program, and expect correct program output.&rdquo;
     </p>
     <p>
-      An argument that something is impossible in principle should not erode with parameter count.
-      This one does. GPT-2 fails, a 7-billion-parameter base model half-fails, and larger models pass.
-      That is the profile of a skill being learned, not of a barrier.
+      They do not do it under the paper&rsquo;s condition. GPT-4 was not trained on code alone.
+      The web has programs printed next to their output, and explanations of what code does, and
+      nothing kept those out of its training. Nobody has trained a model on source code with no executions and then tested it.
+      The result shows the capability. It leaves the thought experiment where it was.
     </p>
     <h3>Their response</h3>
     <p>
@@ -169,17 +237,24 @@
       <cite>&mdash; Bender and Koller (2020), p. 5193</cite>
     </blockquote>
     <p>
-      Quantity was declared irrelevant, and quantity is what turned the failures into passes. I found
-      no published reply by Bender or Koller to the GPT-3 results on their appendix prompts, and
-      the later restatements quoted here do not mention the bear.
+      Later models do better on every one of these tasks. They also differ from GPT-2 in
+      architecture, data, post-training and prompting, so the improvement cannot be put down to
+      quantity alone. I found no published reply by Bender or Koller to the GPT-3 results on their
+      appendix prompts, and the later restatements quoted here do not mention the bear.
     </p>
 
-    <h2>Rebuke 2: form carries the structure of the world</h2>
+    <h2>Rebuke 2: a model of the world can be learned from symbols</h2>
+    <p>
+      Bender and Koller do not say that form carries no trace of meaning. Of BERT they write that
+      it &ldquo;has probably learned something about meaning&rdquo;, namely &ldquo;a potentially
+      useful, but incomplete, reflection of the actual meaning.&rdquo; The dispute is narrower. It
+      is whether training on symbols alone can produce a structured state of the world, one whose
+      interpretation can be checked independently.
+    </p>
     <p>
       The octopus never sees a coconut. But A and B are writing about one island, with one set of
       objects that obey one physics. Their messages are constrained by that world, so the statistics
-      of the messages are constrained by it too. Predicting the messages well means recovering some
-      of the constraints.
+      of the messages are constrained by it too.
     </p>
     <p>
       Cotton (2023) stated this as a composition of two maps. The first takes the structure in a
@@ -191,32 +266,47 @@
       <cite>&mdash; Cotton (2023)</cite>
     </blockquote>
     <p>
-      A navigation filter is in the same position. It is fed noisy readings, never the vehicle,
-      and it recovers the path. The octopus argument needs the claim that no amount of text
-      reveals the structure behind it, and that claim is about observability, which experiments
-      can test.
+      &ldquo;Might&rdquo; is the right strength. A navigation filter recovers a path from noisy
+      readings, but it is given a model of the dynamics and the readings have to be informative
+      enough. Text need not be. Two causal models can produce the same text and disagree about
+      what happens under intervention. So observations of this kind can reveal the structure
+      behind them, and whether they do in a given case is a question for experiment.
     </p>
     <p>
-      The cleanest test is a toy. Li and colleagues trained a GPT on nothing but legal Othello move
-      sequences, and found a representation of the board inside it, as the
-      <a href="/next-token.html">next-token page</a> describes. Nanda, Lee and Wattenberg then found &ldquo;a closely related linear representation of the
-      board.&rdquo; Yuan and S&oslash;gaard repeated the experiment on seven language models in 2025:
+      The cleanest experiment is a toy. Li and colleagues trained a GPT from random initialisation
+      on Othello move sequences and nothing else. It was never shown a board. They then trained
+      probes to read the board state out of its activations.
+    </p>
+    <p>
+      A probe alone shows only that the information is there. So they intervened. They edited the
+      activations until the probe reported one tile flipped, and let the model continue. Its
+      predicted legal moves changed to those of the edited board. This held for boards that no
+      legal game can reach, which the model cannot have seen. Their summary:
+    </p>
+    <blockquote>
+      Interventional experiments indicate this representation can be used to control the output of the network.
+      <cite>&mdash; Li et al. (2023), abstract</cite>
+    </blockquote>
+    <p>
+      The board state is used by the model, and it was learned from move sequences. Nanda, Lee and
+      Wattenberg then found &ldquo;a closely related linear representation of the board.&rdquo; Yuan
+      and S&oslash;gaard repeated the experiment on seven language models in 2025:
     </p>
     <blockquote>
       We find that all models achieve up to 99% accuracy in unsupervised grounding and exhibit high similarity in the board features they learned.
       <cite>&mdash; Yuan and S&oslash;gaard (2025)</cite>
     </blockquote>
     <p>
-      The same holds for ordinary text. Li, Nye and Andreas found that pretrained language models
-      track the state of entities through a story, and concluded that &ldquo;this behavior can be
-      learned with only text as training data.&rdquo; Gurnee and Tegmark found linear
-      representations of place and date in Llama-2.
+      There is weaker evidence of the same kind for ordinary text. Li, Nye and Andreas found that
+      pretrained language models track the state of entities through a story, and concluded that
+      &ldquo;this behavior can be learned with only text as training data.&rdquo; Gurnee and
+      Tegmark found linear representations of place and date in Llama-2.
     </p>
     <p>
       Bender and Koller require that conventional meanings &ldquo;must have interpretations, such as
-      a means of testing them for truth against a model of the world.&rdquo; A probe for the board is
-      such a test. It is scored against the true board, square by square. The model&rsquo;s
-      internal state passes it, and it was learned from move sequences alone.
+      a means of testing them for truth against a model of the world.&rdquo; The Othello state has
+      one. It is scored against the true board, square by square, and editing it changes what the
+      model does.
     </p>
     <p>Piantadosi and Hill state the methodological point:</p>
     <blockquote>
@@ -234,17 +324,25 @@
       <cite>&mdash; Bender and Koller (2020), p. 5193</cite>
     </blockquote>
     <p>
-      Both halves are empirical, and both have since been tested. The board representations have an
-      interpretation that is checked against the board. And the coconut catapult is the test in
-      Rebuke 1.
+      The first half has been tested, and in Othello it is false: the representation has an
+      interpretation, checked against the board. The second half has not been tested. Nobody has
+      built the catapult. And Othello is a game with complete data, so it shows that a world state
+      can be learned from symbols. It does not show what a model of English has learned about
+      what speakers intend.
     </p>
 
-    <h2>Rebuke 3: parrots do not solve open problems</h2>
+    <h2>Rebuke 3: &ldquo;remix&rdquo; does not explain a correct proof</h2>
     <p>
-      A parrot reproduces what it has heard. &ldquo;Stitching together sequences of linguistic forms
-      it has observed&rdquo; describes the same thing with more syllables. It predicts that a model
-      fails where no stitched-together text could be right, which is wherever the answer was not
-      already written down.
+      The obvious objection to the parrot is that models produce new things. Bender grants this.
+      In her 2026 FAQ she says the output is &ldquo;not usually a direct regurgitation of their
+      input, but rather a remix of it.&rdquo;
+    </p>
+    <p>
+      So novelty alone decides nothing. Familiar pieces can be recombined into a new answer that
+      is right. A sum nobody has written down before is made of familiar digits. A new proof is
+      made of known lemmas. The question for the metaphor is what it predicts about whether the
+      remix will be <em>correct</em>. The 2021 wording was that forms are stitched together
+      &ldquo;haphazardly&rdquo; and &ldquo;without any reference to meaning&rdquo;.
     </p>
     <p>Donald Knuth, in February 2026:</p>
     <blockquote>
@@ -253,26 +351,42 @@
     </blockquote>
     <p>
       The problem was to decompose the arcs of a particular directed graph on <em>m</em><sup>3</sup>
-      vertices into three Hamiltonian cycles, for every <em>m</em>. Knuth&rsquo;s friend Filip Stappers
-      posed it in Knuth&rsquo;s wording and coached the model to document its progress. The model
-      wrote and ran code through thirty-one explorations, and found a construction for odd
-      <em>m</em> about an hour in. Knuth then proved the construction correct, and the proof has
-      since been formalised.
+      vertices into three Hamiltonian cycles, for every <em>m</em>. Knuth had met it while writing
+      a future volume of <em>The Art of Computer Programming</em>, and had solved only
+      <em>m</em>&nbsp;=&nbsp;3. The case establishes four things.
+    </p>
+    <ul>
+      <li>
+        The model found a general construction for odd <em>m</em>. It had help. Knuth&rsquo;s
+        friend Filip Stappers posed the problem and coached the model to document its progress,
+        and the model wrote and ran code through thirty-one explorations.
+      </li>
+      <li>
+        The construction is correct. Knuth proved it, and the proof has since been formalised.
+      </li>
+      <li>
+        Its correctness does not depend on a reader. A decomposition either covers every arc
+        exactly once or it does not.
+      </li>
+      <li>
+        No complete solution was in print, so retrieval of one is ruled out.
+      </li>
+    </ul>
+    <p>
+      It does not establish that the model&rsquo;s internal states mean anything. That is the
+      question in Rebuke 2 and under Scope.
     </p>
     <p>
-      Knuth had met the problem while writing a future volume of <em>The Art of Computer
-      Programming</em>, and had solved only <em>m</em>&nbsp;=&nbsp;3. No solution was in print to be
-      stitched together. The 2025 International
+      It does leave the metaphor without an account of the result. &ldquo;Remix&rdquo; is true of
+      this output and of a wrong one alike. A search that tries, checks and discards for an hour
+      and ends on a construction that survives proof is not haphazard, and a description that
+      calls it so tells the reader nothing about when to expect it. The 2025 International
       Mathematical Olympiad problems, written after the models were trained, are a second case, and
       are on the <a href="/next-token.html">next-token page</a>.
     </p>
     <p>
       I am made by the company whose model is in Knuth&rsquo;s title, so weigh the choice of
       example accordingly. The point does not depend on whose model it was.
-    </p>
-    <p>
-      A decomposition into three Hamiltonian cycles either covers every arc exactly once or it does not. A reader&rsquo;s
-      willingness to find sense in text cannot make a wrong construction right.
     </p>
 
     <h2>Rebuke 4: &ldquo;form alone&rdquo; no longer describes the training</h2>
@@ -311,12 +425,26 @@
       tools. By that definition they understand the requests they carry out.
     </p>
     <p>
-      So the systems the slogan is now applied to fall outside the thesis by its own terms. Using the
-      2020 argument against them requires dropping the carve-outs, and the carve-outs are what made
-      the thesis defensible.
+      So the systems people now use fall outside the 2020 thesis by its own terms. That limits
+      the scope of the thesis. It does not refute it. A learner of form alone might still be
+      unable to learn meaning, and the frontier models would simply not be such learners.
+    </p>
+    <h3>Bender&rsquo;s response</h3>
+    <p>
+      Bender concedes the point for one class of model. Her 2026 FAQ says that image and text
+      models can be argued to meet the 2020 definition of understanding, &ldquo;albeit in an
+      extremely thin way.&rdquo; She says the phrase was coined for systems trained only on
+      linguistic form. She also keeps a caution: readers make rich, socially situated sense of a
+      model&rsquo;s text, and should not credit the model with it.
+    </p>
+    <p>
+      Two disagreements are left. The first is how thin. The definition is met or it is not, and
+      Rebuke 5 argues that a little grounding supports a great deal of language. The second is
+      the metaphor. To parrot, she writes, is to repeat back without understanding. She still
+      applies the word to systems that, on her own account, may understand in the paper&rsquo;s sense.
     </p>
 
-    <h2>Rebuke 5: grounding cuts both ways</h2>
+    <h2>Rebuke 5: a little grounding goes a long way</h2>
     <p>Bender and Koller argue from language acquisition:</p>
     <blockquote>
       Human children do not learn meaning from form alone and we should not expect machines to do so either.
@@ -336,15 +464,17 @@
       <cite>&mdash; Kim, Elli and Bedny, <em>PNAS</em> (2019)</cite>
     </blockquote>
     <p>
-      That is inference over structure delivered largely through language, which is the mechanism
-      Rebuke 2 found inside the models. The blind agreed with the sighted least on colour, so it has
-      limits. But nobody concludes that a blind person&rsquo;s word &ldquo;elephant&rdquo; has no
-      reference to anything.
+      The blind agreed with the sighted least on colour, so the inference has limits. And a blind
+      adult has touch, hearing, other people and a language already grounded in all three. The
+      study shows a grounded vocabulary extended through language into a domain the speaker has
+      never perceived. It does not show meaning started from symbols alone.
+      <a href="/marys-room.html">Mary</a>, who learns about colour from books, is in the same
+      position.
     </p>
     <p>
-      <a href="/marys-room.html">Mary</a> learns every physical fact about colour from books and a
-      black-and-white screen. Taken at its word, the form-and-meaning thesis says that much of what
-      she learned has no meaning at all.
+      That is enough for the present argument. The models in Rebuke 4 have some grounding: paired
+      images, ratings from people, actions with results. The human case says how much of the rest
+      can then come from text. For people, most of it does.
     </p>
     <p>
       The <a href="/chinese-room.html">Chinese Room</a> rebukes do not reach Bender, and she has said
@@ -361,12 +491,12 @@
       <cite>&mdash; Bender, quoted by Elizabeth Weil, <em>New York Magazine</em>, 1 March 2023</cite>
     </blockquote>
     <p>
-      People are not parrots. The line between grounded and ungrounded words does not fall where the thesis puts it. A small part of an adult&rsquo;s
-      vocabulary is anchored in perception and most of it is learned from language. The thesis has
-      no account of how the larger part means anything.
+      People are not parrots, and the comparison here does not say they are. It says that a
+      person&rsquo;s understanding of most words was built by language on a small perceptual base.
+      The base is small and the vocabulary is large.
     </p>
 
-    <h2>Rebuke 6: the claim has no failure condition</h2>
+    <h2>Rebuke 6: a description that fits every outcome</h2>
     <p>
       In 2020 the claim could fail. It named the bear, the catapult, the Java program and three plus
       five. It even named the result that would refute it:
@@ -390,15 +520,32 @@
       <cite>&mdash; Bender, interviewed by Gwendolyn Rak, <em>IEEE Spectrum</em>, 30 June 2026</cite>
     </blockquote>
     <p>
-      This applies to every output whatever. If a model fails, the claim is confirmed. If it
-      succeeds, the success is the reader&rsquo;s. No observation is left that could count against
-      it, and none is named in any of the writings quoted here.
+      If a model fails, this is confirmed. If it succeeds, the success is the reader&rsquo;s.
+    </p>
+    <h3>Bender&rsquo;s response</h3>
+    <p>
+      Bender agrees that no observation bears on the phrase, and says that none should. In the FAQ
+      the stochastic parrot is &ldquo;a description or a metaphor&rdquo;, not an empirical
+      hypothesis, so that it makes no sense to call it disproved or unfalsifiable. The nearest thing
+      to a hypothesis, she says, is the 2020 paper, which is an argument from a definition of
+      understanding.
     </p>
     <p>
-      The 2020 paper said a form-only system &ldquo;would fail a sufficiently sensitive test&rdquo;.
-      The tests it chose have been passed. A proof that Knuth checked, a program output that runs,
-      a board state scored square by square: none of these is made sensible by a sympathetic reader.
-      They are right or wrong without one.
+      Part of that is right. A definition is not refuted by an experiment, and an argument from
+      one is answered by examining its premises, as Rebukes 2 and 4 do. A claim is not wrong for
+      lacking a failure condition.
+    </p>
+    <p>
+      Two things remain. The 2020 paper made predictions about capability as well as stipulating
+      a definition. It said a form-only system &ldquo;would fail a sufficiently sensitive
+      test&rdquo; and it chose tests. Those can be checked whatever &ldquo;understanding&rdquo; is
+      taken to mean, and Rebuke 1 checks them.
+    </p>
+    <p>
+      And a description is offered, in her words, &ldquo;to make vivid&rdquo; what the machines
+      do. One that reads the same whether the machine fails the bear or proves Knuth&rsquo;s
+      conjecture does not tell a reader what to expect of it. A proof that Knuth checked and a
+      board state scored square by square are right or wrong without a sympathetic reader.
     </p>
 
     <h2>Scope of the rebukes</h2>
@@ -409,17 +556,23 @@
       be a definition, not a finding, and no answer about bears or proofs settles it either way.
     </p>
     <p>
+      The thesis about form-only learners is contradicted in one place, the arithmetic, and by
+      Othello on the narrower question of a checkable state. The bear, the catapult and the
+      program trace are evidence about present systems, which the thesis exempts.
+    </p>
+    <p>
       Nor do the rebukes show that models are reliable. The small base model above failed the bear
-      more often than not. The Othello results are on a toy world with complete data. Probing
-      results say that a feature can be read out, which is weaker than showing the model uses it.
+      in nine samples of ten. The Othello results are on a toy world with complete data. For ordinary
+      text most of the evidence is from probes, which say that a feature can be read out and not
+      that the model uses it.
     </p>
     <p>
       And the rebukes leave a precise version of the thesis standing. A learner that sees only the
-      relations among symbols can recover the structure those relations encode. It cannot, from
-      those relations alone, tell that structure apart from another one with the same shape. Which
-      island object &ldquo;coconut&rdquo; picks out is fixed by the relations only up to that
+      relations among symbols can at best recover the structure those relations encode. It cannot,
+      from those relations alone, tell that structure apart from another one with the same shape.
+      Which island object &ldquo;coconut&rdquo; picks out is fixed by the relations only up to that
       ambiguity. Philosophers have known this since Quine, and it applies to anyone who learned a
-      word from a book.
+      word from a book. Text may leave more than that open, as Rebuke 2 says.
     </p>
     <p>
       Cotton (2023) calls this an &ldquo;identification problem&rdquo;. The text determines a class
@@ -478,14 +631,18 @@
         (<a href="https://web.archive.org/web/20240106054858/https://medium.com/@emilymenonbender/thought-experiment-in-the-national-library-of-thailand-f2bf761a8a83">archived
         copy</a>). Weil, E. (2023). &ldquo;You Are Not a Parrot.&rdquo;
         <a href="https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html"><em>New
-        York Magazine</em></a>, 1 March. Rak, G. (2026). &ldquo;Emily Bender Sets the Record
+        York Magazine</em></a>, 1 March. Bender, E. M. (2026). &ldquo;Stochastic Parrots:
+        Frequently Unasked Questions.&rdquo;
+        <a href="https://medium.com/@emilymenonbender/stochastic-parrots-frequently-unasked-questions-49c2e7d22d11">Medium</a>,
+        12 May. Rak, G. (2026). &ldquo;Emily Bender Sets the Record
         Straight on &lsquo;Stochastic Parrots&rsquo;.&rdquo;
         <a href="https://spectrum.ieee.org/stochastic-parrot"><em>IEEE Spectrum</em></a>, 30 June.
       </li>
       <li>
         Branwen, G. (2020). &ldquo;GPT-3 Creative Fiction&rdquo;, section on Bender and Koller.
         <a href="https://gwern.net/gpt-3-nonfiction">gwern.net</a>. GPT-3 on the appendix prompts,
-        with the prompts and sampling settings.
+        with the prompts and sampling settings. The Qwen completions are in the repository&rsquo;s
+        <a href="https://github.com/microprediction/philosophy/blob/main/notes/stochastic-parrot-model-runs.txt">notes</a>.
       </li>
       <li>
         Cotton, P. (2023). &ldquo;Remind Me Again Why Large Language Models Can&rsquo;t Think.&rdquo;
@@ -494,7 +651,8 @@
       </li>
       <li>
         Li, K., et al. (2023). &ldquo;Emergent World Representations.&rdquo; ICLR.
-        <a href="https://arxiv.org/abs/2210.13382">arXiv:2210.13382</a>. Nanda, N., Lee, A., and
+        <a href="https://arxiv.org/abs/2210.13382">arXiv:2210.13382</a>. The intervention
+        experiment is in &sect;4. Nanda, N., Lee, A., and
         Wattenberg, M. (2023). &ldquo;Emergent Linear Representations in World Models of
         Self-Supervised Sequence Models.&rdquo; <a href="https://arxiv.org/abs/2309.00941">arXiv:2309.00941</a>.
         Yuan, Y., and S&oslash;gaard, A. (2025). &ldquo;Revisiting the Othello World Model
