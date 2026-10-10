@@ -9,9 +9,16 @@ Candidate targets. Being listed here is an accusation, not a conviction.
 - The Doomsday argument — Carter; Leslie; Gott
 - The simulation argument — Bostrom, 2003
 - Zeno's paradoxes — Zeno, c. 450 BC
+- "Only language": the claim that a system which deals only in language cannot think or understand. Raised by, and to be credited to, **Stuart Reynolds** (issue #33). See "Only language" below.
 
 Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, The Tao of Physics.
 Sourced and waiting: zombies, the ontological argument, Pascal, doomsday and simulation (see the quotes-*.md files).
+
+## "Only language" (issue #33; credit Stuart Reynolds)
+
+- Source of the suggestion: Stuart Reynolds's reply in the thread under Piotr Migdał's LinkedIn post "Pure mathematics, in my view, is not science, not craft - it is art" (8 Oct 2026), https://lnkd.in/p/gUMc45Jc. **His reply is not publicly readable** (LinkedIn shows only top-level comments without a login), so his wording is still to be copied in. Do not paraphrase him from memory.
+- His essay: Stuart Reynolds, "AI Can't? In Defense of Behaviorism", Medium, 29 June 2024, https://medium.com/@stuart-reynolds/in-defense-of-behaviorism-44fdbd7a4087 (Medium blocks scripted fetches; read via https://web.archive.org/web/2026/https://medium.com/@stuart-reynolds/in-defense-of-behaviorism-44fdbd7a4087). Verified quote, "Stu's Golden Rule for AI Tests": "If it's not a standard for human intelligence when your family can't do it, it's not a standard for human intelligence when AI can't do it." The essay catalogues "AI can't..." claims (hear, see, reason, remember, be conscious) and answers each by asking for a test the critic would also apply to people.
+- Overlap to manage: the stochastic-parrot page already rebuts "trained on form alone" (Bender and Koller), and next-token rebuts the capability claim. An "only language" page should take the neighbouring claim that language itself is too thin a medium for thought (for example Fedorenko, Piantadosi and Gibson, "Language is primarily a tool for communication rather than thought", Nature 2024; LeCun on language as a low-bandwidth channel). Sources to be pulled and verified before any are quoted.
 
 ## Chinese Room: lines of attack not yet on the page
 
