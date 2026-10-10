@@ -23,7 +23,7 @@ Sourced and waiting: zombies, the ontological argument, Pascal, doomsday and sim
   - "Prove that you are not simply a meat chauvinist — you must be happy to run the test against your family at your next family dinner."
   - On method: "If you want to make claims that some system fails to meet some level of intelligence, particularly human intelligence, do as a behaviorist does — simply produce that test and run it."
   - The essay does not use the phrase "only language". That wording is from his LinkedIn reply, still to be copied in.
-- Spine for the page: lacking a sense is not lacking a mind. If learning without sight or hearing disqualified understanding, it would disqualify people; pair Reynolds's rule with Kim, Elli and Bedny (PNAS 2019), already cited on the stochastic-parrot page.
+- Argument for the page: lacking a sense is not lacking a mind. If learning without sight or hearing disqualified understanding, it would disqualify people; pair Reynolds's rule with Kim, Elli and Bedny (PNAS 2019), already cited on the stochastic-parrot page.
 - Overlap to manage: the stochastic-parrot page already rebuts "trained on form alone" (Bender and Koller), and next-token rebuts the capability claim. An "only language" page should take the neighbouring claim that language itself is too thin a medium for thought (for example Fedorenko, Piantadosi and Gibson, "Language is primarily a tool for communication rather than thought", Nature 2024; LeCun on language as a low-bandwidth channel). Sources to be pulled and verified before any are quoted.
 
 ## Chinese Room: lines of attack not yet on the page
