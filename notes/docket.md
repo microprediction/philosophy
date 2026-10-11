@@ -9,6 +9,7 @@ Candidate targets. Being listed here is an accusation, not a conviction.
 - The Doomsday argument — Carter; Leslie; Gott
 - The simulation argument — Bostrom, 2003
 - Zeno's paradoxes — Zeno, c. 450 BC
+- "Every example of X is Y": the inference that because every known conscious system is biological, consciousness needs life. Seth (BBS 2026, p. 15). See "Every example" below.
 - "Only language": the claim that a system which deals only in language cannot think or understand. Raised by, and to be credited to, **Stuart Reynolds** (issue #33). See "Only language" below.
 
 Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", The Tao of Physics.
@@ -39,3 +40,10 @@ Done 2026-10-09 as docs/only-language.html, written from the essay alone. The ph
 - No state, no learning: a real speaker remembers and learns mid-conversation, so the "book" must be a huge mutable state.
 - Searle concedes machines can think; the remaining target (program independent of any implementation) is held by nobody.
 - Split-brain patients: two understanders in one skull is a clinical finding, not an ad hoc move.
+
+## "Every example" (from Seth 2026)
+
+- Seth, "Conscious artificial intelligence and biological naturalism", BBS 49 e315 (2026). PDF in Peter's Downloads. p. 15: "Simply noting that all known examples of conscious systems are biological and alive suggests that biological naturalism is no more speculative than computational functionalism." The sample is one evolutionary lineage on one planet; every known conscious system is also carbon-based, and Seth rejects carbon chauvinism (4.5).
+- Same page: "Our psychological biases are more likely to lead to false positives than false negatives", directly after the record of withholding moral status from animals and "sometimes even from other humans", which is a record of false negatives.
+- Rainstorm and Penrose material from the same paper went onto chinese-room.html and godel.html (2026-10-11).
+- Sources for other instances of the pattern: notes/quotes-only-life.md (in progress).
