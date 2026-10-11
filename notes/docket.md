@@ -2,9 +2,13 @@
 
 Candidate targets. Being listed here is an accusation, not a conviction.
 
+Scope rule (Peter, 2026-10-11): only dumb philosophy. A target belongs on the site only if the page convicts it. This is not a survey of famous arguments; a candidate that would come out acquitted or "not proven" does not get a page.
+
 No candidates are waiting. Add new ones here.
 
-Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", "every known example", The Tao of Physics, abduction, and (2026-10-11) philosophical zombies, the ontological argument, Pascal's Wager, Doomsday and simulation (one page), Zeno.
+Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", "every known example", The Tao of Physics, abduction, and (2026-10-11) philosophical zombies, the ontological argument, Pascal's Wager, Doomsday and simulation (narrowed to Gott and Musk).
+
+Withdrawn under the scope rule: Zeno (mostly acquitted; draft kept at notes/drafts/zeno.html, unpublished). Carter-Leslie Doomsday and Bostrom's trilemma were cut from the Doomsday page for the same reason.
 
 Open follow-ups:
 - Tao of Physics: the 2000 and 2025 afterwords are unread (see below).
