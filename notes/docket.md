@@ -6,7 +6,7 @@ Scope rule (Peter, 2026-10-11): only dumb philosophy. A target belongs on the si
 
 No candidates are waiting. Add new ones here.
 
-Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", "every known example", The Tao of Physics, abduction, and (2026-10-11) philosophical zombies, the ontological argument, Pascal's Wager, Doomsday and simulation (narrowed to Gott and Musk).
+Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", "every known example", The Tao of Physics, abduction, and (2026-10-11) philosophical zombies, the ontological argument, Pascal's Wager, Doomsday and simulation (narrowed to Gott and Musk), "machines can't create" (credit Bernd Johannes Wuebben, from his LinkedIn article of 10 Oct 2026; Barnette proof treated as a claim, its Lean formalisation not compiled).
 
 Withdrawn under the scope rule: Zeno (mostly acquitted; draft kept at notes/drafts/zeno.html, unpublished). Carter-Leslie Doomsday and Bostrom's trilemma were cut from the Doomsday page for the same reason.
 

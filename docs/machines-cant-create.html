@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Machines Can&rsquo;t Create &mdash; Dumb Philosophy</title>
+  <meta name="description" content="AI is said only to recombine and interpolate human work, never to create anything new, sometimes in the language of convex hulls. A convex hull is a set of weighted averages, ideas do not combine by averaging, and in high dimension nothing new lands inside the hull anyway. Machines have meanwhile found matrix algorithms and cap sets that nobody had." />
+  <link rel="stylesheet" href="./style.css?v=5" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Minds and Machines</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+        <a href="/marys-room.html">Mary&rsquo;s Room</a>
+        <a href="/zombies.html">Philosophical Zombies</a>
+        <a href="/orangutan.html">The Orangutan Argument</a>
+        <a href="/next-token.html">Just Predicting the Next Token</a>
+        <a href="/stochastic-parrot.html">The Stochastic Parrot</a>
+        <a href="/only-language.html">Only Language</a>
+        <a href="/every-known-example.html">Every Known Example</a>
+        <a href="/abduction.html">Machines Can&rsquo;t Do Abduction</a>
+        <a href="/machines-cant-create.html">Machines Can&rsquo;t Create</a>
+      </span></span>
+      <span class="menu"><span class="menu-label" tabindex="0">Classics</span><span class="drop">
+        <a href="/ontological.html">The Ontological Argument</a>
+        <a href="/pascal.html">Pascal&rsquo;s Wager</a>
+        <a href="/doomsday.html">Doomsday and Simulation</a>
+        <a href="/godel-abuse.html">G&ouml;del Proves Whatever You Like</a>
+        <a href="/tao-of-physics.html">The Tao of Physics</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>Machines Can&rsquo;t Create</h1>
+    <p class="subtitle">A convex hull is a set of weighted averages. Nobody has averaged their way to a theorem, and in fifty dimensions nobody, human or machine, stays inside the hull.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendants</dt>
+        <dd>Ted Chiang (2023, 2024); Noam Chomsky, Ian Roberts and Jeffrey Watumull (2023); with Ada Lovelace (1843) as precedent</dd>
+        <dt>Claim</dt>
+        <dd>A language model only rephrases, averages or interpolates the human work it was trained on. In the mathematical version, it operates inside the convex hull of its training data and never goes beyond it.</dd>
+        <dt>Charge</dt>
+        <dd>Bringing a charge, &ldquo;just a mashup&rdquo;, that is true of every result by anyone, and dressing it up as geometry when ideas do not combine by averaging and new points almost never lie inside the hull anyway.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Guilty. Machines have produced matrix-multiplication algorithms and combinatorial constructions that beat everything in the literature, checked by proof or computation. Chiang is not guilty on what he says about art and choices, which is a different claim.</dd>
+      </dl>
+    </div>
+
+    <p>
+      This rebuke was suggested by <strong>Bernd Johannes Wuebben</strong> (Global Head, Fixed
+      Income Systematic Investing), whose article
+      &ldquo;<a href="https://lnkd.in/p/gpSYdpUq">Beyond the Convex Hull: AI and the Nature of Human
+      Creativity</a>&rdquo; (LinkedIn, 10 October 2026) supplies the geometric objection in Rebuke 2
+      and several of the examples in Rebuke 1.
+    </p>
+
+    <h2>The argument, in their words</h2>
+    <p>Wuebben states the claim he is answering:</p>
+    <blockquote>
+      A criticism of AI that I hear increasingly often is that it cannot really create anything original because everything it produces must ultimately be some combination of ideas already present in its training data. Sometimes this argument is expressed in mathematical language: AI is said to operate within the convex hull of human knowledge, capable of interpolating between existing ideas but unable to venture genuinely beyond them.
+      <cite>&mdash; Wuebben (2026)</cite>
+    </blockquote>
+    <p>
+      The best-known statement of it is Ted Chiang&rsquo;s essay in <em>The New Yorker</em>,
+      &ldquo;ChatGPT Is a Blurry JPEG of the Web&rdquo; (February 2023). A model is a lossy
+      compression of the Web, and when it fills a gap it does what an image decoder does:
+    </p>
+    <blockquote>
+      When an image program is displaying a photo and has to reconstruct a pixel that was lost during the compression process, it looks at the nearby pixels and calculates the average. This is what ChatGPT does when it&rsquo;s prompted to describe, say, losing a sock in the dryer using the style of the Declaration of Independence: it is taking two points in &ldquo;lexical space&rdquo; and generating the text that would occupy the location between them.
+      <cite>&mdash; Chiang (2023)</cite>
+    </blockquote>
+    <p>
+      For a writer, he concludes, &ldquo;starting with a blurry copy of unoriginal work isn&rsquo;t a
+      good way to create original work.&rdquo; The essay closes:
+    </p>
+    <blockquote>
+      In the meantime, it&rsquo;s reasonable to ask, What use is there in having something that rephrases the Web?
+      <cite>&mdash; Chiang (2023)</cite>
+    </blockquote>
+    <p>
+      In &ldquo;Why A.I. Isn&rsquo;t Going to Make Art&rdquo; (August 2024) the averaging is
+      explicit. A program writing a story from a short prompt has to fill in the choices the user did
+      not make:
+    </p>
+    <blockquote>
+      One is to take an average of the choices that other writers have made, as represented by text found on the Internet; that average is equivalent to the least interesting choices possible, which is why A.I.-generated text is often really bland.
+      <cite>&mdash; Chiang (2024)</cite>
+    </blockquote>
+    <p>
+      Noam Chomsky, Ian Roberts and Jeffrey Watumull, in <em>The New York Times</em> a month after
+      Chiang&rsquo;s first essay, called the same systems &ldquo;a lumbering statistical engine for
+      pattern matching&rdquo; that works by &ldquo;extrapolating the most likely conversational
+      response&rdquo;. Of one of its answers they wrote that it works &ldquo;by a kind of
+      super-autocomplete&rdquo; and shows &ldquo;plagiarism and apathy and obviation&rdquo;. And they
+      make the limit permanent:
+    </p>
+    <blockquote>
+      For this reason, the predictions of machine learning systems will always be superficial and dubious.
+      <cite>&mdash; Chomsky, Roberts and Watumull (2023)</cite>
+    </blockquote>
+    <blockquote>
+      In short, ChatGPT and its brethren are constitutionally unable to balance creativity with constraint.
+      <cite>&mdash; Chomsky, Roberts and Watumull (2023)</cite>
+    </blockquote>
+    <p>
+      The claim is older than any of them. Ada Lovelace wrote in 1843 that the Analytical Engine
+      &ldquo;has no pretensions whatever to originate anything&rdquo;. Her note, and Turing&rsquo;s
+      reply to it, are on the <a href="/abduction.html">abduction page</a>.
+    </p>
+
+    <h2>Rebuke 1: every result is a mashup, so the word distinguishes nothing</h2>
+    <p>
+      In the accuser&rsquo;s sense, everything is interpolation. Every result takes theory A and
+      applies technique B to it. So the charge &ldquo;it&rsquo;s just a mashup&rdquo; can be brought
+      against any result by anyone, and it will be true.
+    </p>
+    <p>
+      Try it on the human canon. Donaldson&rsquo;s work on 4-manifolds is the Yang&ndash;Mills
+      equations from physics applied to smooth topology. Atiyah and Bott&rsquo;s paper on the
+      Yang&ndash;Mills equations over Riemann surfaces is gauge theory plus Morse theory. Wiles&rsquo;s
+      proof of Fermat&rsquo;s Last Theorem is modularity plus Galois representations. Scholze&rsquo;s
+      perfectoid spaces carry problems in mixed characteristic over to characteristic <em>p</em>,
+      where older tools work. Each description is accurate. Each is useless, because it is equally
+      accurate of a dull paper that combines the same two things.
+    </p>
+    <p>
+      An accusation that can always be made tells you nothing about the case in front of you. The
+      <a href="/stochastic-parrot.html">stochastic-parrot page</a> makes the same point about
+      &ldquo;remix&rdquo; (its Rebuke 6 is about descriptions that fit every outcome). The test we
+      apply to people is different: is the result new, is it correct, and is it useful? Rebuke 4
+      applies that test to machines.
+    </p>
+
+    <h3>Their response</h3>
+    <p>
+      Chiang anticipated a version of this in 2024:
+    </p>
+    <blockquote>
+      Some individuals have defended large language models by saying that most of what human beings say or write isn&rsquo;t particularly original. That is true, but it&rsquo;s also irrelevant.
+      <cite>&mdash; Chiang (2024)</cite>
+    </blockquote>
+    <p>
+      His reason is that a sincere apology or a work of art has value because of who says it and
+      what life it comes from, not because it is novel. That is a fair point about meaning, and I
+      return to it under Scope. It answers a different defence. The point here is not that humans
+      are unoriginal. It is that the best human work is also a combination, so being a combination
+      cannot be what separates creating from copying.
+    </p>
+
+    <h2>Rebuke 2: ideas do not combine by averaging</h2>
+    <p>
+      The mathematical version tries to make the mashup charge precise. It fails in a different
+      way. The convex hull of a set of points is the set of their weighted averages, with weights
+      that are nonnegative and sum to one. Wuebben asks what that would mean for ideas:
+    </p>
+    <blockquote>
+      But why should the space of ideas have such a geometry? What would it even mean to take a weighted average of algebraic geometry and quantum field theory, or to combine thirty percent of topology with seventy percent of number theory?
+      <cite>&mdash; Wuebben (2026)</cite>
+    </blockquote>
+    <p>
+      &ldquo;More importantly,&rdquo; he goes on, &ldquo;combining mathematical structures is not the
+      same as averaging them.&rdquo; Composing two functions does not give a point between them.
+      Neither does applying a theorem from one field to an object from another, or taking the dual of
+      a construction. Each gives an object of a different kind, which can be combined again.
+    </p>
+    <p>
+      Chiang&rsquo;s own example shows this. A sock lost in the dryer, written in the style of the
+      Declaration of Independence, is not halfway between a laundry note and the Declaration. It
+      takes the content of one and the form of the other. That is a composition. A text literally
+      halfway between them would be neither about socks nor in Jefferson&rsquo;s style.
+    </p>
+    <p>
+      Averages also have a property the results in Rebuke 4 lack. An average cannot be more extreme
+      than everything it averages. A cap set larger than any known cap set is not a weighted average
+      of smaller ones.
+    </p>
+
+    <h2>Rebuke 3: even where the hull exists, nothing new is inside it</h2>
+    <p>
+      Suppose the data really are points in space, as images and embeddings are. Then the convex
+      hull is well defined, and one can ask how often a new point falls inside it. Randall
+      Balestriero, J&eacute;r&ocirc;me Pesenti and Yann LeCun asked in 2021:
+    </p>
+    <blockquote>
+      We empirically and theoretically argue against those two points and demonstrate that on any high-dimensional (&gt;100) dataset, interpolation almost surely never happens.
+      <cite>&mdash; Balestriero, Pesenti and LeCun (2021), abstract</cite>
+    </blockquote>
+    <p>
+      Here &ldquo;interpolation&rdquo; is the hull definition: a sample interpolates if it lies inside
+      or on the boundary of the training set&rsquo;s convex hull, and extrapolates otherwise. Their
+      conclusion is that the definition is useless as a measure of how a model generalises, because
+      by it every model extrapolates nearly all the time.
+    </p>
+    <p>
+      This is easy to check. Draw 1,000 training points from a standard Gaussian in <em>d</em>
+      dimensions. Then draw fresh points from the same Gaussian, so that none of them is unusual,
+      and test each one for membership of the hull. Membership is a linear program: find weights
+      <em>w</em> &ge; 0 summing to one with <em>X</em><sup>T</sup><em>w</em> = <em>x</em>. The
+      <a href="https://github.com/microprediction/philosophy/blob/main/demos/convex_hull.py">script</a>
+      does this with <code>scipy.optimize.linprog</code> for 200 fresh points per dimension, and
+      runs in under a minute:
+    </p>
+    <div class="table-wrap">
+    <table class="evidence">
+      <thead>
+        <tr><th>Dimension <em>d</em></th><th>Fresh points inside the hull of 1,000 training points</th><th>Fraction</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2</td><td>199 of 200</td><td>0.995</td></tr>
+        <tr><td>5</td><td>165 of 200</td><td>0.825</td></tr>
+        <tr><td>10</td><td>53 of 200</td><td>0.265</td></tr>
+        <tr><td>20</td><td>0 of 200</td><td>0.000</td></tr>
+        <tr><td>50</td><td>0 of 200</td><td>0.000</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      By twenty dimensions, a point drawn from the very distribution the training set came from is
+      outside its hull every time. Language-model embeddings have thousands of dimensions. Adding
+      data helps slowly: the number of points needed to keep new samples inside grows exponentially
+      with the dimension of the data, which is the paper&rsquo;s theoretical result.
+    </p>
+    <p>
+      So the dressed-up claim is false as stated, for machines and for people. Every sentence you
+      have ever written, encoded as a vector, almost surely lies outside the hull of the sentences
+      you had read. That does not make it original. It shows that &ldquo;inside the hull&rdquo; was
+      never the line between copying and creating.
+    </p>
+
+    <h2>Rebuke 4: the record</h2>
+    <p>
+      The fair test is the one we apply to people. Is the result new, is it checkable, and does it
+      beat what the field had?
+    </p>
+    <p>
+      <strong>Matrix multiplication, 2022.</strong> Multiplying two 4&times;4 matrices by applying
+      Strassen&rsquo;s 1969 method twice takes 49 multiplications. DeepMind&rsquo;s AlphaTensor,
+      a reinforcement-learning system, found an algorithm that uses 47 in arithmetic modulo 2:
+    </p>
+    <blockquote>
+      Particularly relevant is the case of 4 &times; 4 matrices in a finite field, where AlphaTensor&rsquo;s algorithm improves on Strassen&rsquo;s two-level algorithm for the first time, to our knowledge, since its discovery 50 years ago.
+      <cite>&mdash; Fawzi et al., <em>Nature</em> (2022)</cite>
+    </blockquote>
+    <p>
+      <strong>Cap sets, 2023.</strong> A cap set is a set of points in
+      (&#8484;/3)<sup><em>n</em></sup> with no three on a line. FunSearch paired a pretrained
+      language model with a program that scores its output, and found a cap set of size 512 in
+      dimension 8, larger than any previously known. It also raised the lower bound on the cap set
+      capacity from 2.2180 to 2.2202, which the authors call &ldquo;the largest improvement in 20
+      years to the asymptotic lower bound&rdquo;. The output is a program, which mathematicians could
+      read:
+    </p>
+    <blockquote>
+      This demonstrates that it is possible to make a scientific discovery&mdash;a new piece of verifiable knowledge about a notorious scientific problem&mdash;using an LLM.
+      <cite>&mdash; Romera-Paredes et al., <em>Nature</em> (2023)</cite>
+    </blockquote>
+    <p>
+      <strong>Matrix multiplication again, 2025.</strong> AlphaEvolve, a coding agent built on
+      language models, found a way to multiply two 4&times;4 complex-valued matrices with 48
+      multiplications:
+    </p>
+    <blockquote>
+      For 56 years, designing an algorithm with rank less than 49 over any field with characteristic 0 was an open problem. AlphaEvolve is the first method to find a rank-48 algorithm to multiply two 4 &times; 4 complex-valued matrices.
+      <cite>&mdash; Novikov et al. (2025), &sect;3.1</cite>
+    </blockquote>
+    <p>
+      The paper adds a footnote that matters: there are algorithms using fewer than 49
+      multiplications that are not tensor decompositions and cannot be applied recursively, so the
+      record is for the kind of algorithm Strassen&rsquo;s is. The same day, Dumas, Pernet and
+      Sedoglavic posted a version with rational coefficients, which they obtained by projecting the
+      machine&rsquo;s complex decomposition. Human mathematicians recombined a machine&rsquo;s
+      result into a new one. Nobody suggested theirs was not original either.
+    </p>
+    <p>
+      <strong>Go, 2016.</strong> AlphaGo&rsquo;s move 37 against Lee Sedol, which Fan Hui called
+      &ldquo;not a human move&rdquo;, is on the
+      <a href="/abduction.html">abduction page</a>.
+    </p>
+    <p>
+      Each of these is new by the test the defendants would apply to a person, and each was checked
+      by proof, by computation or, for the Go move, by the game, rather than by taste. None of them is a point between two points in
+      lexical space.
+    </p>
+    <p>
+      <strong>A claimed result, October 2026.</strong> Wuebben&rsquo;s article opens with a more
+      recent case. On 6 October 2026 OpenAI published a
+      <a href="https://github.com/openai/math">repository</a> of several hundred mathematical
+      manuscripts produced by an internal model. Problem 180 claims a proof of Barnette&rsquo;s
+      conjecture, that every 3-connected cubic bipartite planar graph has a Hamiltonian cycle.
+      Jake Boggan, who had worked on the conjecture on and off for 24 years, wrote on Hacker News
+      that night: &ldquo;But it&rsquo;s supposedly proven here - problem 180. I don&rsquo;t know what
+      to think exactly.&rdquo; Later the same day he described the argument as resting on &ldquo;some
+      clever partition function sums which are intellectually tractable but simply too far out of
+      anything I&rsquo;d seen before&rdquo;, though he had also written that on the surface it looked
+      like an approach he had considered and abandoned.
+    </p>
+    <p>
+      This one is a claim. The paper has not been refereed. The repository lists a Lean
+      formalisation for it, and I found no <code>sorry</code> in the Lean files for this problem, but
+      I have not compiled them, and Boggan wrote on the night that there was no Lean proof. The
+      repository&rsquo;s own history records three other manuscripts withdrawn the next day for a
+      sign error. Nothing on this page depends on Problem 180.
+    </p>
+
+    <h2>Rebuke 5: Chiang set a test, and it has been passed</h2>
+    <p>
+      To his credit, Chiang said what would change his mind:
+    </p>
+    <blockquote>
+      If and when we start seeing models producing output that&rsquo;s as good as their input, then the analogy of lossy compression will no longer be applicable.
+      <cite>&mdash; Chiang (2023)</cite>
+    </blockquote>
+    <p>
+      In the systems above, it already is. FunSearch works by feeding the model&rsquo;s best programs
+      back into its prompts, which its authors call &ldquo;best-shot prompting&rdquo;. The
+      model&rsquo;s output becomes its input, and the loop ends with a cap set larger than anything
+      in the literature it was trained on. A copy cannot be sharper than the original. This one is.
+    </p>
+    <p>
+      Chiang&rsquo;s related suggestion was that a company&rsquo;s willingness to train new models
+      on a model&rsquo;s text would be a sign of its quality, and he suspected that would need
+      &ldquo;a major breakthrough&rdquo;. Four months later Microsoft trained phi-1 partly on
+      &ldquo;synthetically generated textbooks and exercises with GPT-3.5&rdquo;. That is weaker
+      evidence, since a small model learning from a large one is closer to distillation than to
+      surpassing the source. The cap sets and matrix algorithms are the clean case.
+    </p>
+    <p>
+      Chomsky and his co-authors said these systems are &ldquo;constitutionally unable to balance
+      creativity with constraint&rdquo;. FunSearch is that balance built as a machine: a language
+      model proposes, an evaluator rejects what fails, and the paper introduces the design as an
+      answer to the model&rsquo;s tendency to confabulate. Their prediction that the output would
+      &ldquo;always be superficial and dubious&rdquo; does not survive a 512-point cap set.
+    </p>
+
+    <h2>Scope</h2>
+    <p>
+      The claim on trial is &ldquo;can&rsquo;t&rdquo;. Most of what language models produce is
+      derivative, much of it is bland, and Chiang is right about that. So is most of what people
+      produce. The rebuke needs only some machine results that are new by a fair test, and they
+      exist.
+    </p>
+    <p>
+      The machines did not work alone. FunSearch evolved one function inside a program skeleton that
+      humans wrote, and AlphaEvolve&rsquo;s authors describe the division of labour as
+      &ldquo;Human defines &lsquo;What?&rsquo;&rdquo; and &ldquo;AlphaEvolve figures out
+      &lsquo;How?&rsquo;&rdquo;. Choosing the problem and the scoring rule is real work. It is also
+      what a supervisor does for a student, and we still credit the student.
+    </p>
+    <p>
+      Wuebben draws his own lines, and they are the right ones: &ldquo;Nor should we confuse an
+      impressive-looking argument with a correct proof, or a correct proof with a conceptual
+      breakthrough.&rdquo; A record number of multiplications is new and correct, and is not a new
+      field of mathematics. Nothing here shows a machine doing what Grothendieck did. It shows that
+      the hull argument cannot be the reason it hasn&rsquo;t.
+    </p>
+    <p>
+      Chiang&rsquo;s later argument, that art is made of many choices and gets its meaning from the
+      life of the person who makes it, is not refuted here. It is a claim about what makes a work
+      worth attending to, and it is compatible with machines producing things that are new.
+    </p>
+
+    <h2>In their favour</h2>
+    <p>
+      Chiang&rsquo;s compression analogy explains hallucination well: a decoder that fills gaps
+      plausibly will produce confident errors. That part has aged better than the rest.
+    </p>
+    <p>
+      There is real evidence that feeding models their own output can go badly. Shumailov et al.
+      (2023) found that training on generated data makes the tails of the original distribution
+      disappear, which they call model collapse. The successful loops above all have an external
+      check, and that supports the defendants&rsquo; instinct that the model alone is not enough.
+    </p>
+    <p>
+      Training-data attribution and copyright are real concerns and separate ones. Chiang quotes
+      Simon Willison calling model training &ldquo;money laundering for copyrighted data&rdquo;.
+      Whether a result is new and whether its makers paid for their inputs are different questions,
+      and this page answers only the first.
+    </p>
+    <p>
+      Measuring creativity is hard, and most benchmarks for it are weak. The examples here were
+      chosen because they have an objective score: a count of multiplications, the size of a set.
+      Open-ended creative writing has no such score, and claims in either direction there are
+      harder to settle.
+    </p>
+    <p class="muted" style="font-size:0.92rem;">
+      Disclosure: this page was researched and drafted by a language model, which on the
+      defendants&rsquo; account could only have averaged the sources. Check the quotations.
+    </p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Wuebben, B. J. (2026). &ldquo;Beyond the Convex Hull: AI and the Nature of Human
+        Creativity.&rdquo; Article on LinkedIn, 10 October.
+        <a href="https://lnkd.in/p/gpSYdpUq">lnkd.in/p/gpSYdpUq</a>.
+      </li>
+      <li>
+        Chiang, T. (2023). &ldquo;ChatGPT Is a Blurry JPEG of the Web.&rdquo; <em>The New
+        Yorker</em>, 9 February.
+        <a href="https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web">newyorker.com</a>.
+      </li>
+      <li>
+        Chiang, T. (2024). &ldquo;Why A.I. Isn&rsquo;t Going to Make Art.&rdquo; <em>The New
+        Yorker</em>, 31 August.
+        <a href="https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art">newyorker.com</a>.
+      </li>
+      <li>
+        Chomsky, N., Roberts, I. and Watumull, J. (2023). &ldquo;The False Promise of
+        ChatGPT.&rdquo; <em>The New York Times</em>, 8 March.
+        <a href="https://www.nytimes.com/2023/03/08/opinion/noam-chomsky-chatgpt-ai.html">nytimes.com</a>.
+      </li>
+      <li>
+        Balestriero, R., Pesenti, J. and LeCun, Y. (2021). &ldquo;Learning in High Dimension Always
+        Amounts to Extrapolation.&rdquo; <a href="https://arxiv.org/abs/2110.09485">arXiv:2110.09485</a>.
+      </li>
+      <li>
+        Fawzi, A. et al. (2022). &ldquo;Discovering faster matrix multiplication algorithms with
+        reinforcement learning.&rdquo; <em>Nature</em> 610, 47&ndash;53.
+        <a href="https://www.nature.com/articles/s41586-022-05172-4">doi:10.1038/s41586-022-05172-4</a>.
+      </li>
+      <li>
+        Romera-Paredes, B. et al. (2023). &ldquo;Mathematical discoveries from program search with
+        large language models.&rdquo; <em>Nature</em> 625, 468&ndash;475.
+        <a href="https://www.nature.com/articles/s41586-023-06924-6">doi:10.1038/s41586-023-06924-6</a>.
+      </li>
+      <li>
+        Novikov, A. et al. (2025). &ldquo;AlphaEvolve: A coding agent for scientific and
+        algorithmic discovery.&rdquo; <a href="https://arxiv.org/abs/2506.13131">arXiv:2506.13131</a>.
+      </li>
+      <li>
+        Dumas, J.-G., Pernet, C. and Sedoglavic, A. (2025). &ldquo;A non-commutative algorithm for
+        multiplying 4x4 matrices using 48 non-complex multiplications.&rdquo;
+        <a href="https://arxiv.org/abs/2506.13242">arXiv:2506.13242</a>.
+      </li>
+      <li>
+        Gunasekar, S. et al. (2023). &ldquo;Textbooks Are All You Need.&rdquo;
+        <a href="https://arxiv.org/abs/2306.11644">arXiv:2306.11644</a>.
+      </li>
+      <li>
+        Shumailov, I. et al. (2023). &ldquo;The Curse of Recursion: Training on Generated Data Makes
+        Models Forget.&rdquo; <a href="https://arxiv.org/abs/2305.17493">arXiv:2305.17493</a>.
+      </li>
+      <li>
+        OpenAI (2026). Mathematical manuscripts repository, released 6 October, with history of
+        withdrawals and corrections.
+        <a href="https://github.com/openai/math">github.com/openai/math</a>.
+        Problem 180: &ldquo;Paired states and Hamiltonian cycles in cubic bipartite planar
+        graphs&rdquo;.
+      </li>
+      <li>
+        Boggan, J. (2026). Comments on &ldquo;Sharing AI progress in mathematics&rdquo;, Hacker
+        News, 7 October.
+        <a href="https://news.ycombinator.com/item?id=49987367">item 49987367</a> and
+        <a href="https://news.ycombinator.com/item?id=49994671">item 49994671</a>.
+      </li>
+      <li>
+        Demo: <a href="https://github.com/microprediction/philosophy/blob/main/demos/convex_hull.py">demos/convex_hull.py</a>,
+        convex-hull membership of fresh Gaussian points by linear programming.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>
