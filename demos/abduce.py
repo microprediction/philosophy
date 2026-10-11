@@ -3,10 +3,11 @@
 Peirce's schema: the surprising fact C is observed; but if A were true, C would be
 a matter of course; hence there is reason to suspect A.
 
-Here C is Kepler's table of orbital periods and distances, and A is searched for
-among expressions in the two variables, smallest first.  An expression counts as
-an explanation only if it is near-constant on the real data AND varies on random
-data: an "explanation" that fits any data whatever explains nothing.
+Here C is Kepler's table of orbital periods and distances.  The schema does not
+say where A comes from; in this toy a supplied grammar generates candidates,
+smallest first.  A candidate survives only if it is near-constant on the real
+data AND varies on random data, a weak test that it says something.  The
+smallest survivors are reported.
 
     python3 abduce.py
 """

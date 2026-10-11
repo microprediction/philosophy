@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Machines Can&rsquo;t Do Abduction &mdash; Dumb Philosophy</title>
-  <meta name="description" content="Inference to the best explanation is said to be unprogrammable. Here is a toy that does one formalisable piece of it, and recovers Kepler's third law from six numbers." />
+  <meta name="description" content="Abduction is said to be unprogrammable. Here is a toy that does one formalisable piece of it, and recovers Kepler's third law from six numbers." />
   <link rel="stylesheet" href="./style.css?v=4" />
   <script defer src="./abduce.js"></script>
 </head>
@@ -39,7 +39,7 @@
         <dt>Defendants</dt>
         <dd>Erik J. Larson, <em>The Myth of Artificial Intelligence</em> (2021); Jerry Fodor, <em>The Mind Doesn&rsquo;t Work That Way</em> (2000)</dd>
         <dt>Claim</dt>
-        <dd>Inference to the best explanation is neither deduction nor induction, nobody knows how to program it, and so machine intelligence is going nowhere.</dd>
+        <dd>Abduction is neither deduction nor induction, nobody knows how to program it, and so machine intelligence is going nowhere.</dd>
         <dt>Charge</dt>
         <dd>Answering a formal literature in two endnotes, and treating an unsolved problem as a closed door.</dd>
         <dt>Verdict</dt>
@@ -59,7 +59,15 @@
       <cite>&mdash; Peirce, <em>Collected Papers</em> 5.189</cite>
     </blockquote>
     <p>
-      It is the interesting one, because it is the only one that adds anything. Deduction unpacks
+      The word now has two senses. In Peirce&rsquo;s, the first, abduction is about generating a
+      hypothesis worth testing. In the modern sense it is about justification: preferring the best
+      of the explanations on the table, which is why it is also called inference to the best
+      explanation. The Stanford Encyclopedia notes that &ldquo;there is no reference in
+      Peirce&rsquo;s writings on abduction to the notion of best explanation.&rdquo; Both senses
+      come up below, and I try to say which.
+    </p>
+    <p>
+      Peirce&rsquo;s sense is the interesting one, because it is the only kind of inference that adds anything. Deduction unpacks
       what you had; induction counts. Abduction guesses.
     </p>
     <blockquote>
@@ -98,14 +106,21 @@
 
     <h2>Rebuke 1: a piece of it, implemented</h2>
     <p>
-      Peirce&rsquo;s schema has two clauses and both are mechanical. The candidate must account for
-      the observation. And the accounting must be <em>non-trivial</em>, because something that
-      would fit any observation whatever accounts for nothing.
+      The program below does three things. A grammar I supplied <em>generates</em> candidate
+      expressions. Two numerical tests <em>filter</em> them: a candidate must fit the observations,
+      and it must not fit random data as well, which is a weak test that it says something. Then
+      size <em>selects</em>: the smallest survivor wins.
     </p>
     <p>
-      So: take Kepler&rsquo;s six planets as bare pairs of numbers, the distance <em>a</em> and the
+      Neither test is a clause of Peirce&rsquo;s schema. The schema already contains A; it says when
+      a candidate is worth suspecting, not where the candidate came from. Here the grammar and the
+      enumerator do that job. The random-data test only throws out some vacuous invariants, and a
+      quantity being nearly constant is not, by itself, an explanation.
+    </p>
+    <p>
+      Take Kepler&rsquo;s six planets as bare pairs of numbers, the distance <em>a</em> and the
       period <em>T</em>. Enumerate expressions in the two variables, smallest first, and keep the
-      ones that pass both clauses. That is the whole program.
+      ones that pass both tests. That is the whole program.
     </p>
     <pre class="code">for expr in expressions_by_size():   <span class="c"># a, T, (a*T), (a/(T*T)), ...</span>
 
@@ -118,10 +133,7 @@
         continue
 
     report(expr)</pre>
-    <p>
-      Those two tests are mechanical stand-ins for the two clauses of the schema. They are stand-ins
-      and not the thing itself, which the next paragraphs are about. Run it:
-    </p>
+    <p>Run it:</p>
     <pre class="out">(a*(a*(a/(T*T))))      = 1.000109   spread 1.39e-03   varies on random data: 2.7
 (T/(a*(a*(a/T))))      = 0.999891   spread 1.39e-03   varies on random data: 6.1
 
@@ -154,16 +166,16 @@
       background knowledge, or which of a thousand irrelevant facts might bear on the case.
     </p>
     <p>
-      So this is a toy instance of one formalisable component: search a hypothesis language, score
-      the candidates, keep what fits and says something. It is not general abduction, and it does
+      So this is a toy: a rudimentary discovery procedure joined to model selection inside a fixed
+      grammar. Generate, filter, select. It is not general abduction, and it does
       not refute Fodor or Larson on the hard part. It does show that the component is mechanical,
       which is worth establishing before anyone calls the whole thing a mystery.
     </p>
 
     <h2>Rebuke 2: the formal answer is in the endnotes</h2>
     <p>
-      <em>Scoring</em> a hypothesis against the data, with a penalty for complication, is not an
-      open problem. It is a textbook chapter. David MacKay, in the standard one:
+      This is the modern sense, the one that ranks candidates. <em>Scoring</em> a hypothesis
+      against the data, with a penalty for complication, is not an open problem. It is a textbook chapter. David MacKay, in the standard one:
     </p>
     <blockquote>
       Coherent inference (as embodied by Bayesian probability) automatically embodies Occam&rsquo;s razor, quantitatively.
@@ -288,24 +300,29 @@
       magical and unknowable. The myth of AI becomes the myth of intelligence generally.&rdquo;
     </p>
 
-    <h2>Rebuke 5: Lovelace asked it in 1843 and Turing answered it in 1950</h2>
+    <h2>Rebuke 5: Lovelace asked it in 1843 and Turing narrowed it in 1950</h2>
     <p>This is the oldest objection in the subject. Ada Lovelace, in Note G:</p>
     <blockquote>
       The Analytical Engine has no pretensions whatever to originate anything. It can do whatever we know how to order it to perform. It can follow analysis; but it has no power of anticipating any analytical relations or truths.
       <cite>&mdash; Lovelace (1843)</cite>
     </blockquote>
     <p>
-      That last clause is the abduction claim, a century before the word reached AI. Turing gave it
-      a name and three answers. The first is about burden of proof: the evidence available to her
+      That is a claim about originality, which is broader than abduction and not the same thing.
+      Turing gave it a name and three answers. The first is about burden of proof: the evidence available to her
       &ldquo;did not encourage her to believe&rdquo; the machines had the property, which is not the
       same as their lacking it.
     </p>
     <p>
-      The second is universality, and it is still the strongest thing anyone has said on the
-      subject. Whatever the mysterious faculty is, if some machine has it, a universal computer
-      can be programmed to do the same: &ldquo;The Analytical Engine was a universal digital
+      The second is universality, and it is conditional: &ldquo;For suppose that some
+      discrete-state machine has the property. The Analytical Engine was a universal digital
       computer, so that, if its storage capacity and speed were adequate, it could by suitable
       programming be made to mimic the machine in question.&rdquo;
+    </p>
+    <p>
+      If any discrete-state machine can do it, a universal computer can be programmed to do the
+      same, so no special kind of machine is needed. That is all it shows. It does not show that
+      human abduction is done by such a machine, it does not supply the program, which is
+      Larson&rsquo;s complaint, and it does not touch Fodor&rsquo;s problem of relevance.
     </p>
     <p>The third is to turn the question round:</p>
     <blockquote>
@@ -316,6 +333,10 @@
       Seventy-five years later, Fan Hui watched a machine play a move with a one in ten thousand
       chance of being chosen by a human: &ldquo;It&rsquo;s not a human move. I&rsquo;ve never seen a
       human play this move,&rdquo; he says. &ldquo;So beautiful.&rdquo;
+    </p>
+    <p>
+      That answers the absolute version, that a machine can never do anything new. A new move in a
+      fixed game is not the forming of a hypothesis, so it does not answer Larson.
     </p>
 
     <h2>Scope</h2>
