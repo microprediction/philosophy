@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Doomsday and Simulation &mdash; Dumb Philosophy</title>
+  <meta name="description" content="Assume you are a random sample of everyone who will ever live, and doom is near; of every mind like yours, and you are software. Gott's rule fails on dogs and old men, a rival assumption cancels Doomsday exactly, and Bostrom's careful trilemma is not Musk's one in billions." />
+  <link rel="stylesheet" href="./style.css?v=5" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Minds and Machines</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+        <a href="/marys-room.html">Mary&rsquo;s Room</a>
+        <a href="/zombies.html">Philosophical Zombies</a>
+        <a href="/orangutan.html">The Orangutan Argument</a>
+        <a href="/next-token.html">Just Predicting the Next Token</a>
+        <a href="/stochastic-parrot.html">The Stochastic Parrot</a>
+        <a href="/only-language.html">Only Language</a>
+        <a href="/every-known-example.html">Every Known Example</a>
+        <a href="/abduction.html">Machines Can&rsquo;t Do Abduction</a>
+      </span></span>
+      <span class="menu"><span class="menu-label" tabindex="0">Classics</span><span class="drop">
+        <a href="/zeno.html">Zeno&rsquo;s Paradoxes</a>
+        <a href="/ontological.html">The Ontological Argument</a>
+        <a href="/pascal.html">Pascal&rsquo;s Wager</a>
+        <a href="/doomsday.html">Doomsday and Simulation</a>
+        <a href="/godel-abuse.html">G&ouml;del Proves Whatever You Like</a>
+        <a href="/tao-of-physics.html">The Tao of Physics</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>Doomsday and Simulation</h1>
+    <p class="subtitle">Assume you are a random sample of all the humans who will ever live, and doom is near. Assume you are a random sample of all minds like yours, and you are probably software. Two conclusions from one move.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendants</dt>
+        <dd>Brandon Carter and John Leslie (the Doomsday argument; Leslie, <em>The End of the World</em>, 1996); J. Richard Gott III, <em>Nature</em> (1993); Nick Bostrom, &ldquo;Are You Living in a Computer Simulation?&rdquo; (2003); and Elon Musk (2016) for the popular version</dd>
+        <dt>Claim</dt>
+        <dd>Treat yourself as a random draw from all observers. Then humanity probably ends soon (Doomsday), or at least one of three surprising things is true, one of which is that we live in a simulation (Bostrom). Musk: &ldquo;one in billions&rdquo; that we are not simulated.</dd>
+        <dt>Charge</dt>
+        <dd>Turning a fact about averages over a population into a probability about one known member, after choosing the population to suit.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Gott: guilty. His rule ignores what we know, and it fails wherever there is something to know. Carter and Leslie: not proven. The argument stands or falls on a sampling assumption that a rival assumption exactly cancels. Bostrom: acquitted on the trilemma, which is careful and mostly arithmetic. Musk: guilty. He deleted two of Bostrom&rsquo;s three options.</dd>
+      </dl>
+    </div>
+
+    <h2>The argument, in their words</h2>
+    <p>
+      The Doomsday argument has two versions. Gott&rsquo;s uses time. He reasons that if nothing
+      is special about the moment you look at something, that moment is uniformly distributed
+      over its lifetime. So with 95% probability you are not in the first or last 2.5%, and
+      the future duration lies between 1/39 and 39 times the past duration. The abstract of his
+      1993 <em>Nature</em> paper:
+    </p>
+    <blockquote>
+      Making only the assumption that you are a random intelligent observer, limits for the total longevity of our species of 0.2 million to 8 million years can be derived at the 95% confidence level.
+      <cite>&mdash; Gott, <em>Nature</em> 363 (1993), abstract</cite>
+    </blockquote>
+    <p>
+      Homo sapiens is about 200,000 years old, so the future is between 5,100 and 7.8 million
+      years. Gott has applied the same rule to the Berlin Wall, Stonehenge, Broadway plays,
+      <em>Nature</em> itself, the Chicago White Sox and himself.
+    </p>
+    <p>
+      Carter and Leslie use birth rank. Carter thought of it first and did not publish. Leslie
+      put it in print from 1989 on, and in a book, <em>The End of the World</em>, in 1996. In the
+      illustration Bostrom and Olum use, about 60 billion people have been born so far. If
+      humanity ends soon, with 200 billion in all, your rank is unremarkable. If it lasts and 200
+      trillion are born, you are among the first 0.03%. Being that early is a thousand times less
+      likely, so update toward doom. Unlike Gott, Leslie
+      starts from a prior and applies Bayes&rsquo; rule, and he says the argument only shifts
+      probability. Bostrom gave the assumption a name:
+    </p>
+    <blockquote>
+      (SSA) One should reason as if one were a random sample from the set of all observers in one&rsquo;s reference class.
+      <cite>&mdash; Bostrom, <em>Anthropic Bias</em> (2002), ch. 3</cite>
+    </blockquote>
+    <p>
+      Bostrom&rsquo;s simulation paper uses a weaker cousin of this to reach a disjunction:
+    </p>
+    <blockquote>
+      This paper argues that at least one of the following propositions is true: (1) the human species is very likely to go extinct before reaching a &ldquo;posthuman&rdquo; stage; (2) any posthuman civilization is extremely unlikely to run a significant number of simulations of their evolutionary history (or variations thereof); (3) we are almost certainly living in a computer simulation.
+      <cite>&mdash; Bostrom (2003), abstract</cite>
+    </blockquote>
+    <p>
+      At Recode&rsquo;s Code Conference in 2016, Elon Musk gave the version most people have
+      heard. Games went from Pong to photorealism in forty years, so they will become
+      indistinguishable from reality, and there will be billions of machines running them.
+      Asked what he thought:
+    </p>
+    <blockquote>
+      There&rsquo;s a one in billions chance we&rsquo;re in base reality.
+      <cite>&mdash; Musk (2016), as transcribed by Ezra Klein, <em>Vox</em></cite>
+    </blockquote>
+
+    <h2>Rebuke 1: the rule is right on average and wrong for nearly everyone</h2>
+    <p>
+      Gott&rsquo;s rule gives every phenomenon of age <em>t</em> a 50% chance of reaching age
+      2<em>t</em>, whatever the phenomenon is. Mark Brown sent Andrew Gelman the obvious test:
+    </p>
+    <blockquote>
+      Apply the method to a 90 year old man and the 50% prediction confidence interval for his residual life will be (30,270). Apply it to his 9 year old great grandson and you get (3,27).
+      <cite>&mdash; Mark Brown, quoted by Gelman (2018)</cite>
+    </blockquote>
+    <p>Gelman&rsquo;s reply:</p>
+    <blockquote>
+      Hey, living to the age of 270&mdash;that&rsquo;d be cool! I just have to make it to 90, then I&rsquo;m most of the way there.
+      <cite>&mdash; Gelman (2018)</cite>
+    </blockquote>
+    <p>
+      There is a precise sense in which Gott is right, and it is worth seeing. Take a population
+      with stable births and a realistic mortality curve, and pick a living person at random
+      without looking at their age. Their age is then uniformly placed within their lifetime, and
+      Gott&rsquo;s intervals have exactly the coverage he claims. I checked this with a
+      Gompertz&ndash;Makeham mortality model (hazard 0.0005 + 0.00003&#8239;e<sup>0.095&#8239;age</sup>,
+      life expectancy 77 years; the script is in the notes). Averaged over everyone alive, the
+      50% intervals cover 50.0% of the time and the 95% intervals cover 94.9%. Now condition on
+      the age, which is the only thing Gott uses:
+    </p>
+    <div class="table-wrap">
+    <table class="evidence">
+      <thead>
+        <tr><th>Age</th><th>Gott&rsquo;s 50% interval for years remaining</th><th>Chance it is right</th><th>Gott&rsquo;s 95% interval</th><th>Chance it is right</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>0.33 to 3</td><td>0.1%</td><td>0.03 to 39</td><td>3%</td></tr>
+        <tr><td>10</td><td>3.3 to 30</td><td>3%</td><td>0.26 to 390</td><td>100%</td></tr>
+        <tr><td>20</td><td>6.7 to 60</td><td>48%</td><td>0.5 to 780</td><td>100%</td></tr>
+        <tr><td>40</td><td>13 to 120</td><td>96%</td><td>1 to 1,560</td><td>99.8%</td></tr>
+        <tr><td>60</td><td>20 to 180</td><td>58%</td><td>1.5 to 2,340</td><td>98%</td></tr>
+        <tr><td>80</td><td>27 to 240</td><td>0.1%</td><td>2 to 3,120</td><td>87%</td></tr>
+        <tr><td>90</td><td>30 to 270</td><td>0%</td><td>2.3 to 3,510</td><td>67%</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      The 50% interval is right for almost nobody in particular. It averages to 50% because it is
+      nearly always right for the middle-aged and nearly always wrong for the old and the young.
+      The model is illustrative, but no plausible mortality curve changes the pattern. Gelman
+      put the statistical point in 2005:
+    </p>
+    <blockquote>
+      If you look carefully at classical statistical theory, you&rsquo;ll see that it makes claims about averages, not about particular cases. However, this does not mean that there is a 95% chance that any particular interval will contain the true value. Especially not in this situation, where we have additional subject-matter knowledge.
+      <cite>&mdash; Gelman (2005)</cite>
+    </blockquote>
+    <p>
+      His summary: &ldquo;The doomsday argument is pretty silly (and also, it&rsquo;s not
+      Bayesian).&rdquo; Carlton Caves reached the same place by a different route. Gott&rsquo;s
+      rule is the Bayesian answer under one particular prior, proportional to 1/<em>T</em>&sup2;
+      in total duration, which is the prior that has no time scale in it. Caves&rsquo;s abstract:
+    </p>
+    <blockquote>
+      Nothing licenses indiscriminate use of Gott&rsquo;s rule as a predictor of future duration. It should only be used when the phenomenon in question has no identifiable time scales.
+      <cite>&mdash; Caves (2008), abstract</cite>
+    </blockquote>
+    <p>
+      Humans have a time scale. So do dogs, baseball careers and species.
+    </p>
+
+    <h2>Rebuke 2: Caves offered to bet</h2>
+    <p>
+      In 1999 Caves collected the names, breeds and birth dates of 24 dogs owned by people in his
+      department and lodged a notarised list. For each of the six dogs over ten years old, Gott&rsquo;s
+      rule says a 50% chance of living to twice its age.
+    </p>
+    <blockquote>
+      To sweeten the pot, I offered Gott 2:1 odds in his favor. Gott refused the bets on the grounds that &ldquo;I don&rsquo;t do bets.&rdquo; If he had believed his own predictions, his expected gain would have been $3,000 US, and the probability that he would have been a net loser on the six bets was 7/64=0.11. I contacted the caretakers during May and June of 2008 and verified that all six dogs have died. Thus, as I fully expected, I would have won all the bets and been $6,000 US richer.
+      <cite>&mdash; Caves (2008), sec. 4</cite>
+    </blockquote>
+    <p>
+      Under Gott&rsquo;s rule the chance that all six dogs fail to reach twice their age is
+      1/64. Caves would have put the chance near 1, because a dog of eleven is not going to see
+      twenty-two.
+    </p>
+    <p>
+      Caves did the same arithmetic for baseball. In June 2008 the Chicago Cubs had not won the
+      World Series since 1908. Gott&rsquo;s rule gives a 50% chance that the drought lasts another
+      99 years. Giving every one of 30 clubs an equal chance each year gives
+      (29/30)<sup>99</sup> = 3.5%. The Cubs won in 2016. Gott&rsquo;s rule had given that about
+      an 8% chance (8.4 more years on a 100-year drought); the equal-chance model gave it about
+      26%. Caves had done the White Sox too: in 1996 Gott&rsquo;s rule gave a title by 2005 a 10%
+      chance against 26% for equal chances, and they won in 2005.
+    </p>
+    <h3>Gott&rsquo;s response</h3>
+    <p>
+      According to Caves, Gott replied that his rule applies to a dog drawn at random from the
+      sample, not to particular dogs whose ages are known. Caves agrees, and that is the point:
+    </p>
+    <blockquote>
+      It is obvious that in a large sample of dogs selected without regard to age, roughly half the dogs, within the inevitable statistical fluctuations, will be in the first half of their lives, with the rest in the second half. This is the trivial content of Gott&rsquo;s Copernican principle. It is equally obvious that having a sample in which half the dogs are in the first half of their lives does not imply that any particular dog in the sample has a probability of 1/2 to survive beyond twice its present age.
+      <cite>&mdash; Caves (2008), sec. 4</cite>
+    </blockquote>
+    <p>
+      Humanity is one particular dog, of known age. Gott&rsquo;s prediction for it is made on
+      exactly the basis he declined to bet on for the dogs.
+    </p>
+
+    <h2>Rebuke 3: the answer depends on who &ldquo;we&rdquo; are</h2>
+    <p>
+      &ldquo;A random intelligent observer&rdquo; has to be random within some class. The class
+      is not given by nature, and Gott&rsquo;s own arithmetic moves with it. Here is his 95% rule
+      applied to some reasonable choices of what we are, measured in years:
+    </p>
+    <div class="table-wrap">
+    <table class="evidence">
+      <thead>
+        <tr><th>Reference class</th><th>Age so far</th><th>95% interval for the future</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Genus Homo</td><td>about 2 million years</td><td>51,000 to 78 million years</td></tr>
+        <tr><td>Homo sapiens (Gott&rsquo;s choice)</td><td>about 200,000 years</td><td>5,100 to 7.8 million years</td></tr>
+        <tr><td>Farming societies</td><td>about 10,000 years</td><td>260 to 390,000 years</td></tr>
+        <tr><td>People who have read the Doomsday argument in print</td><td>37 years (Leslie, 1989)</td><td>about 1 to 1,440 years</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>
+      Each row is equally Copernican. The last row is the class that is actually doing the
+      reasoning, and it predicts the end of Doomsday reasoners, not of people. The birth-rank
+      version has the same problem: count all humans, or only those who could follow the
+      argument, or only those alive after some date, and the likelihood ratio changes. Radford
+      Neal, commenting on Gelman&rsquo;s 2005 post:
+    </p>
+    <blockquote>
+      One problem with the Doomsday Argument is that there isn&rsquo;t just one of them &ndash; there are several, some Bayesian, some not, propounded with varying degrees of statistical literacy. None of them are precise (due to the &ldquo;reference class&rdquo; problem), which is one argument for why they&rsquo;re invalid.
+      <cite>&mdash; Neal, comment on Gelman (2005)</cite>
+    </blockquote>
+    <p>
+      Bostrom, who is sympathetic to the argument and wrote the book on it, agrees about both
+      versions. On Gott: &ldquo;Gott&rsquo;s version is incorrect.&rdquo; On Leslie:
+    </p>
+    <blockquote>
+      We found shortcomings in the versions that have been presented in the literature, we argued that John Leslie&rsquo;s proposal for solving the reference class problem is unworkable, and we showed that DA has alternative interpretations and is inconclusive.
+      <cite>&mdash; Bostrom, <em>Anthropic Bias</em> (2002), ch. 10</cite>
+    </blockquote>
+
+    <h2>Rebuke 4: a rival assumption cancels it exactly</h2>
+    <p>
+      The Carter&ndash;Leslie update uses one likelihood: if <em>N</em> people will ever live,
+      the chance of having any particular birth rank is 1/<em>N</em>. A world with more people
+      makes your rank less probable. But a world with more people also makes it more probable that
+      you exist to have a rank at all. Dennis Dieks raised this in 1992, and Bostrom calls it the
+      Self-Indication Assumption (SIA). Weight each world by its number of observers and the two
+      factors of <em>N</em> cancel. Ken Olum:
+    </p>
+    <blockquote>
+      Under this treatment, it is more likely to exist at all in a race which is long-lived, as originally discussed by Dieks, and this cancels the Doomsday Argument, so that the chance of a disaster is only what one would ordinarily estimate.
+      <cite>&mdash; Olum (2002), abstract</cite>
+    </blockquote>
+    <p>
+      With the same numbers and even prior odds between 200 billion and 200 trillion
+      people, the self-sampling assumption gives doom-soon a probability of 1/(1 + 0.001) =
+      99.9%. Add the self-indication weight and it returns to 50%, which is where you started.
+      The argument adds nothing, and the forecast is whatever your study of the actual hazards
+      says it is. Olum&rsquo;s point about those hazards:
+    </p>
+    <blockquote>
+      It doesn&rsquo;t really matter how long it took and how many people lived and died before we achieved the technology to destroy ourselves.
+      <cite>&mdash; Olum (2002), sec. IV</cite>
+    </blockquote>
+    <h3>Bostrom&rsquo;s response</h3>
+    <p>
+      SIA has its own absurd consequence. Bostrom&rsquo;s Presumptuous Philosopher tells
+      physicists choosing between two cosmologies, one with a trillion times more observers,
+      that they need not run the experiment:
+    </p>
+    <blockquote>
+      &ldquo;Hey guys, it is completely unnecessary for you to do the experiment, because I can already show to you that T<sub>2</sub> is about a trillion times more likely to be true than T<sub>1</sub>!&rdquo;
+      <cite>&mdash; Bostrom, <em>Anthropic Bias</em> (2002), ch. 7</cite>
+    </blockquote>
+    <p>
+      That is a fair hit, and I do not think SIA is obviously right. But it does not rescue
+      Doomsday. It shows that two candidate rules for reasoning about your own existence each
+      give a strange answer somewhere, and that the Doomsday conclusion is an output of the
+      choice. An argument whose conclusion vanishes under a rival assumption that nobody has
+      ruled out has not established its conclusion. Bostrom&rsquo;s own eventual position is
+      that neither assumption is needed in its simple form, and that the Doomsday argument is
+      inconclusive.
+    </p>
+
+    <h2>Rebuke 5: Bostrom is not Musk</h2>
+    <p>
+      Bostrom&rsquo;s argument is close to arithmetic. Let <em>f</em><sub>P</sub> be the
+      fraction of human-level civilisations that reach a posthuman stage, <em>f</em><sub>I</sub>
+      the fraction of those interested in running ancestor simulations, and
+      <em>N</em><sub>I</sub> the number such a civilisation runs, each roughly as populous as
+      the real history. The fraction of human-type observers who are simulated is
+    </p>
+    <p style="text-align:center;">
+      <em>f</em><sub>sim</sub> = <em>f</em><sub>P</sub><em>f</em><sub>I</sub><em>N</em><sub>I</sub>
+      / (<em>f</em><sub>P</sub><em>f</em><sub>I</sub><em>N</em><sub>I</sub> + 1).
+    </p>
+    <p>
+      If <em>N</em><sub>I</sub> is enormous, either <em>f</em><sub>P</sub><em>f</em><sub>I</sub>
+      is tiny or <em>f</em><sub>sim</sub> is close to 1. That is the trilemma, and given
+      substrate-independence and the premise about computing power, it is valid. Bostrom then
+      declines to say which horn is true:
+    </p>
+    <blockquote>
+      In the dark forest of our current ignorance, it seems sensible to apportion one&rsquo;s credence roughly evenly between (1), (2), and (3).
+      <cite>&mdash; Bostrom (2003), sec. VII</cite>
+    </blockquote>
+    <p>
+      That puts his credence that we are simulated at something like one in three. Musk&rsquo;s
+      &ldquo;one in billions&rdquo; for base reality needs <em>f</em><sub>P</sub><em>f</em><sub>I</sub><em>N</em><sub>I</sub>
+      of about a billion. In other words it needs the first two horns to be false with near
+      certainty, which is to assume that civilisations like ours survive and want to run
+      simulations. Musk&rsquo;s premise was that games keep improving. Bostrom&rsquo;s first
+      horn, extinction before maturity, is the Doomsday question again, and nobody knows its
+      answer. Bostrom&rsquo;s FAQ describes the move:
+    </p>
+    <blockquote>
+      I note that people who hear about the simulation argument often react by saying, &ldquo;Yes, I accept the argument, and it is obvious that it is alternative n that obtains.&rdquo; But different people pick a different n. Some think it obvious that (1) is true, others that (2) is true, yet others that (3) is true. Many if not all of these people are overconfident.
+      <cite>&mdash; Bostrom, <em>The Simulation Argument FAQ</em> (2025), Q2</cite>
+    </blockquote>
+    <p>
+      The FAQ also has an entry titled &ldquo;What if one is Elon Musk?&rdquo;, which begins:
+      &ldquo;This is not actually a frequently asked question, but perhaps it should be.&rdquo;
+    </p>
+    <p>
+      Bostrom also saw the connection this page is about, and argued that his principle is
+      weaker than Doomsday&rsquo;s:
+    </p>
+    <blockquote>
+      The Doomsday argument rests on a much stronger and more controversial premiss, namely that one should reason as if one were a random sample from the set of all people who will ever have lived (past, present, and future) even though we know that we are living in the early twenty&#8209;first century rather than at some point in the distant past or the future. The bland indifference principle, by contrast, applies only to cases where we have no information about which group of people we belong to.
+      <cite>&mdash; Bostrom (2003), sec. V</cite>
+    </blockquote>
+    <p>
+      That is a real distinction, and it is the right one. Gott and Leslie know their position
+      in the sequence and throw the knowledge away. Bostrom&rsquo;s principle applies only when
+      nothing you can observe tells simulated and unsimulated minds apart.
+    </p>
+
+    <h2>Rebuke 6: what the simulation argument still borrows</h2>
+    <p>
+      The weak point is the step from &ldquo;most observers like us are simulated&rdquo; to
+      &ldquo;I probably am&rdquo;. It needs the class &ldquo;observers with human-type
+      experiences&rdquo; to be the right one, and it needs us to have no information that
+      distinguishes our case. Sean Carroll doubted both:
+    </p>
+    <blockquote>
+      If we know that we are members of some very homogeneous ensemble, where every member is basically the same, then by all means typicality is a sensible assumption. But when ensembles are highly heterogeneous, and we actually know something about our specific situation, there&rsquo;s no reason to assume we are typical. As James Hartle and Mark Srednicki have pointed out, that&rsquo;s a fake kind of humility &mdash; by asserting that &ldquo;we are typical&rdquo; in the multiverse, we&rsquo;re actually claiming that &ldquo;typical observers are like us.&rdquo;
+      <cite>&mdash; Carroll (2016)</cite>
+    </blockquote>
+    <p>
+      Carroll added a puzzle. Simulated civilisations can run simulations of their own, with less
+      computing power at each level, so the hierarchy bottoms out in worlds too crude to simulate
+      anything. If observers are counted, most of them live at the bottom. So the typical observer
+      cannot build the simulations the argument started from, and we are building increasingly
+      good ones. Carroll argued against &ldquo;one version&rdquo; of the argument, not
+      Bostrom&rsquo;s exact text, but Bostrom&rsquo;s third horn needs the same counting.
+    </p>
+    <p>
+      The physicists&rsquo; complaint is about explanation rather than probability. Sabine
+      Hossenfelder:
+    </p>
+    <blockquote>
+      &ldquo;The programmer did it&rdquo; isn&rsquo;t science. It&rsquo;s not even pseudoscience. It&rsquo;s just words.
+      <cite>&mdash; Hossenfelder (2017)</cite>
+    </blockquote>
+    <p>
+      Scott Aaronson agreed that the hypothesis is lazy, &ldquo;that it doesn&rsquo;t pay its rent
+      by doing real explanatory work&rdquo;, while rejecting Hossenfelder&rsquo;s claim that known
+      physics nearly rules it out.
+    </p>
+    <h3>Bostrom&rsquo;s response</h3>
+    <p>
+      Bostrom answers the unfalsifiability charge in his FAQ, and the answer is a forecaster&rsquo;s
+      answer. Evidence about one horn moves the others. If we found a hazard that destroys nearly
+      every civilisation before maturity, (1) would rise and (3) would fall. If we approach
+      technological maturity &ldquo;with no clear peril in sight&rdquo;, (1) falls and (2) and (3)
+      rise. That is right. It makes the simulation hypothesis a quantity that can be moved by
+      evidence, even if no experiment settles it. It also means the probability of (3) is
+      currently whatever we think about extinction and about the tastes of posthumans, which is
+      to say not much.
+    </p>
+
+    <h2>Scope</h2>
+    <p>
+      None of this says humanity is safe. Extinction risk is real, and Leslie gave much attention
+      to actual hazards; Bostrom lists nuclear war, meteors, particle-physics experiments and
+      nanotechnology among them. Those deserve estimates.
+      The rebuke is to the idea that our birth rank or our species&rsquo; age supplies one for
+      free.
+    </p>
+    <p>
+      Nor does it say we are not simulated. Bostrom&rsquo;s disjunction may well be true, and
+      I cannot say which horn holds. The rebuke to the simulation side is narrow: to the step from
+      &ldquo;at least one of three&rdquo; to &ldquo;almost certainly the third&rdquo;.
+    </p>
+    <p>
+      And the dispute between SSA and SIA is not settled here. The claim is only that an argument
+      which depends on an unsettled choice between them is not a result about the future.
+    </p>
+
+    <h2>In their favour</h2>
+    <p>
+      Gott&rsquo;s first prediction came true. He visited the Berlin Wall in 1969, when it was
+      eight years old, and told a friend there was a 50% chance it would last between 2&#8532; and
+      24 more years. It came down twenty years later. On 27 May 1993, the day the <em>Nature</em>
+      paper appeared, he gave 95% intervals for the 44 Broadway and off-Broadway shows then
+      running, and he reports that they did well. Olum checked Broadway runs from 1970 to 1990
+      and found why: for shows past their first few months, the share running a given length
+      falls off roughly as <em>T</em><sup>&minus;1.7</sup>, close to the 1/<em>T</em>&sup2; that
+      makes Gott&rsquo;s rule exact. For long-running shows the rule had the right prior by luck
+      or instinct. Olum also found it fails for new shows: a show open 44 days gets a 97.5%
+      chance of closing within 156 days from Gott, against 78% in the data.
+    </p>
+    <p>
+      That is the honest case for the rule. Where a phenomenon has no time scale you know of,
+      the scale-free answer is sensible, and Caves says so. It resembles the Lindy heuristic that
+      old books and old firms will last longer than new ones, which is often a good bet. The
+      error is to use it where you do know something.
+    </p>
+    <p>
+      Leslie used priors and Bayes&rsquo; rule, said plainly that the argument only shifts
+      probabilities, and used it to argue for taking extinction risk seriously at a time when few
+      did. Carter, Leslie and Bostrom turned a
+      vague worry about observation selection into explicit assumptions that could be argued
+      over, which is how the cancellation in Rebuke 4 was found.
+    </p>
+    <p>
+      Bostrom is more careful than his reputation. His paper concludes with a disjunction, says
+      how it differs from Doomsday, refuses to give a number, and calls the people who are sure
+      of one horn overconfident. The simulation argument is better than the popular version
+      it produced.
+    </p>
+    <p class="muted" style="font-size:0.92rem;">
+      Disclosure: this page was researched and drafted by a language model, which also ran the
+      mortality calculation in Rebuke 1. Check the quotations.
+    </p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Gott, J. R. III (1993). &ldquo;Implications of the Copernican principle for our future
+        prospects.&rdquo; <em>Nature</em> 363, 315&ndash;319.
+        <a href="https://doi.org/10.1038/363315a0">doi:10.1038/363315a0</a>.
+      </li>
+      <li>
+        Caves, C. M. (2008). &ldquo;Predicting future duration from present age: Revisiting a
+        critical assessment of Gott&rsquo;s rule.&rdquo;
+        <a href="https://arxiv.org/abs/0806.3538">arXiv:0806.3538</a>.
+        Caves, C. M. (2000). &ldquo;Predicting future duration from present age: A critical
+        assessment.&rdquo; <em>Contemporary Physics</em> 41, 143&ndash;153.
+        <a href="https://arxiv.org/abs/astro-ph/0001414">arXiv:astro-ph/0001414</a>.
+        The 2000 paper quotes Gott&rsquo;s own account of the Berlin Wall prediction from
+        Timothy Ferris, &ldquo;How to Predict Everything&rdquo;, <em>The New Yorker</em>,
+        12 July 1999.
+      </li>
+      <li>
+        Gelman, A. (2005). &ldquo;Doomsday and Bayes.&rdquo;
+        <a href="https://statmodeling.stat.columbia.edu/2005/11/10/doomsday_and_ba/">Statistical
+        Modeling, Causal Inference, and Social Science</a>, 10 November, with Radford Neal&rsquo;s
+        comment. Gelman, A. (2018). &ldquo;Doomsday! Problems with interpreting a confidence
+        interval when there is no evidence for the assumed sampling model.&rdquo;
+        <a href="https://statmodeling.stat.columbia.edu/2018/05/04/doomsday-problems-interpreting-confidence-interval-no-evidence-assumed-sampling-model/">Same
+        blog</a>, 4 May.
+      </li>
+      <li>
+        Leslie, J. (1996). <em>The End of the World: The Science and Ethics of Human
+        Extinction</em>. Routledge. Leslie, J. (1990). &ldquo;Is the end of the world
+        nigh?&rdquo; <em>Philosophical Quarterly</em> 40(158), 65&ndash;72.
+      </li>
+      <li>
+        Bostrom, N. (2002). <em>Anthropic Bias: Observation Selection Effects in Science and
+        Philosophy</em>. Routledge.
+        <a href="https://anthropic-principle.com/anthropic-bias/">Full text online</a>;
+        chapters 4, 6, 7 and 10 quoted.
+      </li>
+      <li>
+        Olum, K. D. (2002). &ldquo;The doomsday argument and the number of possible
+        observers.&rdquo; <em>Philosophical Quarterly</em> 52(207), 164&ndash;184.
+        <a href="https://arxiv.org/abs/gr-qc/0009081">arXiv:gr-qc/0009081</a>.
+        Dieks, D. (1992). &ldquo;Doomsday&mdash;or: the dangers of statistics.&rdquo;
+        <em>Philosophical Quarterly</em> 42(166), 78&ndash;84.
+      </li>
+      <li>
+        Bostrom, N. (2003). &ldquo;Are You Living in a Computer Simulation?&rdquo;
+        <em>Philosophical Quarterly</em> 53(211), 243&ndash;255.
+        <a href="https://www.simulation-argument.com/simulation.pdf">PDF</a>.
+        Bostrom, N. (2025). <a href="https://www.simulation-argument.com/faq/"><em>The Simulation
+        Argument FAQ</em></a>, version 2.0.
+      </li>
+      <li>
+        Klein, E. (2016). &ldquo;Elon Musk believes we are probably characters in some advanced
+        civilization&rsquo;s video game.&rdquo;
+        <a href="https://www.vox.com/2016/6/2/11837608/elon-musk-simulation-argument"><em>Vox</em></a>,
+        2 June. Transcript of Musk at Recode&rsquo;s Code Conference.
+      </li>
+      <li>
+        Carroll, S. (2016). &ldquo;Maybe We Do Not Live in a Simulation: The Resolution
+        Conundrum.&rdquo;
+        <a href="https://www.preposterousuniverse.com/blog/2016/08/22/maybe-we-do-not-live-in-a-simulation-the-resolution-conundrum/">Preposterous
+        Universe</a>, 22 August.
+      </li>
+      <li>
+        Hossenfelder, S. (2017). &ldquo;No, we probably don&rsquo;t live in a computer
+        simulation.&rdquo;
+        <a href="http://backreaction.blogspot.com/2017/03/no-we-probably-dont-live-in-computer.html">Backreaction</a>,
+        15 March. Aaronson, S. (2017). &ldquo;Your yearly dose of
+        is-the-universe-a-simulation.&rdquo;
+        <a href="https://scottaaronson.blog/?p=3208">Shtetl-Optimized</a>, 22 March.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>

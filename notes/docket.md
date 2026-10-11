@@ -2,18 +2,15 @@
 
 Candidate targets. Being listed here is an accusation, not a conviction.
 
-- Mary's Room — Jackson, 1982
-- Philosophical zombies — Chalmers, 1996
-- Pascal's Wager — Pascal, 1670
-- The ontological argument — Anselm, 1078, and successors
-- The Doomsday argument — Carter; Leslie; Gott
-- The simulation argument — Bostrom, 2003
-- Zeno's paradoxes — Zeno, c. 450 BC
-- Done 2026-10-11 as docs/every-known-example.html. "Every example of X is Y": the inference that because every known conscious system is biological, consciousness needs life. Seth (BBS 2026, p. 15). See "Every example" below.
-- "Only language": the claim that a system which deals only in language cannot think or understand. Raised by, and to be credited to, **Stuart Reynolds** (issue #33). See "Only language" below.
+No candidates are waiting. Add new ones here.
 
-Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", The Tao of Physics.
-Sourced and waiting: zombies, the ontological argument, Pascal, doomsday and simulation (see the quotes-*.md files).
+Done: Chinese Room, Lucas-Penrose, abuses of Gödel's theorem, LeCun's orangutan argument, Mary's Room, "just predicting the next token", the stochastic parrot, "only language", "every known example", The Tao of Physics, abduction, and (2026-10-11) philosophical zombies, the ontological argument, Pascal's Wager, Doomsday and simulation (one page), Zeno.
+
+Open follow-ups:
+- Tao of Physics: the 2000 and 2025 afterwords are unread (see below).
+- Unverified and unused: Russell's "Great God in boots", Gasking's parody, Dawkins on the ontological argument and Pascal, Hitchens, Peirce on Zeno via Salmon, Whitehead on Zeno, Stoppard, Gott's Nature full text, Leslie's own text. See the cautions in each notes/quotes-*.md.
+- The Doomsday mortality table uses an illustrative Gompertz-Makeham model; re-run against a real life table (script in notes/quotes-doomsday.md).
+- "Dialectically toothless" is from the 2024 SEP entry by Oppy, Rasmussen and Schmid, not Oppy alone (correcting quotes-other-classics.md).
 
 ## "Only language" (issue #33; credit Stuart Reynolds)
 
@@ -29,7 +26,7 @@ Done 2026-10-09 as docs/only-language.html, written from the essay alone. The ph
 - Argument for the page: lacking a sense is not lacking a mind. If learning without sight or hearing disqualified understanding, it would disqualify people; pair Reynolds's rule with Kim, Elli and Bedny (PNAS 2019), already cited on the stochastic-parrot page.
 - Overlap to manage: the stochastic-parrot page already rebuts "trained on form alone" (Bender and Koller), and next-token rebuts the capability claim. An "only language" page should take the neighbouring claim that language itself is too thin a medium for thought (for example Fedorenko, Piantadosi and Gibson, "Language is primarily a tool for communication rather than thought", Nature 2024; LeCun on language as a low-bandwidth channel). Sources to be pulled and verified before any are quoted.
 
-## Chinese Room: lines of attack not yet on the page
+## Chinese Room: lines of attack (added 2026-10-11 as Rebukes 4, 5, 7, 9, except "no state, no learning", which Rebuke 1 covers, split-brain, for lack of a primary source, and "held by nobody", which is false: Chalmers holds it)
 
 - The brain is already in a Chinese room (the skull): it only ever receives spike trains. Kills Searle's answer to the robot reply.
 - Leibniz's Mill (1714) is the same argument; Leibniz accepted that it refutes materialism, Searle wants it both ways.

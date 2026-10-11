@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zeno&rsquo;s Paradoxes &mdash; Dumb Philosophy</title>
+  <meta name="description" content="Achilles, the Dichotomy, the Arrow and the Stadium. The usual reply sums a geometric series, which answers the easy half. The real answer is the theory of the continuum, and Zeno mostly earns an acquittal." />
+  <link rel="stylesheet" href="./style.css?v=5" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Minds and Machines</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+        <a href="/marys-room.html">Mary&rsquo;s Room</a>
+        <a href="/zombies.html">Philosophical Zombies</a>
+        <a href="/orangutan.html">The Orangutan Argument</a>
+        <a href="/next-token.html">Just Predicting the Next Token</a>
+        <a href="/stochastic-parrot.html">The Stochastic Parrot</a>
+        <a href="/only-language.html">Only Language</a>
+        <a href="/every-known-example.html">Every Known Example</a>
+        <a href="/abduction.html">Machines Can&rsquo;t Do Abduction</a>
+      </span></span>
+      <span class="menu"><span class="menu-label" tabindex="0">Classics</span><span class="drop">
+        <a href="/zeno.html">Zeno&rsquo;s Paradoxes</a>
+        <a href="/ontological.html">The Ontological Argument</a>
+        <a href="/pascal.html">Pascal&rsquo;s Wager</a>
+        <a href="/doomsday.html">Doomsday and Simulation</a>
+        <a href="/godel-abuse.html">G&ouml;del Proves Whatever You Like</a>
+        <a href="/tao-of-physics.html">The Tao of Physics</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>Zeno&rsquo;s Paradoxes</h1>
+    <p class="subtitle">One half plus one quarter plus one eighth, and so on, comes to one. Zeno never said it didn&rsquo;t.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendants</dt>
+        <dd>Zeno of Elea, fifth century BC, as reported by Aristotle; the popular version of Zeno (&ldquo;motion is impossible&rdquo;); and the geometric-series rebuttal, as taught in classrooms and in <em>The Feynman Lectures on Physics</em> (1963)</dd>
+        <dt>Claim</dt>
+        <dd>Zeno: a runner must first reach the half-way point, then the half of what remains, without end, so motion is impossible; and a flying arrow occupies a space equal to itself at every instant, so it is at rest. The rebuttal: the infinitely many pieces of time add up to a finite total, so Achilles catches the tortoise.</dd>
+        <dt>Charge</dt>
+        <dd>The popular Zeno: concluding that nothing moves from premises about the continuum that turn out to be consistent with motion. The series rebuttal: answering how long the run takes, when the paradox asks how an endless sequence of steps can be completed and how instants of no duration can make up a duration.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Split. Zeno is acquitted on Achilles, the Dichotomy and the Arrow: he found real gaps, and they stayed open until the nineteenth century. The Stadium, on its usual reading, is a mistake about relative speed. &ldquo;Motion is impossible&rdquo; is guilty. The geometric-series rebuttal is guilty of answering the easy half and calling it the whole. Aristotle said so first.</dd>
+      </dl>
+    </div>
+
+    <h2>The arguments, in their words</h2>
+    <p>
+      Nothing Zeno wrote about motion survives. The four arguments come to us from Aristotle,
+      who reported them in order to refute them, in <em>Physics</em> VI.9:
+    </p>
+    <blockquote>
+      Zeno&rsquo;s arguments about motion, which cause so much disquietude to those who try to solve the problems that they present, are four in number. The first asserts the non-existence of motion on the ground that that which is in locomotion must arrive at the half-way stage before it arrives at the goal.
+      <cite>&mdash; Aristotle, <em>Physics</em> VI.9, 239b11 (Hardie and Gaye)</cite>
+    </blockquote>
+    <blockquote>
+      The second is the so-called &lsquo;Achilles&rsquo;, and it amounts to this, that in a race the quickest runner can never overtake the slowest, since the pursuer must first reach the point whence the pursued started, so that the slower must always hold a lead.
+      <cite>&mdash; Aristotle, <em>Physics</em> VI.9, 239b14</cite>
+    </blockquote>
+    <blockquote>
+      Zeno&rsquo;s reasoning, however, is fallacious, when he says that if everything when it occupies an equal space is at rest, and if that which is in locomotion is always occupying such a space at any moment, the flying arrow is therefore motionless.
+      <cite>&mdash; Aristotle, <em>Physics</em> VI.9, 239b5</cite>
+    </blockquote>
+    <p>
+      The fourth, the Stadium, has two rows of equal bodies passing each other in opposite
+      directions at equal speed, past a third row standing still. Aristotle says Zeno drew from it
+      &ldquo;the conclusion that half a given time is equal to double that time&rdquo;.
+    </p>
+    <p>
+      What were they for? In Plato&rsquo;s <em>Parmenides</em> (128c&ndash;d) Zeno explains that
+      his book defended his teacher Parmenides, who held that all is one and change is illusion,
+      against people who mocked him. The book returned the mockery: the hypothesis that there are
+      many things, followed through, &ldquo;appears to be still more ridiculous than the
+      hypothesis of the being of one&rdquo;. They are reductios. Assume the opponent&rsquo;s view
+      of space, time and plurality, and derive an absurdity. Plato&rsquo;s Zeno adds that he wrote
+      it young, out of &ldquo;the pugnacity of a young one&rdquo;, and that someone stole the copy.
+    </p>
+    <p>The rebuttal most people learn is the one in Feynman&rsquo;s lecture on motion:</p>
+    <blockquote>
+      What is wrong with that? It is that a finite amount of time can be divided into an infinite number of pieces, just as a length of line can be divided into an infinite number of pieces by dividing repeatedly by two. And so, although there are an infinite number of steps (in the argument) to the point at which Achilles reaches the tortoise, it doesn&rsquo;t mean that there is an infinite amount of time.
+      <cite>&mdash; Feynman, Leighton and Sands, <em>The Feynman Lectures on Physics</em>, Vol. I, &sect;8-2</cite>
+    </blockquote>
+    <p>
+      The same section introduces Zeno with a joke: &ldquo;The Greeks were somewhat confused by
+      such problems, being helped, of course, by some very confusing Greeks.&rdquo;
+    </p>
+
+    <h2>Rebuke 1: the series answers a question Zeno did not need to ask</h2>
+    <p>
+      Take Feynman&rsquo;s numbers. Achilles runs 10 metres a second, the tortoise one, and the
+      tortoise starts 100 metres ahead. Achilles reaches the tortoise&rsquo;s starting point after
+      10 seconds; the tortoise is now 10 metres on. He covers that in 1 second; it is 1 metre on.
+      Then 0.1 seconds, and so on. The times are
+    </p>
+    <p style="text-align:center;">10 + 1 + 0.1 + 0.01 + &hellip; = 100/9 &asymp; 11.11 seconds.</p>
+    <p>
+      You do not need the series to get this. Achilles is at 10<em>t</em>, the tortoise at
+      100&nbsp;+&nbsp;<em>t</em>, and they are level when 9<em>t</em>&nbsp;=&nbsp;100. One line
+      of algebra. The series is a slow way of computing a number nobody disputed.
+    </p>
+    <p>
+      Zeno&rsquo;s premise is different. The catch-up stages form a sequence with no last member.
+      Each stage ends with the tortoise still ahead. The question is how a process made of such
+      stages can be <em>finished</em>, and what happens at the moment it is. Summing the times
+      says when that moment is. It does not say what happens there.
+    </p>
+    <p>
+      Here is a case where the times converge and the answer is still missing. J. F. Thomson
+      (1954) switches a lamp on after one minute, off after another half minute, on after a
+      quarter, and so on. The switching times add up to two minutes, exactly as in Achilles. Is
+      the lamp on or off at two minutes? The sequence on, off, on, off has no limit, and the
+      convergent series is silent.
+    </p>
+    <p>
+      Achilles differs from the lamp because his position is a continuous function of time, and
+      the positions 100, 110, 111, 111.1 metres converge. Continuity is what puts him level with
+      the tortoise at 100/9 seconds. The point he reaches there is not in the sequence of stages
+      at all; it has to be added, as Huggett&rsquo;s article in the <em>Stanford
+      Encyclopedia</em> points out. The work is being done by limits and continuity, which are
+      Weierstrass&rsquo;s, not by the sum.
+    </p>
+    <p>
+      Aristotle saw this. In Book VI he gave the series answer: the time, like the distance, is
+      divisible without end, so there is no mismatch. In Book VIII he came back to it:
+    </p>
+    <blockquote>
+      But, although this solution is adequate as a reply to the questioner (the question asked being whether it is possible in a finite time to traverse or reckon an infinite number of units), nevertheless as an account of the fact and explanation of its true nature it is inadequate.
+      <cite>&mdash; Aristotle, <em>Physics</em> VIII.8, 263a15</cite>
+    </blockquote>
+    <p>
+      The objection he raises is that the time is itself divided into infinitely many parts, so
+      the same puzzle comes back with the distance left out. The geometric series, offered in
+      2026 as the answer to Zeno, is an answer Aristotle had already marked down as incomplete.
+    </p>
+
+    <h2>Rebuke 2: the real answer is about points, not sums</h2>
+    <p>
+      The harder question under all four arguments is how a line made of points can have length,
+      or a stretch of time made of instants can have duration, when each point has length zero.
+      Add up zeros and you get zero. That is the paradox the series cannot reach, because there
+      are not countably many points to sum.
+    </p>
+    <p>
+      The modern answer, set out by Adolf Gr&uuml;nbaum (1967) following Russell, has two parts.
+      Cantor showed that the points of a segment are uncountable: they cannot be listed as first,
+      second, third. And length is countably additive and no more. You may add the lengths of a
+      countable collection of disjoint pieces. You may not add the lengths of uncountably many
+      points and expect the length of the segment. A line is a set of points together with a
+      distance between them; its length is not a sum of the lengths of its points.
+    </p>
+    <p>A small example shows the difference. The geometric series turns up in it, doing a different job.</p>
+    <p>
+      The rational numbers between 0 and 1 can be listed: <em>q</em><sub>1</sub>,
+      <em>q</em><sub>2</sub>, <em>q</em><sub>3</sub>, &hellip;. Cover the <em>n</em>th by an
+      interval of length &epsilon;/2<sup><em>n</em></sup>. The covering intervals have total
+      length at most &epsilon;(1/2&nbsp;+&nbsp;1/4&nbsp;+&nbsp;&hellip;)&nbsp;=&nbsp;&epsilon;,
+      and &epsilon; can be as small as you like. So the rationals, which are everywhere dense in
+      the segment, have total length zero. The whole segment has length one. The difference is
+      made by the uncountably many irrationals, each of length zero.
+    </p>
+    <p>
+      So a countable heap of points, however dense, has no length, and an uncountable continuum
+      of points can have length one. Zeno&rsquo;s assumption, that a thing composed of parts
+      without size must be without size, fails for the second kind of collection. That is the
+      answer, and it needs Cantor and measure theory. It was not available to Aristotle, or to
+      anyone before the late nineteenth century.
+    </p>
+    <p>
+      One caution. Recent work (Reese and others, 2022, as summarised by the
+      <em>Stanford Encyclopedia</em>) argues that Gr&uuml;nbaum&rsquo;s reading of the ancient
+      argument is historically loose, and that the version that troubled mathematicians in the
+      1880s was settled by Borel without appeal to infinite sums. The mathematics stands. Who said
+      what, and when, is still argued.
+    </p>
+
+    <h2>Rebuke 3: the arrow is at rest at every instant, and it moves</h2>
+    <p>
+      Aristotle&rsquo;s reply to the Arrow was to deny the premise: &ldquo;time is not composed of
+      indivisible moments any more than any other magnitude is composed of indivisibles.&rdquo;
+      Modern mathematics does the opposite. It accepts that time is made of instants and blocks
+      the inference later.
+    </p>
+    <p>
+      At an instant the arrow travels no distance in no time. Distance over time is 0/0, which is
+      not a speed of zero; it is not a number. Velocity at an instant is defined by what happens
+      around it, as a limit of distance over time as the time shrinks. That is exactly the
+      definition Feynman gives a few paragraphs after his Achilles, and the right answer to the
+      Arrow is in the same section of the same lecture.
+    </p>
+    <p>
+      Russell drew the consequence plainly. There is no state of motion over and above position
+      at each time:
+    </p>
+    <blockquote>
+      Motion consists merely in the occupation of different places at different times, subject to continuity as explained in Part V. There is no transition from place to place, no consecutive moment or consecutive position, no such thing as velocity except in the sense of a real number which is the limit of a certain set of quotients.
+      <cite>&mdash; Russell, <em>The Principles of Mathematics</em> (1903), &sect;447</cite>
+    </blockquote>
+    <p>
+      This is now called the at-at theory: to move is to be at one place at one time and at
+      another place at another time. The arrow is at rest in the sense that, at each instant, it
+      is where it is. It moves in the sense that where it is depends on when. Zeno&rsquo;s
+      premise is granted. His conclusion does not follow.
+    </p>
+
+    <h2>Rebuke 4: the Stadium</h2>
+    <p>
+      Aristotle&rsquo;s diagnosis is that Zeno assumed &ldquo;a body occupies an equal time in
+      passing with equal velocity a body that is in motion and a body of equal size that is at
+      rest; which is false.&rdquo; A moving body passes oncoming bodies twice as fast as
+      stationary ones. On that reading the Stadium is a mistake about relative speed, and the
+      <em>Stanford Encyclopedia</em> reports the general verdict that Zeno was &ldquo;hopelessly
+      confused about relative velocities&rdquo; here.
+    </p>
+    <p>
+      There are kinder readings. Sattler (2015) disputes the standard one, and Davey (2007) reads
+      the bodies as indivisible units of space passing in indivisible units of time, which would
+      make the Stadium an argument against atomic space and time rather than a blunder. The text
+      is cryptic. I count this one against Zeno, with that caveat.
+    </p>
+
+    <h2>Russell&rsquo;s defence of Zeno</h2>
+    <p>
+      The strongest case for the defendant was made by Russell, who opened his chapter on the
+      continuum with it:
+    </p>
+    <blockquote>
+      One of the most notable victims of posterity&rsquo;s lack of judgment is the Eleatic Zeno. Having invented four arguments, all immeasurably subtle and profound, the grossness of subsequent philosophers pronounced him to be a mere ingenious juggler, and his arguments to be one and all sophisms. After two thousand years of continual refutation, these sophisms were reinstated, and made the foundation of a mathematical renaissance, by a German professor, who probably never dreamed of any connection between himself and Zeno.
+      <cite>&mdash; Russell, <em>The Principles of Mathematics</em> (1903), &sect;327</cite>
+    </blockquote>
+    <p>
+      The professor is Weierstrass, who removed infinitesimals from the calculus. Russell goes on
+      to say, with his tongue partly in his cheek, that Weierstrass &ldquo;has at last shown that
+      we live in an unchanging world, and that the arrow, at every moment of its flight, is truly
+      at rest.&rdquo; Zeno&rsquo;s only probable error, he says, was inferring (&ldquo;if he did
+      infer&rdquo;) that the world must therefore be in the same state at one time as at another.
+      Of the Arrow he writes that it &ldquo;has usually been thought so monstrous a paradox as
+      scarcely to deserve serious discussion&rdquo;, and that to him it seems &ldquo;a very plain
+      statement of a very elementary fact&rdquo;.
+    </p>
+    <p>
+      Two qualifications are needed. Russell says in a footnote, &ldquo;Not being a Greek scholar, I pretend
+      to no first-hand authority as to what Zeno really did say or mean&rdquo;, and takes his versions of the arguments from a French article, treating them
+      as &ldquo;merely a text for discussion&rdquo;. And he defends the arguments, not the
+      conclusion. Russell&rsquo;s Zeno is right about nearly everything and wrong about the last
+      step, which is the verdict given here.
+    </p>
+
+    <h2>Getting up and walking about</h2>
+    <p>
+      The other famous rebuttal is a story. Diogenes Laertius, in his life of Diogenes the Cynic,
+      says that &ldquo;when somebody declared that there is no such thing as motion, he got up and
+      walked about.&rdquo; The passage does not name Zeno. The link to Zeno comes from the later
+      commentator Simplicius, and the Latin tag <em>solvitur ambulando</em> is later still.
+    </p>
+    <p>
+      As a rebuttal it misses. Zeno did not doubt that things appear to move. He argued that the
+      appearance cannot be described consistently on his opponents&rsquo; assumptions. Walking is
+      more evidence about the appearance. It shows that some premise is false and does not say
+      which, and saying which took until Cantor.
+    </p>
+
+    <h2>Scope</h2>
+    <p>
+      The resolution is mathematical. It shows that a continuum of points and instants, with
+      limits and velocities defined as above, is consistent and contains Achilles overtaking the
+      tortoise. Whether physical space and time are such a continuum is a separate question, and
+      quantum gravity may say they are not. If they are not, Zeno is answered differently, not
+      revived.
+    </p>
+    <p>
+      Nor does the resolution settle every puzzle about completing infinitely many tasks. Thomson&rsquo;s
+      lamp shows that some such descriptions leave the final state undetermined. Non-standard
+      analysis, with genuine infinitesimals, also handles the paradoxes; the standard continuum is
+      one adequate answer, not the only one.
+    </p>
+    <p>
+      And the Feynman passage is a lecture on velocity, not on Zeno. Its Achilles paragraph is
+      Aristotle&rsquo;s first answer, correct as far as it goes. The charge is against offering that
+      paragraph as the whole solution, which is how it usually travels.
+    </p>
+
+    <h2>In their favour</h2>
+    <p>
+      Zeno made the infinite a problem two thousand years before anyone could solve it, with four
+      short arguments that are still taught. Aristotle&rsquo;s word for their effect on people who
+      try to solve them was &ldquo;disquietude&rdquo;. Each of the three good ones isolates a
+      real assumption: that an endless sequence of steps cannot be completed, that a sum of
+      sizeless parts has no size, that motion must be a state present at an instant. All three
+      fail in the modern continuum, and it took the arithmetisation of analysis to show it.
+    </p>
+    <p>
+      The series rebuttal is right about the thing it addresses. A popular version of the paradox
+      does say that infinitely many pieces of time must add up to an infinite time, and that is
+      simply false. The series refutes it in one line. For a first-year class that may be the
+      right amount of Zeno.
+    </p>
+    <p>
+      And Feynman, a few paragraphs later, gives the limit definition of velocity, which is the
+      answer to the Arrow. He just did not say so.
+    </p>
+    <p class="muted" style="font-size:0.92rem;">
+      Disclosure: this page was researched and drafted by a language model. Check the quotations.
+    </p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Aristotle. <em>Physics</em>, trans. R. P. Hardie and R. K. Gaye, in <em>The Works of
+        Aristotle</em>, ed. W. D. Ross, Oxford (1930). Book VI.2 (233a21&ndash;31), VI.9
+        (239b5&ndash;240a18) and VIII.8 (263a4&ndash;b9). Online at the
+        <a href="http://classics.mit.edu/Aristotle/physics.6.vi.html">Internet Classics Archive</a>.
+      </li>
+      <li>
+        Plato. <em>Parmenides</em> 128c&ndash;d, trans. B. Jowett.
+        <a href="https://www.gutenberg.org/ebooks/1687">Project Gutenberg</a>.
+      </li>
+      <li>
+        Diogenes Laertius. <em>Lives of Eminent Philosophers</em> VI.39, trans. R. D. Hicks.
+        <a href="https://en.wikisource.org/wiki/Lives_of_the_Eminent_Philosophers/Book_VI">Wikisource</a>.
+      </li>
+      <li>
+        Feynman, R. P., Leighton, R. B., and Sands, M. (1963). <em>The Feynman Lectures on
+        Physics</em>, Vol. I, ch. 8, &ldquo;Motion&rdquo;, &sect;8-2.
+        <a href="https://www.feynmanlectures.caltech.edu/I_08.html">Caltech online edition</a>.
+      </li>
+      <li>
+        Russell, B. (1903). <em>The Principles of Mathematics</em>. Cambridge University Press.
+        &sect;&sect;327&ndash;333 (pp. 347&ndash;352) and &sect;447 (p. 473).
+        <a href="https://archive.org/details/cu31924001610421">Internet Archive</a>.
+      </li>
+      <li>
+        Huggett, N. &ldquo;Zeno&rsquo;s Paradoxes.&rdquo; <em>Stanford Encyclopedia of
+        Philosophy</em>, substantive revision 6 March 2024.
+        <a href="https://plato.stanford.edu/entries/paradox-zeno/">plato.stanford.edu</a>.
+        Source for Simplicius on Diogenes, for Gr&uuml;nbaum (1967), Reese et al. (2022), Davey
+        (2007), Sattler (2015) and the at-at theory.
+      </li>
+      <li>
+        Gr&uuml;nbaum, A. (1967). <em>Modern Science and Zeno&rsquo;s Paradoxes</em>. Wesleyan
+        University Press.
+      </li>
+      <li>
+        Thomson, J. F. (1954). &ldquo;Tasks and Super-Tasks.&rdquo; <em>Analysis</em> 15(1),
+        1&ndash;13. As described in &ldquo;Supertasks&rdquo;, <em>Stanford Encyclopedia of
+        Philosophy</em>, <a href="https://plato.stanford.edu/entries/spacetime-supertasks/">plato.stanford.edu</a>.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>

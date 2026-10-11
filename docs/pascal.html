@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pascal&rsquo;s Wager &mdash; Dumb Philosophy</title>
+  <meta name="description" content="Pascal says that a finite stake against an infinite reward makes betting on God the only rational choice. Multiply anything by infinity and every option ties, so the wager cannot rank going to Mass above having a hamburger, and its finite repair is a mugging." />
+  <link rel="stylesheet" href="./style.css?v=5" />
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner">
+    <a class="site-nav-brand" href="/">philosophy</a>
+    <div class="site-nav-links">
+      <span class="menu"><span class="menu-label" tabindex="0">Minds and Machines</span><span class="drop">
+        <a href="/chinese-room.html">The Chinese Room</a>
+        <a href="/godel.html">The G&ouml;del Argument</a>
+        <a href="/marys-room.html">Mary&rsquo;s Room</a>
+        <a href="/zombies.html">Philosophical Zombies</a>
+        <a href="/orangutan.html">The Orangutan Argument</a>
+        <a href="/next-token.html">Just Predicting the Next Token</a>
+        <a href="/stochastic-parrot.html">The Stochastic Parrot</a>
+        <a href="/only-language.html">Only Language</a>
+        <a href="/every-known-example.html">Every Known Example</a>
+        <a href="/abduction.html">Machines Can&rsquo;t Do Abduction</a>
+      </span></span>
+      <span class="menu"><span class="menu-label" tabindex="0">Classics</span><span class="drop">
+        <a href="/zeno.html">Zeno&rsquo;s Paradoxes</a>
+        <a href="/ontological.html">The Ontological Argument</a>
+        <a href="/pascal.html">Pascal&rsquo;s Wager</a>
+        <a href="/doomsday.html">Doomsday and Simulation</a>
+        <a href="/godel-abuse.html">G&ouml;del Proves Whatever You Like</a>
+        <a href="/tao-of-physics.html">The Tao of Physics</a>
+      </span></span>
+      <a href="https://github.com/microprediction/philosophy">GitHub</a>
+    </div>
+  </div></nav>
+
+  <main>
+    <p class="pagenav"><a href="/">&larr; Home</a></p>
+    <h1>Pascal&rsquo;s Wager</h1>
+    <p class="subtitle">Multiply anything by infinity and you get infinity. That includes the expected value of having a hamburger.</p>
+
+    <div class="charge-sheet">
+      <dl>
+        <dt>Defendant</dt>
+        <dd>Blaise Pascal, <em>Pens&eacute;es</em> &sect;233 (Brunschvicg numbering; 418 in Lafuma&rsquo;s), notes left at his death in 1662 and published in 1670</dd>
+        <dt>Claim</dt>
+        <dd>Reason cannot settle whether God exists, but you must bet. A finite stake against an infinite reward, at any positive probability, makes betting on God the only rational choice.</dd>
+        <dt>Charge</dt>
+        <dd>An infinite payoff does not make one option best. It makes every option that might lead to it equally good, it cannot choose between rival gods, and once it is made finite to repair this, the argument is a mugging.</dd>
+        <dt>Verdict</dt>
+        <dd class="verdict">Guilty, as a proof that rationality requires the bet. Not guilty of bad mathematics for its time: this page is where expected-value reasoning about decisions begins, and the defendant never published it.</dd>
+      </dl>
+    </div>
+
+    <h2>The argument, in his words</h2>
+    <p>
+      The passage is headed &ldquo;Infinite&mdash;nothing&rdquo;. Pascal first grants the
+      unbeliever that the question cannot be decided by argument:
+    </p>
+    <blockquote>
+      &ldquo;God is, or He is not.&rdquo; But to which side shall we incline? Reason can decide nothing here.
+      <cite>&mdash; Pascal, <em>Pens&eacute;es</em> &sect;233 (Trotter translation)</cite>
+    </blockquote>
+    <p>Then he removes the option of not playing:</p>
+    <blockquote>
+      Yes; but you must wager. It is not optional. You are embarked.
+      <cite>&mdash; Pascal, &sect;233</cite>
+    </blockquote>
+    <blockquote>
+      Let us weigh the gain and the loss in wagering that God is. Let us estimate these two chances. If you gain, you gain all; if you lose, you lose nothing. Wager, then, without hesitation that He is.
+      <cite>&mdash; Pascal, &sect;233</cite>
+    </blockquote>
+    <p>And the infinity that does the work:</p>
+    <blockquote>
+      But there is here an infinity of an infinitely happy life to gain, a chance of gain against a finite number of chances of loss, and what you stake is finite. It is all divided; wherever the infinite is and there is not an infinity of chances of loss against that of gain, there is no time to hesitate, you must give all.
+      <cite>&mdash; Pascal, &sect;233</cite>
+    </blockquote>
+    <p>He thought the conclusion as secure as anything can be:</p>
+    <blockquote>
+      This is demonstrable; and if men are capable of any truths, this is one.
+      <cite>&mdash; Pascal, &sect;233</cite>
+    </blockquote>
+    <p>
+      In modern terms: let <em>p</em> &gt; 0 be your probability that God exists, let salvation be
+      worth &infin;, and let a life of piety cost a finite amount <em>c</em>. Wagering for God has
+      expected value <em>p</em>&middot;&infin; &minus; <em>c</em> = &infin;. Anything else is finite.
+      So wager.
+    </p>
+
+    <h2>Rebuke 1: infinity cannot rank anything</h2>
+    <p>
+      Expected-value reasoning works by comparing numbers. Infinity breaks the comparison, and it
+      breaks it in Pascal&rsquo;s favour only if you look at one option.
+    </p>
+    <p>
+      Consider the strategy &ldquo;roll a die, and wager for God if it shows a six&rdquo;. With
+      probability 1/6 you get Pascal&rsquo;s infinite expectation, so the whole strategy is worth
+      &infin; too. Antony Duff (1986) and Alan H&aacute;jek (2003) pointed out that this makes the
+      argument invalid: the wager is not the unique best act, because every mixture of it is
+      equally good. H&aacute;jek&rsquo;s entry in the <em>Stanford Encyclopedia</em> takes the
+      next step:
+    </p>
+    <blockquote>
+      Suppose that you choose to ignore the Wager, and to go and have a hamburger instead. Still, you may well assign positive and finite probability to your winding up wagering for God nonetheless; and this probability multiplied by infinity again gives infinity.
+      <cite>&mdash; H&aacute;jek, &ldquo;Pascal&rsquo;s Wager&rdquo;, <em>SEP</em> &sect;5.4</cite>
+    </blockquote>
+    <p>
+      His conclusion: &ldquo;All hell breaks loose: anything you might do is maximally good by
+      expected utility lights!&rdquo;
+    </p>
+    <p>
+      Here is the arithmetic with numbers. Take <em>p</em> = 10<sup>&minus;6</sup> and a cost of
+      piety <em>c</em> = 1,000 (in whatever units you like: say, Sunday mornings). Let the reward
+      be a large finite number <em>R</em> = 10<sup>12</sup>. If you wager for God with probability
+      <em>q</em>, your expected gain over not wagering is
+    </p>
+    <p class="display"><em>q</em>&thinsp;(<em>pR</em> &minus; <em>c</em>) = <em>q</em> &times; 999,000.</p>
+    <p>
+      Wagering outright (<em>q</em> = 1) is worth 999,000. The die (<em>q</em> = 1/6) is worth
+      166,500. The hamburger, with a 1% chance of a later conversion, is worth 9,990. The ranking
+      is clean, and wagering wins.
+    </p>
+    <p>
+      Now set <em>R</em> = &infin;, as Pascal does. All three are worth &infin;. So is every other
+      act with any chance of leading to belief, which is every act. The feature that makes the
+      wager look overwhelming is the feature that stops it choosing.
+    </p>
+    <p>
+      Pascal&rsquo;s own sentence half-sees this. A finite unit &ldquo;adds nothing&rdquo; to the
+      infinite, he says at the start of the same passage: &ldquo;The finite is annihilated in the
+      presence of the infinite.&rdquo; So is the difference between the die and the certainty.
+    </p>
+
+    <h3>The response</h3>
+    <p>
+      Bradley Monton (2011) replied that if the die says no, you should roll again, and with
+      probability one you eventually wager. Robertson (2012) found strategies whose chances shrink
+      fast enough that you may never get there. Easwaran and Monton (2012) answered with
+      uncountably many rolls, an idealisation they concede cannot be carried out physically. Other authors, H&aacute;jek
+      included, have rebuilt the wager so that the payoff to wagering scales with how likely you
+      are to do it. Those versions are valid. They are also not Pascal&rsquo;s argument: each adds
+      a decision rule that the text does not contain.
+    </p>
+
+    <h2>Rebuke 2: infinity cannot choose a god</h2>
+    <p>
+      Pascal&rsquo;s table has two columns: his God exists, or does not. If reason can decide
+      nothing here, it cannot decide against the other candidates either. Diderot made the point in
+      1746: &ldquo;An Imam could reason just as well this way.&rdquo;
+    </p>
+    <p>Homer Simpson put the risk more directly:</p>
+    <blockquote>
+      And what if we picked the wrong religion? Every week, we&rsquo;re just making God madder and madder!
+      <cite>&mdash; <em>The Simpsons</em>, &ldquo;Homer the Heretic&rdquo; (1992), as given in a fan episode capsule</cite>
+    </blockquote>
+    <p>
+      The candidates are cheap to produce. James Cargile (1966) proposed, for each real number
+      <em>x</em>, a god who rewards contemplating <em>x</em> above all else. That is uncountably many
+      columns, each with an infinite payoff.
+    </p>
+    <p>
+      Try two jealous gods. God A sends A&rsquo;s worshippers to heaven and B&rsquo;s to hell; God B
+      does the reverse. With infinite stakes, worshipping A is worth &infin; &minus; &infin;, which
+      is not a number. Make the stakes finite (<em>R</em> = 10<sup>12</sup> again, <em>c</em> =
+      1,000) and give A probability 2&times;10<sup>&minus;6</sup> and B 10<sup>&minus;6</sup>:
+    </p>
+    <p class="display">E(A) = (2&times;10<sup>&minus;6</sup> &minus; 10<sup>&minus;6</sup>)&thinsp;<em>R</em> &minus; <em>c</em> = 999,000 &nbsp;&nbsp;&nbsp; E(B) = &minus;1,001,000.</p>
+    <p>
+      Now there is an answer, and it depends entirely on the difference between two probabilities
+      of order one in a million. Swap them and the answer swaps. Nobody can estimate either number
+      to that precision, and the size of <em>R</em> magnifies the error in the difference. Eliezer
+      Yudkowsky described the same trap for an AI doing these sums: its decision would be
+      &ldquo;dominated by whatever tiny differentials existed in the various tiny probabilities&rdquo;
+      under which the vast payoff was at stake.
+    </p>
+
+    <h3>The response</h3>
+    <p>
+      Defenders reply that the rival gods are not equally probable. George Schlesinger (1994)
+      proposed that when expectations are all infinite you should bet on the most probable
+      outcome. Others argue that Pascal&rsquo;s audience in 1660s Paris took only Catholicism and
+      atheism seriously, or that a maximally perfect God is simplest. Paul Bartha (2012) gives a
+      dynamic model in which some assignments are stable.
+    </p>
+    <p>
+      The tie-breaking rule is a new rule, and the SEP entry notes it is &ldquo;not found in the
+      Wager itself&rdquo;. It also concedes the point of Rebuke 1: once every option is worth
+      &infin;, expectation has stopped doing the work and the probabilities are deciding. That
+      makes it an argument about which religion is most likely to be true, which is the argument
+      Pascal said reason could not settle.
+    </p>
+
+    <h2>Rebuke 3: the finite wager is a mugging</h2>
+    <p>
+      The obvious repair is to drop the infinity. Nick Bostrom showed that this does not help, in a
+      short dialogue in <em>Analysis</em>. A mugger without a gun approaches Pascal and asks
+      for his wallet anyway. He asks Pascal for his credence that the mugger has magic powers and
+      will repay. Pascal says one in ten quadrillion. The mugger then offers a thousand quadrillion
+      happy days, which is an expected surplus of about 99 days for a wallet worth one:
+    </p>
+    <blockquote>
+      Mugger: I assure you, my powers are strictly finite. The offer before you does not involve infinite values in any way. But now I really must be off; I have an assignation in the Seventh Dimension that I&rsquo;d rather not miss. Your wallet, please!<br />
+      Pascal hands over his wallet.
+      <cite>&mdash; Bostrom, &ldquo;Pascal&rsquo;s mugging&rdquo; (2009)</cite>
+    </blockquote>
+    <p>
+      The structure is the wager&rsquo;s. Whatever probability you state, the other party names a
+      payoff larger than its reciprocal. If your utility is unbounded and your credence does not
+      fall at least as fast as the promises grow, you pay. Yudkowsky, who named the problem in
+      2007, put it with five dollars: &ldquo;Give me five dollars, or I&rsquo;ll use my magic
+      powers from outside the Matrix to run a Turing machine that simulates and kills 3^^^^3
+      people.&rdquo;
+    </p>
+    <p>
+      The standard fix is bounded utility. If nothing can be worth more than <em>B</em>, an offer
+      costing <em>c</em> is worth taking only when <em>p</em> &gt; <em>c</em>/<em>B</em>, and no
+      promise can lower that threshold. With <em>B</em> = 10<sup>6</sup> and <em>c</em> = 1,000,
+      the mugger needs you to believe him at better than one in a thousand. That fix also
+      dissolves Pascal&rsquo;s wager, which needs the payoff to beat any probability you name.
+    </p>
+    <p>
+      The same structure is argued over today in AI risk. Critics call spending on AI safety a
+      Pascal&rsquo;s mugging. Some defenders reply that the probability of catastrophe is high, so
+      it cannot be one. Elliott Thornley (2026) points out that both miss the number that matters:
+    </p>
+    <blockquote>
+      So when people say that AI safety is a Pascal&rsquo;s mugging, you can&rsquo;t just reply that p(doom) is high. You have to argue that p(you avert doom) is high.
+      <cite>&mdash; Thornley, LessWrong, 25 April 2026</cite>
+    </blockquote>
+    <p>
+      That is the right test for Pascal too. The probability that your wager makes the difference
+      is not the probability that God exists. It is the probability that God exists and rewards a
+      belief acquired by holy water and habit, which brings us to the next rebuke.
+      (Thornley goes on to argue that for AI the probability is not tiny. That is an empirical
+      claim, and a mugging needs a tiny probability. A large one is just an ordinary bet.)
+    </p>
+
+    <h2>Rebuke 4: you cannot bet a belief</h2>
+    <p>
+      A bet is an act. Believing is not one you can perform on demand. Pascal knew this, and gave
+      the objection to his imagined unbeliever:
+    </p>
+    <blockquote>
+      I am forced to wager, and am not free. I am not released, and am so made that I cannot believe. What, then, would you have me do?
+      <cite>&mdash; Pascal, &sect;233</cite>
+    </blockquote>
+    <p>His answer is habit:</p>
+    <blockquote>
+      Follow the way by which they began; by acting as if they believed, taking the holy water, having masses said, etc. Even this will naturally make you believe, and deaden your acuteness.
+      <cite>&mdash; Pascal, &sect;233</cite>
+    </blockquote>
+    <p>
+      &ldquo;Deaden your acuteness&rdquo; is Trotter being polite. The French is <em>vous
+      ab&ecirc;tira</em>, which the SEP renders literally as &ldquo;will make you a beast&rdquo;. The
+      method for placing the bet is to make yourself less able to judge it.
+    </p>
+    <p>
+      Then there is the bookmaker. William James asked how the house would view a customer who
+      arrived this way:
+    </p>
+    <blockquote>
+      We feel that a faith in masses and holy water adopted wilfully after such a mechanical calculation would lack the inner soul of faith&rsquo;s reality; and if we were ourselves in the place of the Deity, we should probably take particular pleasure in cutting off believers of this pattern from their infinite reward.
+      <cite>&mdash; James, <em>The Will to Believe</em> (1896), &sect;II</cite>
+    </blockquote>
+    <p>
+      That is one more column for the table: a God who rewards honest doubt and penalises
+      calculated belief. It has no less claim to positive probability than Pascal&rsquo;s, and it
+      reverses his sign.
+    </p>
+    <p>
+      Voltaire objected on taste: &ldquo;that notion of gambling, of losses and winnings, does not
+      suit the gravity of the subject.&rdquo; I don&rsquo;t rely on that. The gambling is the
+      interesting part.
+    </p>
+
+    <h2>Scope</h2>
+    <p>
+      None of this is an argument that God does not exist. It is an argument that this route to
+      belief does not work as a proof. Pascal himself said reason could not settle existence, and
+      the wager was meant to work without settling it.
+    </p>
+    <p>
+      Nor does it show that small probabilities of large outcomes should be ignored. Insurance,
+      asteroid surveys and AI safety are all bets of that kind, and each has to be argued on its
+      numbers. The rebuke applies when the payoff is chosen to beat whatever probability you name.
+    </p>
+
+    <h2>In his favour</h2>
+    <p>
+      The passage is, as the SEP puts it, the use of probability and decision theory &ldquo;for almost
+      the first time in history&rdquo;. The objections on this page are made in the language he invented.
+    </p>
+    <p>
+      He did not publish it. The <em>Pens&eacute;es</em> were notes left unfinished at his death.
+      Ian Hacking described this fragment as &ldquo;two pieces of paper covered on both sides by
+      handwriting going in all directions, full of erasures, corrections, insertions, and
+      afterthoughts&rdquo;. Judging it as a finished proof is harsh.
+    </p>
+    <p>
+      He anticipated the strongest practical objection, that belief is not voluntary, and gave a
+      real answer to it. Habit does change belief. And his closing section offers a version with no
+      infinity at all: you will be &ldquo;faithful, honest, humble, grateful, generous&rdquo;, and
+      &ldquo;gain in this life&rdquo;. If that is true, belief wins in every column, and
+      H&aacute;jek (2018) calls the result a valid argument from &ldquo;superduperdominance&rdquo;.
+      Its soundness turns on whether the devout really do live better, which is a question for
+      evidence, not for infinity.
+    </p>
+    <p class="muted" style="font-size:0.92rem;">
+      Disclosure: this page was researched and drafted by a language model, which is the kind of
+      expected-utility maximiser Yudkowsky worried a mugger would find easy. Check the quotations.
+    </p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>
+        Pascal, B. (1670). <em>Pens&eacute;es</em>, &sect;233, &ldquo;Infinite&mdash;nothing&rdquo;.
+        Trans. W. F. Trotter (Dent, 1910; Dutton, 1958).
+        <a href="https://www.gutenberg.org/ebooks/18269">Project Gutenberg #18269</a>.
+      </li>
+      <li>
+        H&aacute;jek, A. &ldquo;Pascal&rsquo;s Wager.&rdquo; <em>Stanford Encyclopedia of
+        Philosophy</em>, substantive revision 11 September 2022.
+        <a href="https://plato.stanford.edu/entries/pascal-wager/">plato.stanford.edu/entries/pascal-wager</a>.
+        Source of the Diderot, Voltaire, Hacking, Schlesinger and Cargile material, and the
+        summaries of Duff (1986), H&aacute;jek (2003, 2018), Monton (2011), Easwaran and Monton
+        (2012) and Bartha (2012).
+      </li>
+      <li>
+        James, W. (1896). &ldquo;The Will to Believe.&rdquo; In <em>The Will to Believe, and Other
+        Essays in Popular Philosophy</em>, &sect;II.
+        <a href="https://www.gutenberg.org/ebooks/26659">Project Gutenberg #26659</a>.
+      </li>
+      <li>
+        Bostrom, N. (2009). &ldquo;Pascal&rsquo;s mugging.&rdquo; <em>Analysis</em> 69(3),
+        443&ndash;445. <a href="https://nickbostrom.com/papers/pascal.pdf">PDF</a>.
+      </li>
+      <li>
+        Yudkowsky, E. (2007). &ldquo;Pascal&rsquo;s Mugging: Tiny Probabilities of Vast
+        Utilities.&rdquo; <a href="https://www.lesswrong.com/posts/a5JAiTdytou3Jg749/pascal-s-mugging-tiny-probabilities-of-vast-utilities">LessWrong</a>,
+        19 October (first posted on <em>Overcoming Bias</em>).
+      </li>
+      <li>
+        Thornley, E. (2026). &ldquo;AI safety can be a Pascal&rsquo;s mugging even if p(doom) is
+        high.&rdquo; <a href="https://www.lesswrong.com/posts/Hq6SJnh5maYtDAZ56/ai-safety-can-be-a-pascal-s-mugging-even-if-p-doom-is-high">LessWrong</a>,
+        25 April.
+      </li>
+      <li>
+        <em>The Simpsons</em>, &ldquo;Homer the Heretic&rdquo; (1992), written by George Meyer.
+        Line as given in the fan-maintained
+        <a href="https://www.simpsonsarchive.com/episodes/9F01.html">Simpsons Archive episode capsule</a>,
+        not checked against the broadcast.
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <a href="https://github.com/microprediction/philosophy">Source</a> &middot;
+    Maintained by <a href="https://github.com/microprediction">Peter Cotton</a>.
+  </footer>
+</body>
+</html>
