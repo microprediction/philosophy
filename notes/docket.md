@@ -47,3 +47,7 @@ Done 2026-10-09 as docs/only-language.html, written from the essay alone. The ph
 - Same page: "Our psychological biases are more likely to lead to false positives than false negatives", directly after the record of withholding moral status from animals and "sometimes even from other humans", which is a record of false negatives.
 - Rainstorm and Penrose material from the same paper went onto chinese-room.html and godel.html (2026-10-11).
 - Sources: notes/quotes-only-life.md. Page published 2026-10-11 as docs/every-known-example.html.
+
+## Tao of Physics: later afterwords not read (issue #32)
+
+- The 25th-anniversary edition (1999/2000) and the 50th-anniversary edition (Shambhala, 1 July 2025, ISBN 9781645472902) both add new afterword material, per the publisher. Neither has been read. If the 2025 afterword or postscript concedes the bootstrap, Rebuke 5 and possibly the verdict wording should say so.
