@@ -153,6 +153,13 @@ button.run:disabled { background: var(--faint); cursor: default; }
 .rebukes p { margin: 6px 0 0; }
 
 
+/* full-width illustration */
+figure.cartoon { margin: 24px 0 28px; }
+figure.cartoon img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--border); border-radius: 6px;
+}
+
 .pagenav { margin: 0 0 22px; font-size: 0.95rem; }
 .aside {
   background: var(--accent-soft); border-radius: 8px;
